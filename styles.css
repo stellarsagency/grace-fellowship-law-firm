@@ -27,8 +27,7 @@ html, body { margin: 0 !important; padding: 0 !important; border: none !importan
   --transition: all .35s cubic-bezier(.25,.46,.45,.94);
 }
 
-
-html { scroll-behavior: smooth; scroll-padding-top: 80px; margin: 0; padding: 0; background: #041f17; }
+html { scroll-behavior: smooth; scroll-padding-top: 80px; margin: 0; padding: 0; background: var(--green-deep); }
 
 body { margin: 0; padding: 0; border: 0;
   font-family: 'Source Sans 3', 'Segoe UI', sans-serif;
@@ -52,12 +51,15 @@ ul { list-style: none; }
 
 /* ============ TOPBAR ============ */
 .topbar {
+  position: sticky;
+  top: 0;
+  z-index: 200;
   background: var(--green-deep);
   color: var(--gold-pale);
   font-size: 0.78rem;
   letter-spacing: 0.08em;
   padding: 10px 0;
-  border-bottom: none;
+  border-bottom: 1px solid rgba(212,168,67,0.15);
 }
 .topbar-inner {
   display: flex;
@@ -71,7 +73,7 @@ ul { list-style: none; }
 /* ============ NAVBAR ============ */
 .navbar {
   position: sticky;
-  top: 0;
+  top: 38px;
   z-index: 100;
   background: rgba(255,255,255,0.96);
   backdrop-filter: blur(12px);
@@ -1110,10 +1112,7 @@ ul { list-style: none; }
 }
 
 /* === NUCLEAR MOBILE GAP FIX === */
-.navbar { line-height: 0; }
-.topbar + .navbar { margin-top: -1px; }
-.hero { margin-top: -1px; }
+
 /* Top line fix */
 html { border-top: none !important; outline: none; }
 
-.topbar { padding-top: calc(10px + env(safe-area-inset-top, 0px)); }
