@@ -1,5 +1,7 @@
-﻿*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-html, body { margin: 0 !important; padding: 0 !important; border: none !important; }
+﻿
+html { margin: 0 !important; padding: 0 !important; }
+body { margin: 0 !important; padding: 0 !important; }
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
 /* ============================================
    Grace Fellowship Law Firm
@@ -27,7 +29,7 @@ html, body { margin: 0 !important; padding: 0 !important; border: none !importan
   --transition: all .35s cubic-bezier(.25,.46,.45,.94);
 }
 
-html { scroll-behavior: smooth; scroll-padding-top: 80px; margin: 0; padding: 0; background: var(--green-deep); }
+html { scroll-behavior: smooth; scroll-padding-top: 0; margin: 0; padding: 0; }
 
 body { margin: 0; padding: 0; border: 0;
   font-family: 'Source Sans 3', 'Segoe UI', sans-serif;
@@ -74,7 +76,7 @@ ul { list-style: none; }
 .navbar {
   position: sticky;
   top: 0;
-  z-index: 100;
+  z-index: 100; box-shadow: 0 -2px 0 0 var(--green-deep);
   background: rgba(255,255,255,0.96);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
@@ -995,8 +997,8 @@ ul { list-style: none; }
 }
 
 @media (max-width: 768px) {
-  .topbar-inner { justify-content: center; text-align: center; flex-direction: column; gap: 4px; }
-  .topbar span:last-child { display: none; }
+  
+  
   .hamburger { display: block; }
   .nav-links {
     position: fixed;
