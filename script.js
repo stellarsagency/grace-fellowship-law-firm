@@ -40,29 +40,39 @@ document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 document.getElementById('year').textContent = new Date().getFullYear();
 
 // Counter animation
+function animateCounter(el) {
+  const target = parseInt(el.getAttribute('data-count'));
+  if (!target) return;
+  const suffix = el.getAttribute('data-suffix') || '';
+  const duration = 1800;
+  const startTime = performance.now();
+  function update(currentTime) {
+    const elapsed = currentTime - startTime;
+    const progress = Math.min(elapsed / duration, 1);
+    const eased = 1 - Math.pow(1 - progress, 3);
+    el.textContent = Math.floor(eased * target) + suffix;
+    if (progress < 1) requestAnimationFrame(update);
+    else el.textContent = target + suffix;
+  }
+  requestAnimationFrame(update);
+}
 const counterObserver = new IntersectionObserver(entries => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
-      const el = entry.target;
-      const target = parseInt(el.getAttribute('data-count'));
-      if (!target) return;
-      const suffix = el.getAttribute('data-suffix') || '';
-      const duration = 1800;
-      const startTime = performance.now();
-      function update(currentTime) {
-        const elapsed = currentTime - startTime;
-        const progress = Math.min(elapsed / duration, 1);
-        const eased = 1 - Math.pow(1 - progress, 3);
-        el.textContent = Math.floor(eased * target) + suffix;
-        if (progress < 1) requestAnimationFrame(update);
-        else el.textContent = target + suffix;
-      }
-      requestAnimationFrame(update);
-      counterObserver.unobserve(el);
+      animateCounter(entry.target);
+      counterObserver.unobserve(entry.target);
     }
   });
-}, { threshold: 0.5 });
-document.querySelectorAll('.stat-num[data-count]').forEach(el => counterObserver.observe(el));
+}, { threshold: 0.3 });
+document.querySelectorAll('.stat-num[data-count]').forEach(el => {
+  counterObserver.observe(el);
+  // Fallback: if already visible on load, animate immediately
+  const rect = el.getBoundingClientRect();
+  if (rect.top < window.innerHeight && rect.bottom > 0) {
+    setTimeout(() => animateCounter(el), 600);
+    counterObserver.unobserve(el);
+  }
+});
 
 // Contact form (demo handler)
 function handleSubmit(event) {
