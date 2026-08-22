@@ -1114,3 +1114,13 @@ ul { list-style: none; }
 .topbar, .navbar { line-height: 0; }
 .topbar + .navbar { margin-top: -1px; }
 .hero { margin-top: -1px; }
+/* Top line fix */
+html { border-top: none !important; outline: none; }
+body::before {
+  content: '';
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: var(--green-deep);
+  z-index: 9999;
+}
