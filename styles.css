@@ -1109,3 +1109,8 @@ ul { list-style: none; }
   0% { transform: rotate(-2deg); }
   100% { transform: rotate(2deg); }
 }
+
+/* === NUCLEAR MOBILE GAP FIX === */
+.topbar, .navbar { line-height: 0; }
+.topbar + .navbar { margin-top: -1px; }
+.hero { margin-top: -1px; }
