@@ -1,4 +1,7 @@
-﻿/* ============================================
+﻿*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html, body { margin: 0 !important; padding: 0 !important; border: none !important; }
+
+/* ============================================
    Grace Fellowship Law Firm
    Pakistani Professional Theme — Emerald & Gold
    ============================================ */
@@ -24,7 +27,7 @@
   --transition: all .35s cubic-bezier(.25,.46,.45,.94);
 }
 
-*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
 html { scroll-behavior: smooth; scroll-padding-top: 80px; margin: 0; padding: 0; }
 
 body { margin: 0; padding: 0; border: 0;
@@ -54,7 +57,7 @@ ul { list-style: none; }
   font-size: 0.78rem;
   letter-spacing: 0.08em;
   padding: 10px 0;
-  border-bottom: 1px solid rgba(212,168,67,0.15);
+  border-bottom: none;
 }
 .topbar-inner {
   display: flex;
@@ -73,7 +76,7 @@ ul { list-style: none; }
   background: rgba(255,255,255,0.96);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border-bottom: 1px solid rgba(10,77,56,0.08);
+  border-bottom: none;
   transition: var(--transition);
 }
 .navbar.scrolled { box-shadow: var(--shadow); background: rgba(255,255,255,0.98); }
