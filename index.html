@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Grace Fellowship Law Firm | Bringing Justice Within Reach</title>
+<meta name="description" content="Grace Fellowship Law Firm is a community-focused legal aid initiative of Grace Bible Fellowship Church, providing free and subsidized legal aid, counselling and rights awareness across Pakistan.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800&family=Source+Sans+3:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- Top Bar -->
+<div class="topbar">
+  <div class="container topbar-inner">
+    <span>⚖️ Justice • Legal Aid • Counselling • Awareness • Human Dignity</span>
+    <span>A Project of Grace Bible Fellowship Church Pakistan</span>
+  </div>
+</div>
+
+<!-- Navigation -->
+<header class="navbar" id="navbar">
+  <div class="container nav-inner">
+    <a href="#home" class="brand">
+      <div class="brand-mark">⚖</div>
+      <div class="brand-text">
+        <strong>Grace Fellowship</strong>
+        <span>Law Firm</span>
+      </div>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#services">What We Do</a>
+      <a href="#commitment">Our Values</a>
+      <a href="#leadership">Leadership</a>
+      <a href="#impact">Impact</a>
+      <a href="#contact" class="btn btn-gold btn-sm">Get Help</a>
+    </nav>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- Hero -->
+<section class="hero" id="home">
+  <div class="hero-overlay"></div>
+  <div class="hero-left-ornament"></div>
+  <div class="hero-pak-flag">
+    <svg viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="flagGreen" x1="0" y1="0" x2="1" y2="0.3">
+          <stop offset="0%" stop-color="#01411C"/>
+          <stop offset="50%" stop-color="#006a2e"/>
+          <stop offset="100%" stop-color="#01411C"/>
+        </linearGradient>
+        <filter id="flagShadow">
+          <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000" flood-opacity="0.3"/>
+        </filter>
+      </defs>
+      <!-- Flag pole -->
+      <rect x="8" y="0" width="6" height="400" rx="3" fill="url(#poleGrad)"/>
+      <defs>
+        <linearGradient id="poleGrad" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0%" stop-color="#888"/>
+          <stop offset="40%" stop-color="#ddd"/>
+          <stop offset="100%" stop-color="#888"/>
+        </linearGradient>
+      </defs>
+      <circle cx="11" cy="8" r="8" fill="#d4a843" stroke="#b8942a" stroke-width="1.5"/>
+      <!-- Waving flag body -->
+      <path d="M14,20 Q80,10 160,30 Q240,50 320,25 Q400,0 480,35 Q540,55 560,30 L560,300 Q480,330 400,310 Q320,285 240,320 Q160,345 80,325 Q40,318 14,330 Z" fill="url(#flagGreen)" filter="url(#flagShadow)" opacity="0.92"/>
+      <!-- White stripe -->
+      <path d="M14,20 Q80,10 100,16 L100,325 Q80,318 14,330 Z" fill="#ffffff" opacity="0.85"/>
+      <!-- Crescent -->
+      <circle cx="350" cy="165" r="52" fill="#ffffff" opacity="0.9"/>
+      <circle cx="368" cy="158" r="44" fill="url(#flagGreen)"/>
+      <!-- Star -->
+      <polygon points="400,130 408,152 432,152 413,166 420,188 400,174 380,188 387,166 368,152 392,152" fill="#ffffff" opacity="0.9"/>
+    </svg>
+  </div>
+  <div class="hero-3d-scale">
+    <svg viewBox="0 0 400 420" xmlns="http://www.w3.org/2000/svg">
+      <!-- Pillar base -->
+      <rect x="185" y="370" width="30" height="30" rx="3" fill="#b8942a"/>
+      <rect x="170" y="395" width="60" height="12" rx="4" fill="#d4a843"/>
+      <rect x="160" y="403" width="80" height="8" rx="3" fill="#b8942a"/>
+      <!-- Pillar -->
+      <rect x="195" y="100" width="10" height="275" fill="url(#pillarGrad)"/>
+      <!-- Top ornament -->
+      <circle cx="200" cy="95" r="14" fill="#d4a843" stroke="#b8942a" stroke-width="2"/>
+      <circle cx="200" cy="95" r="8" fill="#edc96a"/>
+      <!-- Balance beam -->
+      <g class="scale-beam" style="transform-origin:200px 110px">
+        <rect x="60" y="107" width="280" height="6" rx="3" fill="url(#beamGrad)"/>
+        <!-- Left chain -->
+        <line x1="80" y1="110" x2="80" y2="110" stroke="#d4a843" stroke-width="2"/>
+        <rect x="65" y="113" width="30" height="2" fill="#d4a843"/>
+        <line x1="70" y1="115" x2="50" y2="185" stroke="#d4a843" stroke-width="2"/>
+        <line x1="90" y1="115" x2="110" y2="185" stroke="#d4a843" stroke-width="2"/>
+        <!-- Left pan -->
+        <ellipse cx="80" cy="190" rx="55" ry="10" fill="#d4a843" stroke="#b8942a" stroke-width="1.5"/>
+        <path d="M25,190 Q80,230 135,190" fill="none" stroke="#d4a843" stroke-width="2"/>
+        <path d="M25,190 Q80,210 135,190" fill="url(#panGrad)" opacity="0.3"/>
+        <!-- Right chain -->
+        <rect x="305" y="113" width="30" height="2" fill="#d4a843"/>
+        <line x1="310" y1="115" x2="290" y2="185" stroke="#d4a843" stroke-width="2"/>
+        <line x1="330" y1="115" x2="350" y2="185" stroke="#d4a843" stroke-width="2"/>
+        <!-- Right pan -->
+        <ellipse cx="320" cy="190" rx="55" ry="10" fill="#d4a843" stroke="#b8942a" stroke-width="1.5"/>
+        <path d="M265,190 Q320,230 375,190" fill="none" stroke="#d4a843" stroke-width="2"/>
+        <path d="M265,190 Q320,210 375,190" fill="url(#panGrad)" opacity="0.3"/>
+      </g>
+      <!-- Gradients -->
+      <defs>
+        <linearGradient id="pillarGrad" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0%" stop-color="#b8942a"/>
+          <stop offset="50%" stop-color="#edc96a"/>
+          <stop offset="100%" stop-color="#b8942a"/>
+        </linearGradient>
+        <linearGradient id="beamGrad" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0%" stop-color="#c9952e"/>
+          <stop offset="50%" stop-color="#edc96a"/>
+          <stop offset="100%" stop-color="#c9952e"/>
+        </linearGradient>
+        <linearGradient id="panGrad" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="transparent"/>
+          <stop offset="100%" stop-color="#d4a843"/>
+        </linearGradient>
+      </defs>
+    </svg>
+  </div>
+  <div class="container hero-content">
+    <p class="hero-eyebrow">Committed to Believe in Excellence</p>
+    <h1>Bringing Justice<br><em>Within Reach</em></h1>
+    <p class="hero-sub">No deserving person should be denied access to justice because they cannot afford a lawyer.</p>
+    <div class="hero-actions">
+      <a href="#contact" class="btn btn-gold">Request Legal Assistance</a>
+      <a href="#leadership" class="btn btn-outline">Meet Our Chairman</a>
+    </div>
+    <div class="hero-tags">
+      <span>Free &amp; Subsidized Legal Aid</span>
+      <span>Counselling</span>
+      <span>Rights Awareness</span>
+      <span>Nationwide Outreach</span>
+    </div>
+  </div>
+</section>
+
+<!-- Impact Strip -->
+<section class="stats-strip">
+  <div class="container stats-grid">
+    <div class="stat"><span class="stat-num" data-count="3">0</span><span class="stat-plus">+</span><p>Years of Service</p></div>
+    <div class="stat"><span class="stat-num">2023</span><p>Formally Registered</p></div>
+    <div class="stat"><span class="stat-num">100%</span><p>Free &amp; Subsidized Support</p></div>
+    <div class="stat"><span class="stat-word">Nationwide</span><p>Outreach Across Pakistan</p></div>
+  </div>
+</section>
+
+<!-- Leadership -->
+<section class="section section-alt" id="leadership">
+  <div class="container">
+    <div class="section-head reveal">
+      <p class="section-eyebrow">Our Leadership</p>
+      <h2 class="section-title">Guided by Experience &amp; Service</h2>
+    </div>
+    <div class="team-grid team-grid-single">
+
+      <article class="team-card team-card-featured reveal">
+        <div class="team-photo" data-initials="PC">
+          <img src="images/chairman.jpg" alt="Mr. Peter Charles Sahotra — Chairman, Grace Fellowship Law Firm"
+               onerror="this.parentElement.classList.add('no-img'); this.remove();">
+          <span class="photo-frame"></span>
+        </div>
+        <div class="team-card-body">
+          <span class="team-badge">Chairman GFLF</span>
+          <h3>Peter Charles Sahotra</h3>
+          <p class="team-role">Chairman</p>
+          <p>Provides leadership and strategic direction with a focus on expanding access to justice, strengthening community awareness and developing sustainable legal aid services for deserving families across Pakistan.</p>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- About -->
+<section class="section" id="about">
+  <div class="container about-grid">
+    <div class="about-text reveal">
+      <p class="section-eyebrow">Who We Are</p>
+      <h2 class="section-title">Grace Fellowship Law Firm</h2>
+      <p class="lead">A community-focused legal aid initiative of <strong>Grace Bible Fellowship Church</strong>, established to support individuals and families who face injustice but cannot afford the cost of professional legal representation.</p>
+      <p>The work began in <strong>2022</strong> and the organization was formally registered in <strong>June 2023</strong>. For more than three years, the Law Firm has been serving deserving individuals and families across Pakistan through legal assistance, counselling, rights awareness and community support.</p>
+      <blockquote>"No deserving person should be denied access to justice because they cannot afford a lawyer."</blockquote>
+    </div>
+    <div class="about-cards">
+      <div class="info-card reveal">
+        <div class="info-icon">🎯</div>
+        <h3>Our Mission</h3>
+        <p>To provide accessible legal and social support to vulnerable individuals, families and communities — regardless of their ability to pay.</p>
+      </div>
+      <div class="info-card reveal">
+        <div class="info-icon">🌅</div>
+        <h3>Our Vision</h3>
+        <p>Justice within reach of everyone — a Pakistan where every person can seek justice, understand their rights and receive appropriate guidance.</p>
+      </div>
+      <div class="info-card reveal">
+        <div class="info-icon">📖</div>
+        <h3>Our Story</h3>
+        <p>Begun in 2022 as an initiative of Grace Bible Fellowship Church, formally registered in June 2023, and continually expanding its legal aid, counselling and awareness work.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Mission List -->
+<section class="section section-alt">
+  <div class="container split-grid">
+    <div class="reveal">
+      <p class="section-eyebrow">What Drives Us</p>
+      <h2 class="section-title">We Work To…</h2>
+      <p>Every activity of the Law Firm flows from one conviction: justice must never become inaccessible simply because someone is poor.</p>
+    </div>
+    <ul class="check-list reveal">
+      <li>Provide free or subsidized legal assistance to deserving people</li>
+      <li>Support victims of injustice and human rights violations</li>
+      <li>Help families understand their legal rights and available remedies</li>
+      <li>Provide counselling for social and family-related problems</li>
+      <li>Conduct legal and social rights awareness programs</li>
+      <li>Connect vulnerable people with qualified legal professionals</li>
+      <li>Advocate for dignity, equality and justice</li>
+      <li>Strengthen communities through education and awareness</li>
+    </ul>
+  </div>
+</section>
+
+<!-- Services -->
+<section class="section" id="services">
+  <div class="container">
+    <div class="section-head reveal">
+      <p class="section-eyebrow">Our Services</p>
+      <h2 class="section-title">What We Do</h2>
+      <p class="section-sub">Five pillars of service, delivered with professionalism and compassion.</p>
+    </div>
+    <div class="cards-grid">
+
+      <article class="service-card reveal">
+        <div class="service-num">01</div>
+        <div class="service-icon">🛡️</div>
+        <h3>Free &amp; Affordable Legal Aid</h3>
+        <p>We assist deserving individuals who cannot afford professional legal services. Depending on circumstances and resources, support may include:</p>
+        <ul>
+          <li>Initial legal consultation &amp; case assessment</li>
+          <li>Legal guidance &amp; understanding procedures</li>
+          <li>Referral to appropriate advocates</li>
+          <li>Legal representation for qualifying cases</li>
+        </ul>
+      </article>
+
+      <article class="service-card reveal">
+        <div class="service-num">02</div>
+        <div class="service-icon">⚖️</div>
+        <h3>Human Rights &amp; Justice</h3>
+        <p>We support people facing injustice and promote respect for fundamental rights — particularly individuals and families disadvantaged by poverty, social vulnerability or lack of awareness.</p>
+      </article>
+
+      <article class="service-card reveal">
+        <div class="service-num">03</div>
+        <div class="service-icon">💬</div>
+        <h3>Counselling Services</h3>
+        <p>Many legal problems are connected with deeper social and family challenges. We provide guidance for:</p>
+        <ul>
+          <li>Family disputes &amp; domestic conflicts</li>
+          <li>Child and family welfare concerns</li>
+          <li>Community disputes &amp; social pressure</li>
+          <li>Referral to appropriate professionals where needed</li>
+        </ul>
+      </article>
+
+      <article class="service-card reveal">
+        <div class="service-num">04</div>
+        <div class="service-icon">📢</div>
+        <h3>Legal Rights Awareness</h3>
+        <p>Prevention through education. Our awareness activities help communities understand basic legal and human rights, constitutional protections, legal procedures and how to seek lawful assistance.</p>
+      </article>
+
+      <article class="service-card reveal">
+        <div class="service-num">05</div>
+        <div class="service-icon">🤝</div>
+        <h3>Community Outreach</h3>
+        <p>We work beyond the courtroom — through community meetings, awareness campaigns, church networks and outreach programs — reaching people who otherwise have no access to legal information.</p>
+      </article>
+
+      <article class="service-card reveal">
+        <div class="service-num">06</div>
+        <div class="service-icon">📋</div>
+        <h3>Areas of Work</h3>
+        <p>Our activities may include matters involving human rights, family and civil matters, criminal matters, labour concerns, property disputes, legal documentation and the rights of vulnerable people — subject to professional assessment.</p>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- Who We Serve -->
+<section class="section cta-band">
+  <div class="container cta-inner reveal">
+    <div>
+      <h2>Serving Those Who Cannot Afford Justice</h2>
+      <p>For a low-income family, even an initial consultation can become a barrier. Grace Fellowship Law Firm seeks to bridge that gap. Cases are assessed individually and assistance is provided according to circumstances, available resources and professional legal considerations.</p>
+    </div>
+    <ul class="cta-list">
+      <li>Have genuine legal needs</li>
+      <li>Face injustice or exploitation</li>
+      <li>Cannot afford professional legal fees</li>
+      <li>Need guidance on their legal options</li>
+      <li>Require help navigating the justice system</li>
+    </ul>
+  </div>
+</section>
+
+<!-- Commitment / Values -->
+<section class="section" id="commitment">
+  <div class="container">
+    <div class="section-head reveal">
+      <p class="section-eyebrow">Our Commitment</p>
+      <h2 class="section-title">Values That Guide Every Case</h2>
+    </div>
+    <div class="values-grid">
+      <div class="value-card reveal"><h3>Integrity</h3><p>We serve responsibly and professionally.</p></div>
+      <div class="value-card reveal"><h3>Confidentiality</h3><p>We respect the privacy and dignity of everyone who approaches us.</p></div>
+      <div class="value-card reveal"><h3>Compassion</h3><p>We recognize the human circumstances behind every legal problem.</p></div>
+      <div class="value-card reveal"><h3>Professionalism</h3><p>Legal matters are addressed with appropriate professional guidance.</p></div>
+      <div class="value-card reveal"><h3>Justice</h3><p>We support lawful remedies and equal access to justice.</p></div>
+      <div class="value-card reveal"><h3>Awareness</h3><p>Informed citizens are better equipped to protect their rights.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- Church Relationship + Message -->
+<section class="section">
+  <div class="container split-grid">
+    <div class="reveal">
+      <p class="section-eyebrow">Our Foundation</p>
+      <h2 class="section-title">A Project of Grace Bible Fellowship Church</h2>
+      <p>Grace Fellowship Law Firm is a project of Grace Bible Fellowship Church, established to extend the Church's community service mission into legal aid, justice, counselling and rights awareness.</p>
+      <p>The Law Firm operates with a commitment to serving people <strong>regardless of their ability to pay</strong>. Our approach combines professional legal assistance with compassionate community support.</p>
+    </div>
+    <div class="message-box reveal">
+      <h3>Our Message</h3>
+      <p class="message-quote">Know Your Rights.<br>Seek Justice.<br>Protect Your Dignity.</p>
+      <p>We believe justice should never become inaccessible simply because someone is poor. We stand with deserving individuals and families who need guidance, legal assistance and a voice.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Impact -->
+<section class="section section-dark" id="impact">
+  <div class="container">
+    <div class="section-head reveal light">
+      <p class="section-eyebrow">Our Impact</p>
+      <h2 class="section-title">Three Years of Serving Communities</h2>
+      <p class="section-sub">Since beginning our work in 2022, we have supported numerous deserving individuals and families across Pakistan.</p>
+    </div>
+    <div class="impact-grid">
+      <div class="impact-card reveal"><span class="impact-big">2022</span><p>Began community service work as an initiative of Grace Bible Fellowship Church.</p></div>
+      <div class="impact-card reveal"><span class="impact-big">2023</span><p>Formal registration of Grace Fellowship Law Firm.</p></div>
+      <div class="impact-card reveal"><span class="impact-big">3+ Years</span><p>Serving communities through legal aid and social support.</p></div>
+      <div class="impact-card reveal"><span class="impact-big">Nationwide</span><p>Legal and social rights awareness initiatives across Pakistan.</p></div>
+      <div class="impact-card reveal"><span class="impact-big">Free Support</span><p>Subsidized assistance for deserving people who cannot afford legal services.</p></div>
+      <div class="impact-card reveal"><span class="impact-big">Counselling</span><p>Ongoing support for individuals and families facing social challenges.</p></div>
+    </div>
+    <div class="vision-note reveal">
+      <h3>Legal Awareness Across Pakistan</h3>
+      <p>Our long-term goal is a nationwide network of legal and social awareness initiatives — through churches, community organizations, educational activities and public awareness programs — so that communities know they have rights and that lawful remedies are available when those rights are violated.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Contact -->
+<section class="section" id="contact">
+  <div class="container contact-grid">
+    <div class="reveal">
+      <p class="section-eyebrow">Get In Touch</p>
+      <h2 class="section-title">Request Assistance or Learn More</h2>
+      <p>If you or someone you know needs legal guidance, counselling or rights awareness support, please reach out. Every case is assessed individually and confidentially.</p>
+      <div class="contact-info">
+        <div class="contact-item"><span class="ci-icon">📍</span><div><strong>Location</strong><p>Serving communities across Pakistan</p></div></div>
+        <div class="contact-item"><span class="ci-icon">⛪</span><div><strong>Parent Organization</strong><p>Grace Bible Fellowship Church Pakistan</p></div></div>
+        <div class="contact-item"><span class="ci-icon">🕘</span><div><strong>Registered</strong><p>Formally registered June 2023</p></div></div>
+      </div>
+    </div>
+    <form class="contact-form reveal" onsubmit="handleSubmit(event)">
+      <h3>Send Us a Message</h3>
+      <label>Full Name
+        <input type="text" name="name" required placeholder="Your name">
+      </label>
+      <label>Phone / Email
+        <input type="text" name="contact" required placeholder="How can we reach you?">
+      </label>
+      <label>Nature of Your Concern
+        <select name="topic">
+          <option>Legal Aid Request</option>
+          <option>Human Rights Concern</option>
+          <option>Family / Social Counselling</option>
+          <option>Rights Awareness Program</option>
+          <option>Other</option>
+        </select>
+      </label>
+      <label>Your Message
+        <textarea name="message" rows="4" required placeholder="Briefly describe your situation…"></textarea>
+      </label>
+      <button type="submit" class="btn btn-navy btn-block">Submit Request</button>
+      <p class="form-note" id="formNote">Your information will be treated with strict confidentiality.</p>
+    </form>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container footer-grid">
+    <div>
+      <div class="brand brand-light">
+        <div class="brand-mark">⚖</div>
+        <div class="brand-text"><strong>Grace Fellowship</strong><span>Law Firm</span></div>
+      </div>
+      <p class="footer-tag">Committed to Believe in Excellence.</p>
+      <p>A community-focused legal aid initiative serving deserving individuals and families across Pakistan since 2022.</p>
+    </div>
+    <div>
+      <h4>Quick Links</h4>
+      <a href="#about">About Us</a>
+      <a href="#services">What We Do</a>
+      <a href="#commitment">Our Values</a>
+      <a href="#leadership">Leadership</a>
+      <a href="#impact">Our Impact</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <div>
+      <h4>Our Services</h4>
+      <a href="#services">Free Legal Aid</a>
+      <a href="#services">Human Rights &amp; Justice</a>
+      <a href="#services">Counselling Services</a>
+      <a href="#services">Rights Awareness</a>
+      <a href="#services">Community Outreach</a>
+    </div>
+    <div>
+      <h4>Our Motto</h4>
+      <p class="footer-motto">Justice • Legal Aid • Counselling • Awareness • Human Dignity</p>
+      <p class="footer-church">A Project of<br><strong>Grace Bible Fellowship Church Pakistan</strong></p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container">
+      <p>© <span id="year"></span> Grace Fellowship Law Firm. All Rights Reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<button id="toTop" aria-label="Back to top">↑</button>
+
+<script src="script.js"></script>
+</body>
+</html>
