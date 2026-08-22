@@ -1006,8 +1006,8 @@ ul { list-style: none; }
   .hero-actions .btn { width: 100%; max-width: 280px; text-align: center; }
   .hero-tags { gap: 8px; }
   .hero-tags span { padding: 6px 14px; font-size: 0.72rem; }
-  .hero-pak-flag { left: -10%; width: 160px; opacity: 0.15; top: 60%; }
-  .hero-3d-scale { right: -12%; top: 8%; width: 140px; opacity: 0.15; }
+  .hero-pak-flag { left: 0%; width: 150px; opacity: 0.22; top: 10%; }
+  .hero-3d-scale { right: 0%; top: 8%; width: 130px; opacity: 0.20; }
   .section { padding: 56px 0; }
   .section-title { font-size: clamp(1.5rem, 4vw, 2rem); }
   .cards-grid { grid-template-columns: 1fr; }
@@ -1053,8 +1053,8 @@ ul { list-style: none; }
   .hero-eyebrow { font-size: 0.7rem; letter-spacing: 0.25em; }
   .hero-tags { flex-direction: column; align-items: center; }
   .hero-tags span { width: 100%; max-width: 260px; text-align: center; }
-  .hero-pak-flag { left: -12%; width: 120px; opacity: 0.12; top: 55%; }
-  .hero-3d-scale { right: -14%; top: 10%; width: 110px; opacity: 0.12; }
+  .hero-pak-flag { left: 2%; width: 120px; opacity: 0.25; top: 10%; }
+  .hero-3d-scale { right: 2%; top: 8%; width: 110px; opacity: 0.20; }
   .stats-grid { grid-template-columns: 1fr 1fr; gap: 12px; }
   .stat-num, .stat-word { font-size: 1.5rem; }
   .section-title { font-size: 1.4rem; }
