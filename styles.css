@@ -960,7 +960,7 @@ ul { list-style: none; }
   25% { transform: translateY(-50%) perspective(500px) rotateY(3deg) skewY(-1deg); }
   75% { transform: translateY(-50%) perspective(500px) rotateY(-2deg) skewY(1deg); }
 }
-@media (max-width: 768px) { .hero-pak-flag { display: none; } }
+
 
 @media (max-width: 768px) {
   body { margin: 0; padding: 0; border: 0; margin: 0; padding: 0; }
