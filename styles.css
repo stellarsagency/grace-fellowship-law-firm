@@ -1116,11 +1116,5 @@ ul { list-style: none; }
 .hero { margin-top: -1px; }
 /* Top line fix */
 html { border-top: none !important; outline: none; }
-body::before {
-  content: '';
-  position: fixed;
-  top: 0; left: 0; right: 0;
-  height: 3px;
-  background: var(--green-deep);
-  z-index: 9999;
-}
+
+.topbar { padding-top: calc(10px + env(safe-area-inset-top, 0px)); }
