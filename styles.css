@@ -28,7 +28,7 @@ html, body { margin: 0 !important; padding: 0 !important; border: none !importan
 }
 
 
-html { scroll-behavior: smooth; scroll-padding-top: 80px; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; scroll-padding-top: 80px; margin: 0; padding: 0; background: #041f17; }
 
 body { margin: 0; padding: 0; border: 0;
   font-family: 'Source Sans 3', 'Segoe UI', sans-serif;
@@ -1117,4 +1117,5 @@ ul { list-style: none; }
 /* Top line fix */
 html { border-top: none !important; outline: none; }
 
+.topbar { padding-top: calc(10px + env(safe-area-inset-top, 0px)); }
 .topbar { padding-top: calc(10px + env(safe-area-inset-top, 0px)); }
