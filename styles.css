@@ -189,7 +189,6 @@ ul { list-style: none; }
   display: flex;
   align-items: center;
   background: linear-gradient(160deg, var(--green-deep) 0%, var(--green-dark) 40%, var(--green) 100%);
-  overflow: hidden;
 }
 .hero::before {
   content: '';
