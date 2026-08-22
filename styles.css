@@ -73,7 +73,7 @@ ul { list-style: none; }
 /* ============ NAVBAR ============ */
 .navbar {
   position: sticky;
-  top: 38px;
+  top: 0;
   z-index: 100;
   background: rgba(255,255,255,0.96);
   backdrop-filter: blur(12px);
