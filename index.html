@@ -39,93 +39,9 @@
 
 <!-- Hero -->
 <section class="hero" id="home">
+  <div class="hero-bg-pattern"></div>
   <div class="hero-overlay"></div>
-  <div class="hero-left-ornament"></div>
-  <div class="hero-pak-flag">
-    <svg viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <linearGradient id="flagGreen" x1="0" y1="0" x2="1" y2="0.3">
-          <stop offset="0%" stop-color="#01411C"/>
-          <stop offset="50%" stop-color="#006a2e"/>
-          <stop offset="100%" stop-color="#01411C"/>
-        </linearGradient>
-        <filter id="flagShadow">
-          <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000" flood-opacity="0.3"/>
-        </filter>
-      </defs>
-      <!-- Flag pole -->
-      <rect x="8" y="0" width="6" height="400" rx="3" fill="url(#poleGrad)"/>
-      <defs>
-        <linearGradient id="poleGrad" x1="0" y1="0" x2="1" y2="0">
-          <stop offset="0%" stop-color="#888"/>
-          <stop offset="40%" stop-color="#ddd"/>
-          <stop offset="100%" stop-color="#888"/>
-        </linearGradient>
-      </defs>
-      <circle cx="11" cy="8" r="8" fill="#d4a843" stroke="#b8942a" stroke-width="1.5"/>
-      <!-- Waving flag body -->
-      <path d="M14,20 Q80,10 160,30 Q240,50 320,25 Q400,0 480,35 Q540,55 560,30 L560,300 Q480,330 400,310 Q320,285 240,320 Q160,345 80,325 Q40,318 14,330 Z" fill="url(#flagGreen)" filter="url(#flagShadow)" opacity="0.92"/>
-      <!-- White stripe -->
-      <path d="M14,20 Q80,10 100,16 L100,325 Q80,318 14,330 Z" fill="#ffffff" opacity="0.85"/>
-      <!-- Crescent -->
-      <circle cx="350" cy="165" r="52" fill="#ffffff" opacity="0.9"/>
-      <circle cx="368" cy="158" r="44" fill="url(#flagGreen)"/>
-      <!-- Star -->
-      <polygon points="400,130 408,152 432,152 413,166 420,188 400,174 380,188 387,166 368,152 392,152" fill="#ffffff" opacity="0.9"/>
-    </svg>
-  </div>
-  <div class="hero-3d-scale">
-    <svg viewBox="0 0 400 420" xmlns="http://www.w3.org/2000/svg">
-      <!-- Pillar base -->
-      <rect x="185" y="370" width="30" height="30" rx="3" fill="#b8942a"/>
-      <rect x="170" y="395" width="60" height="12" rx="4" fill="#d4a843"/>
-      <rect x="160" y="403" width="80" height="8" rx="3" fill="#b8942a"/>
-      <!-- Pillar -->
-      <rect x="195" y="100" width="10" height="275" fill="url(#pillarGrad)"/>
-      <!-- Top ornament -->
-      <circle cx="200" cy="95" r="14" fill="#d4a843" stroke="#b8942a" stroke-width="2"/>
-      <circle cx="200" cy="95" r="8" fill="#edc96a"/>
-      <!-- Balance beam -->
-      <g class="scale-beam" style="transform-origin:200px 110px">
-        <rect x="60" y="107" width="280" height="6" rx="3" fill="url(#beamGrad)"/>
-        <!-- Left chain -->
-        <line x1="80" y1="110" x2="80" y2="110" stroke="#d4a843" stroke-width="2"/>
-        <rect x="65" y="113" width="30" height="2" fill="#d4a843"/>
-        <line x1="70" y1="115" x2="50" y2="185" stroke="#d4a843" stroke-width="2"/>
-        <line x1="90" y1="115" x2="110" y2="185" stroke="#d4a843" stroke-width="2"/>
-        <!-- Left pan -->
-        <ellipse cx="80" cy="190" rx="55" ry="10" fill="#d4a843" stroke="#b8942a" stroke-width="1.5"/>
-        <path d="M25,190 Q80,230 135,190" fill="none" stroke="#d4a843" stroke-width="2"/>
-        <path d="M25,190 Q80,210 135,190" fill="url(#panGrad)" opacity="0.3"/>
-        <!-- Right chain -->
-        <rect x="305" y="113" width="30" height="2" fill="#d4a843"/>
-        <line x1="310" y1="115" x2="290" y2="185" stroke="#d4a843" stroke-width="2"/>
-        <line x1="330" y1="115" x2="350" y2="185" stroke="#d4a843" stroke-width="2"/>
-        <!-- Right pan -->
-        <ellipse cx="320" cy="190" rx="55" ry="10" fill="#d4a843" stroke="#b8942a" stroke-width="1.5"/>
-        <path d="M265,190 Q320,230 375,190" fill="none" stroke="#d4a843" stroke-width="2"/>
-        <path d="M265,190 Q320,210 375,190" fill="url(#panGrad)" opacity="0.3"/>
-      </g>
-      <!-- Gradients -->
-      <defs>
-        <linearGradient id="pillarGrad" x1="0" y1="0" x2="1" y2="0">
-          <stop offset="0%" stop-color="#b8942a"/>
-          <stop offset="50%" stop-color="#edc96a"/>
-          <stop offset="100%" stop-color="#b8942a"/>
-        </linearGradient>
-        <linearGradient id="beamGrad" x1="0" y1="0" x2="1" y2="0">
-          <stop offset="0%" stop-color="#c9952e"/>
-          <stop offset="50%" stop-color="#edc96a"/>
-          <stop offset="100%" stop-color="#c9952e"/>
-        </linearGradient>
-        <linearGradient id="panGrad" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0%" stop-color="transparent"/>
-          <stop offset="100%" stop-color="#d4a843"/>
-        </linearGradient>
-      </defs>
-    </svg>
-  </div>
-  <div class="container hero-content">
+  <div class="hero-content">
     <p class="hero-eyebrow">Committed to Believe in Excellence</p>
     <h1>Bringing Justice<br><em>Within Reach</em></h1>
     <p class="hero-sub">No deserving person should be denied access to justice because they cannot afford a lawyer.</p>
@@ -160,7 +76,6 @@
       <h2 class="section-title">Guided by Experience &amp; Service</h2>
     </div>
     <div class="team-grid team-grid-single">
-
       <article class="team-card team-card-featured reveal">
         <div class="team-photo" data-initials="PC">
           <img src="images/chairman.jpg" alt="Mr. Peter Charles Sahotra — Chairman, Grace Fellowship Law Firm"
@@ -174,7 +89,6 @@
           <p>Provides leadership and strategic direction with a focus on expanding access to justice, strengthening community awareness and developing sustainable legal aid services for deserving families across Pakistan.</p>
         </div>
       </article>
-
     </div>
   </div>
 </section>
@@ -188,6 +102,11 @@
       <p class="lead">A community-focused legal aid initiative of <strong>Grace Bible Fellowship Church</strong>, established to support individuals and families who face injustice but cannot afford the cost of professional legal representation.</p>
       <p>The work began in <strong>2022</strong> and the organization was formally registered in <strong>June 2023</strong>. For more than three years, the Law Firm has been serving deserving individuals and families across Pakistan through legal assistance, counselling, rights awareness and community support.</p>
       <blockquote>"No deserving person should be denied access to justice because they cannot afford a lawyer."</blockquote>
+      <!-- IMAGE PLACEHOLDER: Drop a photo of your office, team, or community work here -->
+      <!-- Save as: images/about-gflf.jpg -->
+      <div class="about-img-placeholder" style="margin-top:24px;">
+        <span>📷 Drop image here: <strong>images/about-gflf.jpg</strong><br>(Team photo, office, or community work)</span>
+      </div>
     </div>
     <div class="about-cards">
       <div class="info-card reveal">
@@ -239,12 +158,11 @@
       <p class="section-sub">Five pillars of service, delivered with professionalism and compassion.</p>
     </div>
     <div class="cards-grid">
-
       <article class="service-card reveal">
         <div class="service-num">01</div>
         <div class="service-icon">🛡️</div>
         <h3>Free &amp; Affordable Legal Aid</h3>
-        <p>We assist deserving individuals who cannot afford professional legal services. Depending on circumstances and resources, support may include:</p>
+        <p>We assist deserving individuals who cannot afford professional legal services.</p>
         <ul>
           <li>Initial legal consultation &amp; case assessment</li>
           <li>Legal guidance &amp; understanding procedures</li>
@@ -252,14 +170,12 @@
           <li>Legal representation for qualifying cases</li>
         </ul>
       </article>
-
       <article class="service-card reveal">
         <div class="service-num">02</div>
         <div class="service-icon">⚖️</div>
         <h3>Human Rights &amp; Justice</h3>
         <p>We support people facing injustice and promote respect for fundamental rights — particularly individuals and families disadvantaged by poverty, social vulnerability or lack of awareness.</p>
       </article>
-
       <article class="service-card reveal">
         <div class="service-num">03</div>
         <div class="service-icon">💬</div>
@@ -272,28 +188,24 @@
           <li>Referral to appropriate professionals where needed</li>
         </ul>
       </article>
-
       <article class="service-card reveal">
         <div class="service-num">04</div>
         <div class="service-icon">📢</div>
         <h3>Legal Rights Awareness</h3>
         <p>Prevention through education. Our awareness activities help communities understand basic legal and human rights, constitutional protections, legal procedures and how to seek lawful assistance.</p>
       </article>
-
       <article class="service-card reveal">
         <div class="service-num">05</div>
         <div class="service-icon">🤝</div>
         <h3>Community Outreach</h3>
         <p>We work beyond the courtroom — through community meetings, awareness campaigns, church networks and outreach programs — reaching people who otherwise have no access to legal information.</p>
       </article>
-
       <article class="service-card reveal">
         <div class="service-num">06</div>
         <div class="service-icon">📋</div>
         <h3>Areas of Work</h3>
         <p>Our activities may include matters involving human rights, family and civil matters, criminal matters, labour concerns, property disputes, legal documentation and the rights of vulnerable people — subject to professional assessment.</p>
       </article>
-
     </div>
   </div>
 </section>
@@ -334,7 +246,7 @@
 </section>
 
 <!-- Church Relationship + Message -->
-<section class="section">
+<section class="section section-alt">
   <div class="container split-grid">
     <div class="reveal">
       <p class="section-eyebrow">Our Foundation</p>
@@ -346,6 +258,27 @@
       <h3>Our Message</h3>
       <p class="message-quote">Know Your Rights.<br>Seek Justice.<br>Protect Your Dignity.</p>
       <p>We believe justice should never become inaccessible simply because someone is poor. We stand with deserving individuals and families who need guidance, legal assistance and a voice.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Gallery / Image Section -->
+<!-- IMAGE PLACEHOLDERS: Drop your photos here. The placeholders will disappear when images are added. -->
+<section class="section" id="gallery">
+  <div class="container">
+    <div class="section-head reveal">
+      <p class="section-eyebrow">Our Work</p>
+      <h2 class="section-title">Community Impact</h2>
+      <p class="section-sub">Moments from our legal aid, counselling and awareness activities across Pakistan.</p>
+    </div>
+    <div class="gallery-placeholder">
+      <!-- Save these images in the images/ folder to show them here -->
+      <div class="img-slot"><span>📷 images/gallery-1.jpg<br><small>Legal consultation</small></span></div>
+      <div class="img-slot"><span>📷 images/gallery-2.jpg<br><small>Community awareness</small></span></div>
+      <div class="img-slot"><span>📷 images/gallery-3.jpg<br><small>Counselling session</small></span></div>
+      <div class="img-slot"><span>📷 images/gallery-4.jpg<br><small>Team activity</small></span></div>
+      <div class="img-slot"><span>📷 images/gallery-5.jpg<br><small>Church outreach</small></span></div>
+      <div class="img-slot"><span>📷 images/gallery-6.jpg<br><small>Community support</small></span></div>
     </div>
   </div>
 </section>
@@ -406,7 +339,7 @@
       <label>Your Message
         <textarea name="message" rows="4" required placeholder="Briefly describe your situation…"></textarea>
       </label>
-      <button type="submit" class="btn btn-navy btn-block">Submit Request</button>
+      <button type="submit" class="btn btn-maroon btn-block">Submit Request</button>
       <p class="form-note" id="formNote">Your information will be treated with strict confidentiality.</p>
     </form>
   </div>
@@ -448,7 +381,7 @@
   </div>
   <div class="footer-bottom">
     <div class="container">
-      <p>© <span id="year"></span> Grace Fellowship Law Firm. All Rights Reserved.</p>
+      <p>&copy; <span id="year"></span> Grace Fellowship Law Firm. All Rights Reserved.</p>
     </div>
   </div>
 </footer>
