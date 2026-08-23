@@ -1,6 +1,7 @@
 (function(){
 'use strict';
-window.addEventListener('load',function(){var l=document.querySelector('.page-loader');if(l)setTimeout(function(){l.classList.add('loaded')},400)});
+function hideLoader(){var l=document.querySelector('.page-loader');if(l){l.classList.add('loaded');setTimeout(function(){l.style.display='none'},600)}}
+if(document.readyState==='complete')setTimeout(hideLoader,300);else{window.addEventListener('load',function(){setTimeout(hideLoader,300)});setTimeout(hideLoader,3000)}
 var nb=document.getElementById('navbar');
 if(nb)window.addEventListener('scroll',function(){nb.classList.toggle('scrolled',window.scrollY>60)},{passive:true});
 var hb=document.getElementById('hamburger'),nl=document.getElementById('navLinks');
