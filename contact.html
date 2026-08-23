@@ -1,221 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us | Grace Fellowship Law Firm</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Source+Sans+3:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,viewport-fit=cover">
+<title>Contact Us | Grace Fellowship Law Firm</title>
+<meta name="description" content="Reach out to Grace Fellowship Law Firm for free legal aid, counselling, and rights awareness support.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800&family=Source+Sans+3:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="loader" id="loader">
-        <div class="loader-content">
-            <div class="loader-icon">&sect;</div>
-            <div class="loader-bar"><div class="loader-progress"></div></div>
-        </div>
-    </div>
-
-    <nav class="navbar" id="navbar">
-        <div class="nav-container">
-            <a href="index.html" class="nav-logo">
-                <span class="logo-icon">&sect;</span>
-                <span class="logo-text">Grace Fellowship<br><small>Law Firm</small></span>
-            </a>
-            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
-                <span></span><span></span><span></span>
-            </button>
-            <ul class="nav-menu" id="navMenu">
-                <li><a href="index.html" class="nav-link">Home</a></li>
-                <li><a href="about.html" class="nav-link">About</a></li>
-                <li><a href="services.html" class="nav-link">Services</a></li>
-                <li><a href="gallery.html" class="nav-link">Media</a></li>
-                <li><a href="contact.html" class="nav-link btn-nav active">Get Help</a></li>
-            </ul>
-        </div>
+<div class="page-loader"><div class="loader-ring"></div></div>
+<header class="navbar" id="navbar">
+  <div class="container nav-inner">
+    <a href="index.html" class="brand"><div class="brand-mark">&sect;</div><div class="brand-text"><strong>Grace Fellowship</strong><span>Law Firm</span></div></a>
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a><a href="leadership.html">Leadership</a><a href="gallery.html">Media</a><a href="donate.html" class="btn btn-gold btn-sm">Donate</a>
     </nav>
-
-    <section class="page-hero">
-        <div class="container">
-            <p class="breadcrumb"><a href="index.html">Home</a> &rsaquo; Contact</p>
-            <h1>Request Legal Assistance</h1>
-            <p>We're here to help. Reach out for confidential legal support and guidance.</p>
-        </div>
-    </section>
-
-    <section class="section">
-        <div class="container">
-            <div class="contact-grid">
-                <div class="contact-info">
-                    <h2>Get In Touch</h2>
-                    <div class="info-items">
-                        <div class="info-item">
-                            <div class="info-icon">📍</div>
-                            <div>
-                                <h4>Location</h4>
-                                <p>Faisalabad, Punjab, Pakistan</p>
-                            </div>
-                        </div>
-                        <div class="info-item">
-                            <div class="info-icon">⛪</div>
-                            <div>
-                                <h4>Parent Organization</h4>
-                                <p>Grace Bible Fellowship Church Pakistan</p>
-                            </div>
-                        </div>
-                        <div class="info-item">
-                            <div class="info-icon">📜</div>
-                            <div>
-                                <h4>Registered</h4>
-                                <p>Since June 2023</p>
-                            </div>
-                        </div>
-                        <div class="info-item">
-                            <div class="info-icon">⚖</div>
-                            <div>
-                                <h4>Legal Services</h4>
-                                <p>Free consultations available</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="leadership-card">
-                        <div class="leader-avatar">★</div>
-                        <div class="leader-info">
-                            <h4>Leadership</h4>
-                            <p>Grace Fellowship Law Firm is led by a team of dedicated legal professionals committed to justice and human rights.</p>
-                        </div>
-                    </div>
-
-                    <div class="map-placeholder">
-                        <span class="map-icon">🗺</span>
-                        <p>Interactive Map Coming Soon</p>
-                    </div>
-                </div>
-
-                <div class="contact-form-wrapper">
-                    <h2>Send Us a Message</h2>
-                    <form class="contact-form" id="contactForm">
-                        <div class="form-group">
-                            <label for="name">Full Name *</label>
-                            <input type="text" id="name" name="name" required placeholder="Enter your name">
-                        </div>
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="phone">Phone Number *</label>
-                                <input type="tel" id="phone" name="phone" required placeholder="Phone number">
-                            </div>
-                            <div class="form-group">
-                                <label for="email">Email Address</label>
-                                <input type="email" id="email" name="email" placeholder="Email address">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="topic">How Can We Help? *</label>
-                            <select id="topic" name="topic" required>
-                                <option value="">Select a topic...</option>
-                                <option value="legal-aid">Legal Aid Request</option>
-                                <option value="family-dispute">Family Dispute</option>
-                                <option value="rights-awareness">Rights Awareness</option>
-                                <option value="human-rights">Human Rights Issue</option>
-                                <option value="counselling">Family Counselling</option>
-                                <option value="other">Other</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Your Message *</label>
-                            <textarea id="message" name="message" rows="5" required placeholder="Tell us about your situation..."></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary btn-full">Request Assistance</button>
-                        <p class="form-note">All information is kept strictly confidential. We will respond within 24 hours.</p>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="section section-alt">
-        <div class="container">
-            <div class="section-head">
-                <h2>Frequently Asked Questions</h2>
-                <p>Important information about our legal services.</p>
-            </div>
-            <div class="commitment-grid">
-                <div class="commitment-block">
-                    <h4>🔒 Confidentiality</h4>
-                    <p>All communications and case details are kept strictly confidential. Your privacy is our priority.</p>
-                </div>
-                <div class="commitment-block">
-                    <h4>📋 Initial Assessment</h4>
-                    <p>After submitting your request, our team will review your case and contact you within 24 hours for an initial assessment.</p>
-                </div>
-                <div class="commitment-block">
-                    <h4>✓ Eligibility</h4>
-                    <p>Our services are available to individuals and families who cannot afford private legal representation.</p>
-                </div>
-                <div class="commitment-block">
-                    <h4>⚖ Legal Scope</h4>
-                    <p>We provide legal aid for family disputes, rights violations, human rights cases, and community legal issues.</p>
-                </div>
-                <div class="commitment-block">
-                    <h4>⏰ Timeline</h4>
-                    <p>Most cases are addressed within 1-2 weeks. Emergency situations receive immediate attention.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="dark-cta">
-        <div class="container">
-            <h2>Know Your Rights. Seek Justice.</h2>
-            <p>Every person deserves access to legal help. We're here to fight for you.</p>
-            <a href="contact.html" class="btn btn-white">Get Help Now</a>
-        </div>
-    </section>
-
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-about">
-                    <a href="index.html" class="footer-logo">
-                        <span class="logo-icon">&sect;</span>
-                        <span>Grace Fellowship Law Firm</span>
-                    </a>
-                    <p>Providing compassionate legal aid rooted in faith, fighting for justice and human rights for all.</p>
-                </div>
-                <div class="footer-links">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="services.html">Services</a></li>
-                        <li><a href="gallery.html">Media</a></li>
-                        <li><a href="contact.html">Get Help</a></li>
-                    </ul>
-                </div>
-                <div class="footer-links">
-                    <h4>Services</h4>
-                    <ul>
-                        <li><a href="services.html">Legal Aid</a></li>
-                        <li><a href="services.html">Family Counselling</a></li>
-                        <li><a href="services.html">Rights Awareness</a></li>
-                        <li><a href="services.html">Human Rights</a></li>
-                    </ul>
-                </div>
-                <div class="footer-contact">
-                    <h4>Contact</h4>
-                    <p><strong>Address:</strong> Faisalabad, Punjab, Pakistan</p>
-                    <p><strong>Parent Org:</strong> Grace Bible Fellowship Church Pakistan</p>
-                    <p><strong>Legal Email:</strong> legalgracefellowship@gmail.com</p>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 Grace Fellowship Law Firm. All rights reserved.</p>
-                <p>Rooted in Faith. Driven by Justice.</p>
-            </div>
-        </div>
-    </footer>
-
-    <script src="script.js"></script>
+    <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+<section class="page-hero">
+  <div class="hero-content">
+    <p class="hero-eyebrow">Contact Us</p>
+    <h1>Request <em>Legal</em> Assistance</h1>
+    <p class="hero-sub">We're here to help. Reach out for confidential legal support and guidance.</p>
+    <div class="hero-breadcrumb"><a href="index.html">Home</a><span class="sep">/</span><span>Contact</span></div>
+  </div>
+</section>
+<section class="section">
+  <div class="container about-grid">
+    <div class="about-text reveal">
+      <p class="section-eyebrow">Get In Touch</p>
+      <h2 class="section-title">We're Here to Help</h2>
+      <p class="lead">If you or someone you know needs legal guidance, counselling or rights awareness support, please reach out to us.</p>
+      <div class="info-card reveal" style="margin-top:24px"><div class="info-icon">&#128205;</div><h3>Contact Information</h3><p><strong>Location:</strong> Faisalabad, Punjab, Pakistan<br><strong>Parent Organization:</strong> Grace Bible Fellowship Church Pakistan<br><strong>Registered:</strong> Since June 2023<br><strong>Legal Services:</strong> Free consultations available<br><strong>Email:</strong> legalgracefellowship@gmail.com</p></div>
+      <div class="info-card reveal" style="margin-top:24px"><div class="info-icon">&#128100;</div><h3>Leadership</h3><p>Grace Fellowship Law Firm is led by a team of dedicated legal professionals committed to justice and human rights.</p><p><strong>Patron-in-Chief:</strong> Pastor Tariq Rehmat<br><strong>Chairman:</strong> Peter Charles Sahotra<br><strong>Director:</strong> Advocate Shahbaz Fazal Saroya (Senior Advocate High Court)</p></div>
+    </div>
+    <div class="about-cards">
+      <div class="info-card reveal"><div class="info-icon">&#128231;</div><h3>Send Us a Message</h3>
+        <form class="contact-form" id="contactForm">
+          <div class="form-group"><label for="name">Full Name *</label><input type="text" id="name" name="name" required placeholder="Enter your name"></div>
+          <div class="form-group"><label for="phone">Phone Number *</label><input type="tel" id="phone" name="phone" required placeholder="Phone number"></div>
+          <div class="form-group"><label for="email">Email Address</label><input type="email" id="email" name="email" placeholder="Email address"></div>
+          <div class="form-group"><label for="topic">How Can We Help? *</label>
+            <select id="topic" name="topic" required>
+              <option value="">Select a topic...</option>
+              <option value="legal-aid">Legal Aid Request</option>
+              <option value="family-dispute">Family Dispute</option>
+              <option value="rights-awareness">Rights Awareness</option>
+              <option value="human-rights">Human Rights Issue</option>
+              <option value="counselling">Family Counselling</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          <div class="form-group"><label for="message">Your Message *</label><textarea id="message" name="message" rows="5" required placeholder="Tell us about your situation..."></textarea></div>
+          <button type="submit" class="btn btn-maroon btn-block">Request Assistance</button>
+          <p style="color:var(--text-muted);font-size:.85rem;margin-top:12px;text-align:center">All information is kept strictly confidential. We will respond within 24 hours.</p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-head reveal">
+      <h2 class="section-title">Frequently Asked Questions</h2>
+      <p class="section-sub">Important information about our legal services.</p>
+    </div>
+    <div class="cards-grid stagger-children">
+      <article class="service-card reveal"><div class="service-icon">&#128274;</div><h3>Confidentiality</h3><p>All communications and case details are kept strictly confidential. Your privacy is our priority.</p></article>
+      <article class="service-card reveal"><div class="service-icon">&#128203;</div><h3>Initial Assessment</h3><p>After submitting your request, our team will review your case and contact you within 24 hours for an initial assessment.</p></article>
+      <article class="service-card reveal"><div class="service-icon">&#10003;</div><h3>Eligibility</h3><p>Our services are available to individuals and families who cannot afford private legal representation.</p></article>
+      <article class="service-card reveal"><div class="service-icon">&#9878;&#65039;</div><h3>Legal Scope</h3><p>We provide legal aid for family disputes, rights violations, human rights cases, and community legal issues.</p></article>
+      <article class="service-card reveal"><div class="service-icon">&#9200;</div><h3>Timeline</h3><p>Most cases are addressed within 1-2 weeks. Emergency situations receive immediate attention.</p></article>
+    </div>
+  </div>
+</section>
+<section class="section section-dark">
+  <div class="container" style="text-align:center">
+    <div class="reveal">
+      <p class="section-eyebrow" style="color:var(--gold-light)">Justice for All</p>
+      <h2 style="color:var(--white);font-size:clamp(1.8rem,3.5vw,2.5rem);margin-bottom:16px">Know Your Rights. Seek Justice.</h2>
+      <p style="color:#c8a8b0;max-width:550px;margin:0 auto 30px">Every person deserves access to legal help. We're here to fight for you.</p>
+      <a href="contact.html" class="btn btn-gold btn-lg">Get Help Now &rarr;</a>
+    </div>
+  </div>
+</section>
+<footer class="footer">
+  <div class="container footer-grid">
+    <div><div class="brand brand-light"><div class="brand-mark">&sect;</div><div class="brand-text"><strong>Grace Fellowship</strong><span>Law Firm</span></div></div><p class="footer-tag">Committed to Believe in Excellence.</p><p>A Legal Aid, Counselling &amp; Rights Awareness Project of Grace Bible Fellowship Church Pakistan.</p><p style="margin-top:12px;color:var(--gold-light);font-size:0.85rem">Since 2022 | Formally Registered June 2023</p></div>
+    <div><h4>Quick Links</h4><a href="about.html">Executive Overview</a><a href="services.html">Services</a><a href="leadership.html">Leadership</a><a href="gallery.html">Gallery</a><a href="contact.html">Contact</a></div>
+    <div><h4>Our Programs</h4><a href="services.html">Legal Aid</a><a href="services.html">Human Rights Advocacy</a><a href="services.html">Counselling Services</a><a href="services.html">Rights Awareness</a><a href="services.html">Community Outreach</a></div>
+    <div><h4>Our Motto</h4><p class="footer-motto">Justice &bull; Legal Aid &bull; Counselling &bull; Awareness &bull; Human Dignity</p><p class="footer-church">A Project of<br><strong>Grace Bible Fellowship Church Pakistan</strong></p></div>
+  </div>
+  <div class="footer-bottom"><div class="container"><p>&copy; <span id="year"></span> Grace Fellowship Law Firm. All Rights Reserved.</p></div></div>
+</footer>
+<button id="toTop" aria-label="Back to top">&uarr;</button>
+<script src="script.js"></script>
 </body>
 </html>

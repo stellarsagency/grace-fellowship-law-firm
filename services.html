@@ -1,212 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Services | Grace Fellowship Law Firm</title>
-    <meta name="description" content="Explore the comprehensive legal services offered by Grace Fellowship Law Firm, including legal aid, human rights advocacy, counselling, and community outreach.">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Source+Sans+3:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,viewport-fit=cover">
+<title>Services | Grace Fellowship Law Firm</title>
+<meta name="description" content="Explore the comprehensive legal services offered by Grace Fellowship Law Firm, including legal aid, human rights advocacy, counselling, and community outreach.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800&family=Source+Sans+3:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
-    <!-- Page Loader -->
-    <div class="page-loader" id="loader">
-        <div class="loader-ring"></div>
+<div class="page-loader"><div class="loader-ring"></div></div>
+<header class="navbar" id="navbar">
+  <div class="container nav-inner">
+    <a href="index.html" class="brand"><div class="brand-mark">&sect;</div><div class="brand-text"><strong>Grace Fellowship</strong><span>Law Firm</span></div></a>
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html">Home</a><a href="about.html">About</a><a href="services.html" class="active">Services</a><a href="leadership.html">Leadership</a><a href="gallery.html">Media</a><a href="donate.html" class="btn btn-gold btn-sm">Donate</a>
+    </nav>
+    <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+<section class="page-hero">
+  <div class="hero-content">
+    <p class="hero-eyebrow">What We Do</p>
+    <h1>Our Core <em>Services</em></h1>
+    <p class="hero-sub">Comprehensive legal support, counselling, and advocacy rooted in faith and driven by justice.</p>
+    <div class="hero-breadcrumb"><a href="index.html">Home</a><span class="sep">/</span><span>Services</span></div>
+  </div>
+</section>
+<section class="section">
+  <div class="container">
+    <div class="section-head reveal">
+      <h2 class="section-title">How We Serve</h2>
+      <p class="section-sub">Each program is designed to meet the real needs of individuals and families across Pakistan.</p>
     </div>
-
-    <!-- Navbar -->
-    <header class="navbar" id="navbar">
-        <div class="nav-inner container">
-            <a href="index.html" class="brand">
-                <span class="brand-mark">&sect;</span>
-                <span class="brand-text"><strong>Grace Fellowship</strong><span>Law Firm</span></span>
-            </a>
-            <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
-                <span></span><span></span><span></span>
-            </button>
-            <ul class="nav-links" id="navLinks">
-                <li><a href="index.html" class="nav-link">Home</a></li>
-                <li><a href="about.html" class="nav-link">About</a></li>
-                <li><a href="services.html" class="nav-link active">Services</a></li>
-                <li><a href="leadership.html" class="nav-link">Leadership</a></li>
-                <li><a href="gallery.html" class="nav-link">Media</a></li>
-                <li><a href="contact.html" class="btn btn-gold">Contact</a></li>
-            </ul>
-        </div>
-    </header>
-
-    <!-- Page Hero -->
-    <section class="page-hero">
-        <div class="hero-content container">
-            <p class="hero-eyebrow">What We Do</p>
-            <h1>Our Core <em>Services</em></h1>
-            <p class="hero-sub">Comprehensive legal support, counselling, and advocacy rooted in faith and driven by justice.</p>
-            <div class="hero-breadcrumb">
-                <a href="index.html">Home</a>
-                <span class="sep">&rsaquo;</span>
-                <span>Services</span>
-            </div>
-        </div>
-    </section>
-
-    <!-- Services Section -->
-    <section class="section" aria-labelledby="services-list-heading">
-        <div class="container">
-            <div class="section-head">
-                <h2 id="services-list-heading" class="section-title">How We Serve</h2>
-                <p class="section-sub">Each program is designed to meet the real needs of individuals and families across Pakistan.</p>
-            </div>
-            <div class="cards-grid stagger-children">
-
-                <!-- Service 1: Legal Aid Program -->
-                <article class="service-card reveal">
-                    <span class="service-num" aria-hidden="true">01</span>
-                    <div class="service-icon" aria-hidden="true">&#9878;</div>
-                    <h3>Legal Aid Program</h3>
-                    <p>Our flagship program provides free, professional legal assistance to individuals and families who cannot afford private representation.</p>
-                    <ul>
-                        <li>Initial legal consultation and case assessment</li>
-                        <li>Case evaluation and legal information</li>
-                        <li>Referrals to specialized legal resources</li>
-                        <li>Full legal representation in courts</li>
-                        <li>Follow-up support throughout proceedings</li>
-                    </ul>
-                </article>
-
-                <!-- Service 2: Human Rights & Justice -->
-                <article class="service-card reveal">
-                    <span class="service-num" aria-hidden="true">02</span>
-                    <div class="service-icon" aria-hidden="true">&#9830;</div>
-                    <h3>Human Rights &amp; Justice</h3>
-                    <p>We stand as advocates for fundamental human rights, defending the dignity and freedoms of every individual.</p>
-                    <p>Our work includes responding to incidents of injustice and persecution, such as the <strong>Jaranwala incident</strong>, where we provided legal counsel and support to affected communities, ensuring their voices are heard and their rights protected under the law.</p>
-                </article>
-
-                <!-- Service 3: Counselling & Social Support -->
-                <article class="service-card reveal">
-                    <span class="service-num" aria-hidden="true">03</span>
-                    <div class="service-icon" aria-hidden="true">&#9733;</div>
-                    <h3>Counselling &amp; Social Support</h3>
-                    <p>Beyond legal matters, we provide compassionate counselling and social support to help individuals navigate life&rsquo;s challenges.</p>
-                    <ul>
-                        <li>Family conflict resolution and mediation</li>
-                        <li>Social dispute counselling</li>
-                        <li>Emotional and social pressures support</li>
-                        <li>Family welfare guidance and resources</li>
-                    </ul>
-                </article>
-
-                <!-- Service 4: Legal Rights Awareness -->
-                <article class="service-card reveal">
-                    <span class="service-num" aria-hidden="true">04</span>
-                    <div class="service-icon" aria-hidden="true">&#9829;</div>
-                    <h3>Legal Rights Awareness</h3>
-                    <p>We bridge the knowledge gap between citizens and the law, empowering communities with the information they need to protect themselves.</p>
-                    <p>Through community meetings, church networks, and educational workshops, we ensure that every person understands their fundamental legal rights and how to exercise them effectively.</p>
-                </article>
-
-                <!-- Service 5: Nationwide Community Outreach -->
-                <article class="service-card reveal">
-                    <span class="service-num" aria-hidden="true">05</span>
-                    <div class="service-icon" aria-hidden="true">&#9879;</div>
-                    <h3>Nationwide Community Outreach</h3>
-                    <p>Our legal awareness network extends across Pakistan, leveraging partnerships with churches and community leaders to reach those in need.</p>
-                    <p>We work alongside local congregations and community organizations to deliver legal education, resources, and direct assistance to underserved regions throughout the country.</p>
-                </article>
-
-                <!-- Service 6: Awareness Initiatives -->
-                <article class="service-card reveal">
-                    <span class="service-num" aria-hidden="true">06</span>
-                    <div class="service-icon" aria-hidden="true">&#10047;</div>
-                    <h3>Awareness Initiatives</h3>
-                    <p>We organize and participate in various programs designed to educate the public about legal rights and available resources.</p>
-                    <p>Our initiatives include seminars, community meetings, legal education programs, public awareness campaigns, and referral services to connect individuals with the support they need.</p>
-                </article>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- Who We Serve CTA Band -->
-    <section class="cta-band section" aria-labelledby="serve-heading">
-        <div class="cta-inner container">
-            <div>
-                <span class="section-eyebrow">Who We Serve</span>
-                <h2 id="serve-heading">Dedicated to Those in Need</h2>
-                <p>Grace Fellowship Law Firm extends its services to all underserved and marginalized members of society, with a special focus on the most vulnerable.</p>
-            </div>
-            <ul class="cta-list">
-                <li>Low-income families and individuals</li>
-                <li>Women facing domestic violence or legal disputes</li>
-                <li>Minor children in need of legal protection</li>
-                <li>Religious minorities facing discrimination</li>
-                <li>Elderly citizens with documentation needs</li>
-                <li>Workers seeking justice for exploitation</li>
-            </ul>
-        </div>
-    </section>
-
-    <!-- Dark CTA -->
-    <section class="section-dark section" aria-labelledby="cta-heading">
-        <div class="section-head light">
-            <h2 id="cta-heading" class="section-title">Need Legal Assistance?</h2>
-            <p class="section-sub">We are here to help. Reach out to us today for free legal aid, counselling, or to learn more about our services.</p>
-            <a href="contact.html" class="btn btn-gold btn-lg" style="margin-top:28px">Contact Us Today</a>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-about brand-light">
-                    <a href="index.html" class="brand" aria-label="Grace Fellowship Law Firm">
-                        <span class="brand-mark">&sect;</span>
-                        <span class="brand-text"><strong>Grace Fellowship</strong><span>Law Firm</span></span>
-                    </a>
-                    <p class="footer-tag">&ldquo;Committed to Believe in Excellence&rdquo;</p>
-                    <p>A legal aid ministry of Grace Bible Fellowship Church Pakistan, committed to justice, compassion, and professional service for all.</p>
-                </div>
-                <div class="footer-links">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="services.html">Services</a></li>
-                        <li><a href="leadership.html">Leadership</a></li>
-                        <li><a href="gallery.html">Media</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-links">
-                    <h4>Our Programs</h4>
-                    <ul>
-                        <li><a href="services.html">Legal Aid</a></li>
-                        <li><a href="services.html">Legal Counselling</a></li>
-                        <li><a href="services.html">Rights Awareness</a></li>
-                        <li><a href="services.html">Community Advocacy</a></li>
-                        <li><a href="donate.html">Support Us</a></li>
-                    </ul>
-                </div>
-                <div class="footer-contact">
-                    <h4>Our Motto</h4>
-                    <p class="footer-motto">&ldquo;Committed to Believe in Excellence&rdquo;</p>
-                    <p class="footer-church"><strong>A Ministry of<br>Grace Bible Fellowship Church Pakistan</strong></p>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 Grace Fellowship Law Firm. All rights reserved.</p>
-                <p>Rooted in Faith. Driven by Justice.</p>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Back to Top -->
-    <button id="toTop" aria-label="Back to top">&uarr;</button>
-
-    <script src="script.js"></script>
+    <div class="cards-grid stagger-children">
+      <article class="service-card reveal"><div class="service-num">01</div><div class="service-icon">&#9878;&#65039;</div><h3>Legal Aid Program</h3><p>Our flagship program provides free, professional legal assistance to individuals and families who cannot afford private representation.</p><ul><li>Initial legal consultation and case assessment</li><li>Case evaluation and legal information</li><li>Referrals to specialized legal resources</li><li>Full legal representation in courts</li><li>Follow-up support throughout proceedings</li></ul></article>
+      <article class="service-card reveal"><div class="service-num">02</div><div class="service-icon">&#128737;&#65039;</div><h3>Human Rights &amp; Justice</h3><p>We stand as advocates for fundamental human rights, defending the dignity and freedoms of every individual.</p><p>Our work includes responding to incidents of injustice and persecution, such as the <strong>Jaranwala incident</strong>, where we provided legal counsel and support to affected communities.</p></article>
+      <article class="service-card reveal"><div class="service-num">03</div><div class="service-icon">&#128172;</div><h3>Counselling &amp; Social Support</h3><p>Beyond legal matters, we provide compassionate counselling and social support to help individuals navigate life's challenges.</p><ul><li>Family conflict resolution and mediation</li><li>Social dispute counselling</li><li>Emotional and social pressures support</li><li>Family welfare guidance and resources</li></ul></article>
+      <article class="service-card reveal"><div class="service-num">04</div><div class="service-icon">&#128226;</div><h3>Legal Rights Awareness</h3><p>We bridge the knowledge gap between citizens and the law, empowering communities with the information they need to protect themselves.</p><p>Through community meetings, church networks, and educational workshops, we ensure that every person understands their fundamental legal rights.</p></article>
+      <article class="service-card reveal"><div class="service-num">05</div><div class="service-icon">&#129309;</div><h3>Nationwide Community Outreach</h3><p>Our legal awareness network extends across Pakistan, leveraging partnerships with churches and community leaders to reach those in need.</p><p>We work alongside local congregations and community organizations to deliver legal education and direct assistance to underserved regions.</p></article>
+      <article class="service-card reveal"><div class="service-num">06</div><div class="service-icon">&#128203;</div><h3>Awareness Initiatives</h3><p>We organize and participate in various programs designed to educate the public about legal rights and available resources.</p><p>Our initiatives include seminars, community meetings, legal education programs, public awareness campaigns, and referral services.</p></article>
+    </div>
+  </div>
+</section>
+<section class="section cta-band">
+  <div class="container cta-inner reveal">
+    <div><h2>Who We Serve</h2><p>Grace Fellowship Law Firm extends its services to all underserved and marginalized members of society, with a special focus on the most vulnerable.</p></div>
+    <ul class="cta-list">
+      <li>Low-income families and individuals</li><li>Women facing domestic violence or legal disputes</li><li>Minor children in need of legal protection</li><li>Religious minorities facing discrimination</li><li>Elderly citizens with documentation needs</li><li>Workers seeking justice for exploitation</li>
+    </ul>
+  </div>
+</section>
+<section class="section section-dark">
+  <div class="container" style="text-align:center">
+    <div class="reveal">
+      <p class="section-eyebrow" style="color:var(--gold-light)">Ready to Help</p>
+      <h2 style="color:var(--white);font-size:clamp(1.8rem,3.5vw,2.5rem);margin-bottom:16px">Need Legal Assistance?</h2>
+      <p style="color:#c8a8b0;max-width:550px;margin:0 auto 30px">We are here to help. Reach out to us today for free legal aid, counselling, or to learn more about our services.</p>
+      <a href="contact.html" class="btn btn-gold btn-lg">Contact Us Today &rarr;</a>
+    </div>
+  </div>
+</section>
+<footer class="footer">
+  <div class="container footer-grid">
+    <div><div class="brand brand-light"><div class="brand-mark">&sect;</div><div class="brand-text"><strong>Grace Fellowship</strong><span>Law Firm</span></div></div><p class="footer-tag">Committed to Believe in Excellence.</p><p>A Legal Aid, Counselling &amp; Rights Awareness Project of Grace Bible Fellowship Church Pakistan.</p><p style="margin-top:12px;color:var(--gold-light);font-size:0.85rem">Since 2022 | Formally Registered June 2023</p></div>
+    <div><h4>Quick Links</h4><a href="about.html">Executive Overview</a><a href="services.html">Services</a><a href="leadership.html">Leadership</a><a href="gallery.html">Gallery</a><a href="contact.html">Contact</a></div>
+    <div><h4>Our Programs</h4><a href="services.html">Legal Aid</a><a href="services.html">Human Rights Advocacy</a><a href="services.html">Counselling Services</a><a href="services.html">Rights Awareness</a><a href="services.html">Community Outreach</a></div>
+    <div><h4>Our Motto</h4><p class="footer-motto">Justice &bull; Legal Aid &bull; Counselling &bull; Awareness &bull; Human Dignity</p><p class="footer-church">A Project of<br><strong>Grace Bible Fellowship Church Pakistan</strong></p></div>
+  </div>
+  <div class="footer-bottom"><div class="container"><p>&copy; <span id="year"></span> Grace Fellowship Law Firm. All Rights Reserved.</p></div></div>
+</footer>
+<button id="toTop" aria-label="Back to top">&uarr;</button>
+<script src="script.js"></script>
 </body>
 </html>
