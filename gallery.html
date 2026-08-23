@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery & Media | Grace Fellowship Law Firm</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Source+Sans+3:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="loader" id="loader">
+        <div class="loader-content">
+            <div class="loader-icon">&sect;</div>
+            <div class="loader-bar"><div class="loader-progress"></div></div>
+        </div>
+    </div>
+
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <span class="logo-icon">&sect;</span>
+                <span class="logo-text">Grace Fellowship<br><small>Law Firm</small></span>
+            </a>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="services.html" class="nav-link">Services</a></li>
+                <li><a href="gallery.html" class="nav-link active">Media</a></li>
+                <li><a href="contact.html" class="nav-link">Get Help</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="page-hero">
+        <div class="container">
+            <p class="breadcrumb"><a href="index.html">Home</a> &rsaquo; Media Center</p>
+            <h1>Gallery & Media</h1>
+            <p>Explore our work through photos, reports, documents, and stories of justice served.</p>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="media-tabs">
+                <button class="media-tab active" data-tab="photos">Photos</button>
+                <button class="media-tab" data-tab="reports">Reports</button>
+                <button class="media-tab" data-tab="documents">Legal Documents</button>
+                <button class="media-tab" data-tab="stories">Justice Stories</button>
+            </div>
+
+            <div class="tab-panels">
+                <div class="tab-panel active" id="panel-photos">
+                    <div class="gallery-filters">
+                        <button class="filter-btn active" data-filter="all">All</button>
+                        <button class="filter-btn" data-filter="events">Events</button>
+                        <button class="filter-btn" data-filter="community">Community</button>
+                        <button class="filter-btn" data-filter="awareness">Awareness</button>
+                        <button class="filter-btn" data-filter="leadership">Leadership</button>
+                        <button class="filter-btn" data-filter="outreach">Outreach</button>
+                    </div>
+                    <div class="gallery-grid">
+                        <div class="gallery-item" data-category="events">
+                            <div class="gallery-placeholder">
+                                <span class="placeholder-icon">⚖</span>
+                            </div>
+                            <div class="gallery-overlay">
+                                <span class="zoom-icon">+</span>
+                                <h4>Legal Aid Distribution</h4>
+                                <p>Events</p>
+                            </div>
+                        </div>
+                        <div class="gallery-item" data-category="community">
+                            <div class="gallery-placeholder">
+                                <span class="placeholder-icon">♥</span>
+                            </div>
+                            <div class="gallery-overlay">
+                                <span class="zoom-icon">+</span>
+                                <h4>Community Outreach</h4>
+                                <p>Community</p>
+                            </div>
+                        </div>
+                        <div class="gallery-item" data-category="awareness">
+                            <div class="gallery-placeholder">
+                                <span class="placeholder-icon">📢</span>
+                            </div>
+                            <div class="gallery-overlay">
+                                <span class="zoom-icon">+</span>
+                                <h4>Rights Awareness Session</h4>
+                                <p>Awareness</p>
+                            </div>
+                        </div>
+                        <div class="gallery-item" data-category="leadership">
+                            <div class="gallery-placeholder">
+                                <span class="placeholder-icon">★</span>
+                            </div>
+                            <div class="gallery-overlay">
+                                <span class="zoom-icon">+</span>
+                                <h4>Leadership Meeting</h4>
+                                <p>Leadership</p>
+                            </div>
+                        </div>
+                        <div class="gallery-item" data-category="events">
+                            <div class="gallery-placeholder">
+                                <span class="placeholder-icon">✎</span>
+                            </div>
+                            <div class="gallery-overlay">
+                                <span class="zoom-icon">+</span>
+                                <h4>Registration Ceremony</h4>
+                                <p>Events</p>
+                            </div>
+                        </div>
+                        <div class="gallery-item" data-category="community">
+                            <div class="gallery-placeholder">
+                                <span class="placeholder-icon">☺</span>
+                            </div>
+                            <div class="gallery-overlay">
+                                <span class="zoom-icon">+</span>
+                                <h4>Family Counselling</h4>
+                                <p>Community</p>
+                            </div>
+                        </div>
+                        <div class="gallery-item" data-category="awareness">
+                            <div class="gallery-placeholder">
+                                <span class="placeholder-icon">✊</span>
+                            </div>
+                            <div class="gallery-overlay">
+                                <span class="zoom-icon">+</span>
+                                <h4>Human Rights Campaign</h4>
+                                <p>Awareness</p>
+                            </div>
+                        </div>
+                        <div class="gallery-item" data-category="outreach">
+                            <div class="gallery-placeholder">
+                                <span class="placeholder-icon">⛪</span>
+                            </div>
+                            <div class="gallery-overlay">
+                                <span class="zoom-icon">+</span>
+                                <h4>Church Partnership</h4>
+                                <p>Outreach</p>
+                            </div>
+                        </div>
+                        <div class="gallery-item" data-category="events">
+                            <div class="gallery-placeholder">
+                                <span class="placeholder-icon">📖</span>
+                            </div>
+                            <div class="gallery-overlay">
+                                <span class="zoom-icon">+</span>
+                                <h4>Legal Education</h4>
+                                <p>Events</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-panel" id="panel-reports">
+                    <div class="section-head">
+                        <h2>Our Publications</h2>
+                        <p>Annual reports documenting our journey and impact.</p>
+                    </div>
+                    <div class="docs-grid">
+                        <div class="doc-card">
+                            <div class="doc-icon">📄</div>
+                            <h3>Annual Report 2023</h3>
+                            <p>Formal Registration Year</p>
+                            <div class="doc-actions">
+                                <a href="images/reports/annual-report-2023.pdf" class="btn btn-outline" target="_blank">View PDF</a>
+                                <a href="images/reports/annual-report-2023.pdf" class="btn btn-outline" download>Download</a>
+                            </div>
+                        </div>
+                        <div class="doc-card">
+                            <div class="doc-icon">📄</div>
+                            <h3>Annual Report 2024</h3>
+                            <p>Growth & Expansion</p>
+                            <div class="doc-actions">
+                                <a href="images/reports/annual-report-2024.pdf" class="btn btn-outline" target="_blank">View PDF</a>
+                                <a href="images/reports/annual-report-2024.pdf" class="btn btn-outline" download>Download</a>
+                            </div>
+                        </div>
+                        <div class="doc-card">
+                            <div class="doc-icon">📄</div>
+                            <h3>Annual Report 2025</h3>
+                            <p>Current Year</p>
+                            <div class="doc-actions">
+                                <a href="images/reports/annual-report-2025.pdf" class="btn btn-outline" target="_blank">View PDF</a>
+                                <a href="images/reports/annual-report-2025.pdf" class="btn btn-outline" download>Download</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-panel" id="panel-documents">
+                    <div class="section-head">
+                        <h2>Licenses & Registration</h2>
+                        <p>Official documents验证 our legal standing and affiliations.</p>
+                    </div>
+                    <div class="docs-grid">
+                        <div class="doc-card">
+                            <div class="doc-icon">📜</div>
+                            <h3>Registration Certificate</h3>
+                            <p>Issued June 2023</p>
+                            <div class="doc-actions">
+                                <a href="images/documents/registration-certificate.pdf" class="btn btn-outline" target="_blank">View PDF</a>
+                                <a href="images/documents/registration-certificate.pdf" class="btn btn-outline" download>Download</a>
+                            </div>
+                        </div>
+                        <div class="doc-card">
+                            <div class="doc-icon">⚖</div>
+                            <h3>Legal Practice License</h3>
+                            <p>Status: Active</p>
+                            <div class="doc-actions">
+                                <a href="images/documents/legal-practice-license.pdf" class="btn btn-outline" target="_blank">View PDF</a>
+                                <a href="images/documents/legal-practice-license.pdf" class="btn btn-outline" download>Download</a>
+                            </div>
+                        </div>
+                        <div class="doc-card">
+                            <div class="doc-icon">⛪</div>
+                            <h3>Church Affiliation Letter</h3>
+                            <p>GBFC Pakistan</p>
+                            <div class="doc-actions">
+                                <a href="images/documents/church-affiliation-letter.pdf" class="btn btn-outline" target="_blank">View PDF</a>
+                                <a href="images/documents/church-affiliation-letter.pdf" class="btn btn-outline" download>Download</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-panel" id="panel-stories">
+                    <div class="section-head">
+                        <h2>Voices of Those We've Helped</h2>
+                        <p>Real stories from people whose lives were changed through our legal aid.</p>
+                    </div>
+                    <div class="testimonials-grid">
+                        <div class="testimonial-card">
+                            <span class="tag">Legal Aid</span>
+                            <blockquote>"They helped me understand my rights when I thought no one would listen. The legal aid changed my life."</blockquote>
+                            <div class="testimonial-author">
+                                <div class="avatar">A.</div>
+                                <div>
+                                    <strong>A.</strong>
+                                    <p>Family Dispute Case</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testimonial-card">
+                            <span class="tag">Family Counselling</span>
+                            <blockquote>"The counselling sessions brought peace to our home. We learned to communicate and heal together."</blockquote>
+                            <div class="testimonial-author">
+                                <div class="avatar">F.</div>
+                                <div>
+                                    <strong>F.</strong>
+                                    <p>Marriage Counselling</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testimonial-card">
+                            <span class="tag">Rights Awareness</span>
+                            <blockquote>"I never knew I had legal rights until Grace Fellowship taught me. Now I can protect my family."</blockquote>
+                            <div class="testimonial-author">
+                                <div class="avatar">R.</div>
+                                <div>
+                                    <strong>R.</strong>
+                                    <p>Workers Rights Case</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testimonial-card">
+                            <span class="tag">Human Rights</span>
+                            <blockquote>"Their commitment to justice for our community is unwavering. They are a beacon of hope."</blockquote>
+                            <div class="testimonial-author">
+                                <div class="avatar">★</div>
+                                <div>
+                                    <strong>Community Leader</strong>
+                                    <p>Human Rights Advocacy</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testimonial-card">
+                            <span class="tag">Legal Aid</span>
+                            <blockquote>"When I faced false accusations, they stood by me. Justice prevailed because of their dedication."</blockquote>
+                            <div class="testimonial-author">
+                                <div class="avatar">S.</div>
+                                <div>
+                                    <strong>S.</strong>
+                                    <p>Criminal Defense Case</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testimonial-card">
+                            <span class="tag">Community Support</span>
+                            <blockquote>"Through our partnership, we've been able to serve hundreds of families who desperately needed help."</blockquote>
+                            <div class="testimonial-author">
+                                <div class="avatar">✝</div>
+                                <div>
+                                    <strong>Pastor</strong>
+                                    <p>Church Partnership</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="donate-section">
+        <div class="container">
+            <div class="donate-content">
+                <h2>Support Justice for All</h2>
+                <p>Your donation helps us provide free legal aid to those who cannot afford it.</p>
+            </div>
+            <div class="donate-card">
+                <h3>Make a Donation</h3>
+                <div class="donate-amounts">
+                    <button class="amount-btn">$25</button>
+                    <button class="amount-btn">$50</button>
+                    <button class="amount-btn active">$100</button>
+                    <button class="amount-btn">$250</button>
+                </div>
+                <a href="donate.html" class="btn btn-primary btn-full">Donate Now</a>
+            </div>
+        </div>
+    </section>
+
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close">&times;</button>
+        <button class="lightbox-prev">&#10094;</button>
+        <button class="lightbox-next">&#10095;</button>
+        <img src="" alt="" class="lightbox-img">
+        <p class="lightbox-caption"></p>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <a href="index.html" class="footer-logo">
+                        <span class="logo-icon">&sect;</span>
+                        <span>Grace Fellowship Law Firm</span>
+                    </a>
+                    <p>Providing compassionate legal aid rooted in faith, fighting for justice and human rights for all.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="gallery.html">Media</a></li>
+                        <li><a href="contact.html">Get Help</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="services.html">Legal Aid</a></li>
+                        <li><a href="services.html">Family Counselling</a></li>
+                        <li><a href="services.html">Rights Awareness</a></li>
+                        <li><a href="services.html">Human Rights</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact</h4>
+                    <p><strong>Address:</strong> Faisalabad, Punjab, Pakistan</p>
+                    <p><strong>Parent Org:</strong> Grace Bible Fellowship Church Pakistan</p>
+                    <p><strong>Legal Email:</strong> legalgracefellowship@gmail.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Grace Fellowship Law Firm. All rights reserved.</p>
+                <p>Rooted in Faith. Driven by Justice.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
