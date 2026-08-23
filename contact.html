@@ -21,6 +21,7 @@
     <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
   </div>
 </header>
+
 <section class="page-hero">
   <div class="hero-content">
     <p class="hero-eyebrow">Contact Us</p>
@@ -29,22 +30,65 @@
     <div class="hero-breadcrumb"><a href="index.html">Home</a><span class="sep">/</span><span>Contact</span></div>
   </div>
 </section>
+
 <section class="section">
-  <div class="container about-grid">
-    <div class="about-text reveal">
-      <p class="section-eyebrow">Get In Touch</p>
-      <h2 class="section-title">We're Here to Help</h2>
-      <p class="lead">If you or someone you know needs legal guidance, counselling or rights awareness support, please reach out to us.</p>
-      <div class="info-card reveal" style="margin-top:24px"><div class="info-icon">&#128205;</div><h3>Contact Information</h3><p><strong>Location:</strong> Faisalabad, Punjab, Pakistan<br><strong>Parent Organization:</strong> Grace Bible Fellowship Church Pakistan<br><strong>Registered:</strong> Since June 2023<br><strong>Legal Services:</strong> Free consultations available<br><strong>Email:</strong> legalgracefellowship@gmail.com</p></div>
-      <div class="info-card reveal" style="margin-top:24px"><div class="info-icon">&#128100;</div><h3>Leadership</h3><p>Grace Fellowship Law Firm is led by a team of dedicated legal professionals committed to justice and human rights.</p><p><strong>Patron-in-Chief:</strong> Pastor Tariq Rehmat<br><strong>Chairman:</strong> Peter Charles Sahotra<br><strong>Director:</strong> Advocate Shahbaz Fazal Saroya (Senior Advocate High Court)</p></div>
-    </div>
-    <div class="about-cards">
-      <div class="info-card reveal"><div class="info-icon">&#128231;</div><h3>Send Us a Message</h3>
-        <form class="contact-form" id="contactForm">
-          <div class="form-group"><label for="name">Full Name *</label><input type="text" id="name" name="name" required placeholder="Enter your name"></div>
-          <div class="form-group"><label for="phone">Phone Number *</label><input type="tel" id="phone" name="phone" required placeholder="Phone number"></div>
-          <div class="form-group"><label for="email">Email Address</label><input type="email" id="email" name="email" placeholder="Email address"></div>
-          <div class="form-group"><label for="topic">How Can We Help? *</label>
+  <div class="container">
+    <div class="contact-grid">
+      <div class="contact-info reveal">
+        <h2>Get In Touch</h2>
+        <div class="contact-item">
+          <div class="ci-icon">&#128205;</div>
+          <div>
+            <h4>Location</h4>
+            <p>Faisalabad, Punjab, Pakistan</p>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="ci-icon">&#9962;</div>
+          <div>
+            <h4>Parent Organization</h4>
+            <p>Grace Bible Fellowship Church Pakistan</p>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="ci-icon">&#128203;</div>
+          <div>
+            <h4>Registered</h4>
+            <p>Since June 2023</p>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="ci-icon">&#9878;&#65039;</div>
+          <div>
+            <h4>Legal Services</h4>
+            <p>Free consultations available</p>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="ci-icon">&#128231;</div>
+          <div>
+            <h4>Email</h4>
+            <p>legalgracefellowship@gmail.com</p>
+          </div>
+        </div>
+      </div>
+      <div class="contact-form reveal">
+        <h3>Send Us a Message</h3>
+        <form id="contactForm">
+          <div class="form-group">
+            <label for="name">Full Name *</label>
+            <input type="text" id="name" name="name" required placeholder="Enter your name">
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone Number *</label>
+            <input type="tel" id="phone" name="phone" required placeholder="Phone number">
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="Email address">
+          </div>
+          <div class="form-group">
+            <label for="topic">How Can We Help? *</label>
             <select id="topic" name="topic" required>
               <option value="">Select a topic...</option>
               <option value="legal-aid">Legal Aid Request</option>
@@ -55,14 +99,18 @@
               <option value="other">Other</option>
             </select>
           </div>
-          <div class="form-group"><label for="message">Your Message *</label><textarea id="message" name="message" rows="5" required placeholder="Tell us about your situation..."></textarea></div>
+          <div class="form-group">
+            <label for="message">Your Message *</label>
+            <textarea id="message" name="message" rows="5" required placeholder="Tell us about your situation..."></textarea>
+          </div>
           <button type="submit" class="btn btn-maroon btn-block">Request Assistance</button>
-          <p style="color:var(--text-muted);font-size:.85rem;margin-top:12px;text-align:center">All information is kept strictly confidential. We will respond within 24 hours.</p>
+          <p class="form-note">All information is kept strictly confidential. We will respond within 24 hours.</p>
         </form>
       </div>
     </div>
   </div>
 </section>
+
 <section class="section section-alt">
   <div class="container">
     <div class="section-head reveal">
@@ -70,14 +118,35 @@
       <p class="section-sub">Important information about our legal services.</p>
     </div>
     <div class="cards-grid stagger-children">
-      <article class="service-card reveal"><div class="service-icon">&#128274;</div><h3>Confidentiality</h3><p>All communications and case details are kept strictly confidential. Your privacy is our priority.</p></article>
-      <article class="service-card reveal"><div class="service-icon">&#128203;</div><h3>Initial Assessment</h3><p>After submitting your request, our team will review your case and contact you within 24 hours for an initial assessment.</p></article>
-      <article class="service-card reveal"><div class="service-icon">&#10003;</div><h3>Eligibility</h3><p>Our services are available to individuals and families who cannot afford private legal representation.</p></article>
-      <article class="service-card reveal"><div class="service-icon">&#9878;&#65039;</div><h3>Legal Scope</h3><p>We provide legal aid for family disputes, rights violations, human rights cases, and community legal issues.</p></article>
-      <article class="service-card reveal"><div class="service-icon">&#9200;</div><h3>Timeline</h3><p>Most cases are addressed within 1-2 weeks. Emergency situations receive immediate attention.</p></article>
+      <article class="service-card reveal">
+        <div class="service-icon">&#128274;</div>
+        <h3>Confidentiality</h3>
+        <p>All communications and case details are kept strictly confidential. Your privacy is our priority.</p>
+      </article>
+      <article class="service-card reveal">
+        <div class="service-icon">&#128203;</div>
+        <h3>Initial Assessment</h3>
+        <p>After submitting your request, our team will review your case and contact you within 24 hours for an initial assessment.</p>
+      </article>
+      <article class="service-card reveal">
+        <div class="service-icon">&#10003;</div>
+        <h3>Eligibility</h3>
+        <p>Our services are available to individuals and families who cannot afford private legal representation.</p>
+      </article>
+      <article class="service-card reveal">
+        <div class="service-icon">&#9878;&#65039;</div>
+        <h3>Legal Scope</h3>
+        <p>We provide legal aid for family disputes, rights violations, human rights cases, and community legal issues.</p>
+      </article>
+      <article class="service-card reveal">
+        <div class="service-icon">&#9200;</div>
+        <h3>Timeline</h3>
+        <p>Most cases are addressed within 1-2 weeks. Emergency situations receive immediate attention.</p>
+      </article>
     </div>
   </div>
 </section>
+
 <section class="section section-dark">
   <div class="container" style="text-align:center">
     <div class="reveal">
@@ -88,6 +157,7 @@
     </div>
   </div>
 </section>
+
 <footer class="footer">
   <div class="container footer-grid">
     <div><div class="brand brand-light"><div class="brand-mark">&sect;</div><div class="brand-text"><strong>Grace Fellowship</strong><span>Law Firm</span></div></div><p class="footer-tag">Committed to Believe in Excellence.</p><p>A Legal Aid, Counselling &amp; Rights Awareness Project of Grace Bible Fellowship Church Pakistan.</p><p style="margin-top:12px;color:var(--gold-light);font-size:0.85rem">Since 2022 | Formally Registered June 2023</p></div>
