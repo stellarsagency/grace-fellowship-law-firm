@@ -9,6 +9,16 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800&family=Source+Sans+3:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
+<style>
+.chairman-hero{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.chairman-img{width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:var(--radius);border:4px solid var(--gold);box-shadow:var(--shadow-lg)}
+.chairman-text h2{font-size:clamp(2rem,4vw,2.8rem);margin-bottom:8px}
+.chairman-text .team-badge{display:inline-block;margin-bottom:12px}
+.chairman-text .team-role{color:var(--gold);font-weight:700;font-size:1rem;text-transform:uppercase;letter-spacing:.1em;margin-bottom:20px;display:block}
+.chairman-text p{color:var(--muted);font-size:1.05rem;margin-bottom:16px;line-height:1.8}
+.chairman-text blockquote{border-left:4px solid var(--gold);background:var(--cream);padding:20px 24px;margin-top:20px;font-family:'Playfair Display',serif;font-size:1.1rem;font-style:italic;color:var(--maroon-dark);border-radius:0 var(--radius-sm) var(--radius-sm) 0}
+@media(max-width:992px){.chairman-hero{grid-template-columns:1fr;gap:40px}.chairman-img{max-height:500px}}
+</style>
 </head>
 <body>
 
@@ -31,10 +41,27 @@
   </div>
 </section>
 
+<section class="section">
+  <div class="container">
+    <div class="chairman-hero reveal">
+      <img src="images/chairman.jpg" alt="Peter Charles Sahotra — Chairman of Grace Fellowship Law Firm" class="chairman-img">
+      <div class="chairman-text">
+        <div class="team-badge">Chairman</div>
+        <h2>Peter Charles Sahotra</h2>
+        <span class="team-role">Chairman — Grace Fellowship Law Firm</span>
+        <p>Peter Charles Sahotra leads Grace Fellowship Law Firm with unwavering commitment to justice and tireless efforts in serving those who cannot afford legal representation. His leadership has been instrumental in establishing the firm as a trusted legal aid provider across Pakistan.</p>
+        <p>Under his guidance, the firm has grown from a small initiative into a nationwide network providing free legal aid, counselling, and rights awareness to thousands of families in need.</p>
+        <p>His vision is simple yet powerful: to ensure that no person in Pakistan is denied access to justice simply because they cannot afford a lawyer.</p>
+        <blockquote>"Justice should never be a privilege for the wealthy. Every person, regardless of their financial situation, deserves the right to seek legal help and defend their dignity."</blockquote>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section class="section section-dark">
   <div class="container">
     <div class="section-head reveal">
-      <p class="section-eyebrow" style="color:var(--gold-light)">Our Leadership</p>
+      <p class="section-eyebrow" style="color:var(--gold-light)">Our Leadership Team</p>
       <h2 class="section-title" style="color:var(--white)">Meet the Visionaries Behind Our Mission</h2>
     </div>
     <div class="team-grid stagger-children">
