@@ -9,6 +9,13 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800&family=Source+Sans+3:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
+<style>
+.hero-home{background:linear-gradient(160deg,rgba(61,0,16,.92),rgba(90,0,22,.88) 40%,rgba(128,0,32,.85)),url('images/documents/hERO.png') center/cover no-repeat}
+.service-card-img{width:100%;height:180px;object-fit:cover;border-radius:var(--radius-sm);margin-bottom:18px;border:1px solid #e8ddd0}
+.leadership-strip{padding:80px 0;background:linear-gradient(160deg,var(--maroon-deep),var(--maroon-dark))}
+.leadership-strip .team-grid{grid-template-columns:repeat(3,1fr)}
+.home-about-img{width:100%;border-radius:var(--radius);border:1px solid #e8ddd0;object-fit:cover;max-height:400px}
+</style>
 </head>
 <body>
 
@@ -41,6 +48,47 @@
   <div class="scroll-indicator"><div class="scroll-mouse"></div><span>Scroll</span></div>
 </section>
 
+<section class="section section-dark" style="padding:60px 0">
+  <div class="container">
+    <div class="section-head reveal">
+      <p class="section-eyebrow" style="color:var(--gold-light)">Our Leadership</p>
+      <h2 class="section-title" style="color:var(--white)">Meet the Visionaries Behind Our Mission</h2>
+    </div>
+    <div class="team-grid" style="grid-template-columns:repeat(3,1fr);gap:24px">
+      <div class="team-card reveal" style="padding:28px 20px">
+        <div class="team-photo no-img" data-initials="TR" style="width:90px;height:90px;margin:0 auto 14px">
+          <img src="images/patron.jpg" alt="Pastor Tariq Rehmat" onerror="this.style.display='none'; this.parentElement.classList.add('no-img');">
+        </div>
+        <div class="team-badge">Patron-in-Chief</div>
+        <h3 style="font-size:1.05rem">Pastor Tariq Rehmat</h3>
+        <p class="team-role" style="font-size:.75rem">Volunteer</p>
+        <p style="font-size:.88rem">A spiritual leader dedicated to guiding the firm's mission with faith-based values.</p>
+      </div>
+      <div class="team-card reveal" style="padding:28px 20px">
+        <div class="team-photo" style="width:90px;height:90px;margin:0 auto 14px">
+          <img src="images/chairman.jpg" alt="Peter Charles Sahotra" onerror="this.parentElement.classList.add('no-img'); this.parentElement.setAttribute('data-initials','PC'); this.style.display='none';">
+        </div>
+        <div class="team-badge">Chairman</div>
+        <h3 style="font-size:1.05rem">Peter Charles Sahotra</h3>
+        <p class="team-role" style="font-size:.75rem">Chairman</p>
+        <p style="font-size:.88rem">Leading with unwavering commitment to justice and service to the community.</p>
+      </div>
+      <div class="team-card reveal" style="padding:28px 20px">
+        <div class="team-photo no-img" data-initials="SF" style="width:90px;height:90px;margin:0 auto 14px">
+          <img src="images/director.jpg" alt="Adv. Shahbaz Fazal Saroya" onerror="this.style.display='none'; this.parentElement.classList.add('no-img');">
+        </div>
+        <div class="team-badge">Director</div>
+        <h3 style="font-size:1.05rem">Adv. Shahbaz Fazal Saroya</h3>
+        <p class="team-role" style="font-size:.75rem">Senior Advocate High Court</p>
+        <p style="font-size:.88rem">Extensive High Court experience with a passion for advocating for the underprivileged.</p>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:32px" class="reveal">
+      <a href="leadership.html" class="btn btn-gold btn-sm">Meet Full Leadership Team &rarr;</a>
+    </div>
+  </div>
+</section>
+
 <section class="stats-strip">
   <div class="container stats-grid">
     <div class="stat"><span class="stat-num" data-count="3" data-suffix="+">0</span><p>Years of Service</p></div>
@@ -60,15 +108,11 @@
       <blockquote>"The organization is particularly committed to reaching people who are economically vulnerable and may otherwise be unable to access appropriate legal assistance."</blockquote>
     </div>
     <div class="about-cards">
+      <img src="images/photos/Community .png" alt="Grace Fellowship Law Firm community work" class="home-about-img reveal">
       <div class="info-card reveal">
         <div class="info-icon">&#128203;</div>
         <h3>Institutional Identity</h3>
         <p><strong>Name:</strong> Grace Fellowship Law Firm<br><strong>Established:</strong> 2022<br><strong>Registered:</strong> June 2023<br><strong>Parent:</strong> Grace Bible Fellowship Church Pakistan<br><strong>Focus:</strong> Legal Aid, Counselling, Rights Awareness &amp; Community Advocacy<br><strong>Geography:</strong> Pakistan</p>
-      </div>
-      <div class="info-card reveal">
-        <div class="info-icon">&#9878;&#65039;</div>
-        <h3>Our Purpose</h3>
-        <p>The justice system can be difficult to navigate for people who have limited financial resources, limited education or limited understanding of legal procedures. Grace Fellowship Law Firm was created to address this gap.</p>
       </div>
     </div>
   </div>
@@ -96,38 +140,38 @@
     </div>
     <div class="cards-grid stagger-children">
       <article class="service-card reveal">
+        <img src="images/photos/Community 2.png" alt="Legal Aid Program" class="service-card-img">
         <div class="service-num">01</div>
-        <div class="service-icon">&#9878;&#65039;</div>
         <h3>Legal Aid Program</h3>
         <p>The core service. Initial consultation, case assessment, legal information, referral to advocates and representation in qualifying matters.</p>
       </article>
       <article class="service-card reveal">
+        <img src="images/photos/Community 3.png" alt="Human Rights &amp; Justice" class="service-card-img">
         <div class="service-num">02</div>
-        <div class="service-icon">&#128737;&#65039;</div>
         <h3>Human Rights &amp; Justice</h3>
         <p>We promote respect for human dignity and fundamental rights. Our advocacy addresses issues affecting vulnerable individuals and communities.</p>
       </article>
       <article class="service-card reveal">
+        <img src="images/photos/Community 4.png" alt="Counselling &amp; Social Support" class="service-card-img">
         <div class="service-num">03</div>
-        <div class="service-icon">&#128172;</div>
         <h3>Counselling &amp; Social Support</h3>
         <p>Legal problems have social dimensions. Counselling assists individuals facing family conflicts, social disputes and personal pressures.</p>
       </article>
       <article class="service-card reveal">
+        <img src="images/photos/Community .png" alt="Legal Rights Awareness" class="service-card-img">
         <div class="service-num">04</div>
-        <div class="service-icon">&#128226;</div>
         <h3>Legal Rights Awareness</h3>
         <p>Many suffer injustice because they do not know their rights. Our programs address this knowledge gap through community meetings.</p>
       </article>
       <article class="service-card reveal">
+        <img src="images/photos/Community 2.png" alt="Nationwide Community Outreach" class="service-card-img">
         <div class="service-num">05</div>
-        <div class="service-icon">&#129309;</div>
         <h3>Nationwide Community Outreach</h3>
         <p>We develop a nationwide legal awareness network with churches, community leaders and social organizations.</p>
       </article>
       <article class="service-card reveal">
+        <img src="images/photos/Community 3.png" alt="Awareness Initiatives" class="service-card-img">
         <div class="service-num">06</div>
-        <div class="service-icon">&#128203;</div>
         <h3>Awareness Initiatives</h3>
         <p>Seminars, community meetings, rights education, human rights campaigns, counselling sessions and referral networks.</p>
       </article>
