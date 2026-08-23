@@ -1,6 +1,5 @@
 (function(){
 try {
-  document.querySelectorAll('.page-loader').forEach(function(el){ el.style.display='none'; });
 
   var nb = document.getElementById('navbar');
   if (nb) {
@@ -94,23 +93,7 @@ try {
     });
   });
 
-  var fb = document.querySelectorAll('.filter-btn');
   var gi = document.querySelectorAll('.gallery-item');
-  fb.forEach(function(b){
-    b.addEventListener('click', function(){
-      fb.forEach(function(x){ x.classList.remove('active'); });
-      b.classList.add('active');
-      var f = b.getAttribute('data-filter');
-      gi.forEach(function(item){
-        if (f === 'all' || item.getAttribute('data-category') === f) {
-          item.style.display = '';
-        } else {
-          item.style.display = 'none';
-        }
-      });
-    });
-  });
-
   var lb = document.getElementById('lightbox');
   var li = document.getElementById('lightboxImg');
   var lc = document.getElementById('lightboxCaption');
@@ -163,8 +146,22 @@ try {
     });
   });
 
+  if (!window.matchMedia || !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    var tiltCards = document.querySelectorAll('.service-card, .value-card, .team-card');
+    tiltCards.forEach(function(card){
+      card.addEventListener('mousemove', function(e){
+        var r = card.getBoundingClientRect();
+        var x = (e.clientX - r.left) / r.width - 0.5;
+        var y = (e.clientY - r.top) / r.height - 0.5;
+        card.style.transform = 'perspective(800px) rotateY(' + (x * 6) + 'deg) rotateX(' + (-y * 6) + 'deg) translateY(-8px) scale(1.02)';
+      });
+      card.addEventListener('mouseleave', function(){
+        card.style.transform = '';
+      });
+    });
+  }
+
 } catch(err) {
-  document.querySelectorAll('.page-loader').forEach(function(el){ el.style.display='none'; });
   console.error('Script error:', err);
 }
 })();
