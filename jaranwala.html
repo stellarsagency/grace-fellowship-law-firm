@@ -23,7 +23,7 @@
 .update-images{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px;margin-top:20px}
 .update-img{border-radius:var(--radius-sm);overflow:hidden;border:1px solid #e8ddd0;cursor:pointer;transition:transform .4s,box-shadow .4s}
 .update-img:hover{transform:scale(1.03);box-shadow:var(--shadow)}
-.update-img img{width:100%;height:280px;object-fit:cover;display:block}
+.update-img img{width:100%;height:auto;max-height:400px;object-fit:contain;display:block}
 .person-tag{display:inline-flex;align-items:center;gap:6px;background:var(--gold-pale);color:var(--maroon-dark);padding:4px 14px;border-radius:999px;font-size:.78rem;font-weight:700;margin-top:8px}
 .timeline-mini{position:relative;padding-left:30px;margin-top:20px}
 .timeline-mini::before{content:'';position:absolute;left:8px;top:0;bottom:0;width:2px;background:linear-gradient(to bottom,var(--gold),var(--maroon))}
