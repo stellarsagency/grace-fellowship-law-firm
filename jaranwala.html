@@ -40,6 +40,10 @@
 .urgent-banner{background:linear-gradient(135deg,#dc3545,#a71d2a);color:var(--white);padding:20px 0;text-align:center;position:relative;overflow:hidden}
 .urgent-banner::before{content:'';position:absolute;inset:0;background:linear-gradient(90deg,transparent,rgba(255,255,255,.08),transparent);background-size:200% 100%;animation:shimmer 3s linear infinite}
 .urgent-banner p{font-weight:700;font-size:1rem;letter-spacing:.05em;position:relative;z-index:1}
+.video-wrapper{position:relative;border-radius:var(--radius-lg);overflow:hidden;box-shadow:0 20px 60px rgba(128,0,32,.2);border:3px solid rgba(201,168,76,.3);transition:all .5s cubic-bezier(.25,.46,.45,.94)}
+.video-wrapper:hover{transform:translateY(-6px);box-shadow:0 28px 70px rgba(128,0,32,.25);border-color:var(--gold)}
+.video-container{position:relative;padding-bottom:56.25%;height:0;overflow:hidden}
+.video-container iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:0}
 @media(max-width:992px){.timeline::before{left:24px}.timeline-item,.timeline-item:nth-child(odd){flex-direction:column;padding-left:60px}.timeline-dot{left:24px}.timeline-content,.timeline-item:nth-child(odd) .timeline-content{width:100%;text-align:left}}
 </style>
 </head>
@@ -141,6 +145,21 @@
         <h3>Ongoing Advocacy</h3>
         <p>We continue to advocate for the rights of Jaranwala victims at national and international levels, working with human rights organizations and government bodies.</p>
       </article>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container" style="max-width:900px">
+    <div class="section-head reveal">
+      <p class="section-eyebrow">Watch</p>
+      <h2 class="section-title">See the Jaranwala Response</h2>
+      <p class="section-sub">Watch how Grace Fellowship Law Firm mobilized to support affected families.</p>
+    </div>
+    <div class="video-wrapper reveal">
+      <div class="video-container">
+        <iframe src="https://www.youtube.com/embed/J-SmSfnZpRc" title="Jaranwala Response — Grace Fellowship Law Firm" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
     </div>
   </div>
 </section>
