@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Fresh &amp; Hot Daily — Broast Deals</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--red:#c0392b;--red-dark:#96281b;--red-deep:#6b1d13;--red-light:#e74c3c;--gold:#f39c12;--gold-light:#f1c40f;--cream:#fdf6ec;--white:#ffffff;--dark:#1a1a1a;--gray:#6b6b6b;--shadow:0 20px 60px rgba(0,0,0,.15)}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Inter',sans-serif;color:var(--dark);background:var(--cream);overflow-x:hidden;-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:'Playfair Display',serif;line-height:1.15}
+
+.hero{position:relative;min-height:100vh;display:flex;align-items:center;background:linear-gradient(160deg,var(--red-deep),var(--red-dark) 35%,var(--red));overflow:hidden}
+.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 20% 80%,rgba(243,156,18,.15),transparent 55%),radial-gradient(ellipse at 80% 20%,rgba(241,196,15,.1),transparent 50%)}
+.hero::after{content:'';position:absolute;bottom:-2px;left:0;right:0;height:120px;background:linear-gradient(to top,var(--cream),transparent);z-index:2}
+.hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;position:relative;z-index:1}
+.hero-text{padding:40px 0}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);border-radius:999px;padding:8px 20px;color:var(--gold-light);font-weight:700;font-size:.82rem;letter-spacing:.1em;text-transform:uppercase;margin-bottom:24px;backdrop-filter:blur(8px);animation:fadeUp .8s ease .2s both}
+.hero h1{color:var(--white);font-size:clamp(2.8rem,6vw,5rem);font-weight:800;margin-bottom:20px;animation:fadeUp .8s ease .35s both}
+.hero h1 .highlight{color:var(--gold-light);position:relative;display:inline-block}
+.hero h1 .highlight::after{content:'';position:absolute;left:0;bottom:4px;width:100%;height:4px;background:var(--gold);border-radius:2px;opacity:.6}
+.hero-sub{color:rgba(255,255,255,.8);font-size:1.15rem;max-width:500px;line-height:1.8;margin-bottom:32px;animation:fadeUp .8s ease .5s both}
+.hero-actions{display:flex;gap:16px;flex-wrap:wrap;animation:fadeUp .8s ease .65s both}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:16px 36px;font-weight:700;font-size:1rem;border-radius:60px;cursor:pointer;border:none;transition:all .4s cubic-bezier(.25,.46,.45,.94);font-family:inherit;text-decoration:none}
+.btn-primary{background:linear-gradient(135deg,var(--gold),#d4890a);color:var(--red-deep);box-shadow:0 8px 30px rgba(243,156,18,.35)}
+.btn-primary:hover{transform:translateY(-4px) scale(1.03);box-shadow:0 14px 40px rgba(243,156,18,.45)}
+.btn-outline{background:transparent;border:2px solid rgba(255,255,255,.4);color:var(--white)}
+.btn-outline:hover{background:rgba(255,255,255,.1);border-color:var(--white);transform:translateY(-4px)}
+.hero-visual{position:relative;display:flex;justify-content:center;align-items:center}
+.hero-circle{width:420px;height:420px;border-radius:50%;background:linear-gradient(145deg,rgba(243,156,18,.2),rgba(241,196,15,.08));border:2px solid rgba(243,156,18,.2);display:flex;align-items:center;justify-content:center;position:relative;animation:pulse 4s ease-in-out infinite}
+.hero-circle::before{content:'🍗';font-size:10rem;animation:float 3s ease-in-out infinite}
+.hero-circle::after{content:'';position:absolute;inset:-20px;border-radius:50%;border:1px solid rgba(243,156,18,.1);animation:spinSlow 20s linear infinite}
+.hero-float{position:absolute;border-radius:50%;pointer-events:none}
+.hf-1{width:200px;height:200px;border:1px solid rgba(243,156,18,.15);top:-40px;right:20px;animation:f1 12s ease-in-out infinite}
+.hf-2{width:120px;height:120px;background:radial-gradient(circle,rgba(243,156,18,.1),transparent);bottom:40px;left:-30px;animation:f2 10s ease-in-out infinite}
+.hf-3{width:80px;height:80px;background:rgba(255,255,255,.05);top:30%;right:-20px;animation:f3 14s ease-in-out infinite}
+@keyframes fadeUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
+@keyframes float{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-12px) rotate(5deg)}}
+@keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.04)}}
+@keyframes spinSlow{to{transform:rotate(360deg)}}
+@keyframes f1{0%,100%{transform:translate(0,0)}50%{transform:translate(-20px,15px)}}
+@keyframes f2{0%,100%{transform:translate(0,0)}50%{transform:translate(15px,-20px)}}
+@keyframes f3{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(-10px,10px) scale(1.1)}}
+
+.features{padding:100px 0;position:relative}
+.features-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.feature-card{background:var(--white);border:1px solid #f0e6d6;border-radius:20px;padding:40px 32px;text-align:center;transition:all .5s cubic-bezier(.25,.46,.45,.94);position:relative;overflow:hidden}
+.feature-card::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--red),var(--gold),var(--red));transform:scaleX(0);transition:transform .5s}
+.feature-card:hover{transform:translateY(-10px);box-shadow:var(--shadow)}
+.feature-card:hover::before{transform:scaleX(1)}
+.feature-icon{width:72px;height:72px;margin:0 auto 20px;background:linear-gradient(145deg,var(--red),var(--red-dark));border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:2rem;box-shadow:0 8px 24px rgba(192,57,43,.25);transition:all .4s}
+.feature-card:hover .feature-icon{transform:scale(1.1) rotate(5deg);box-shadow:0 12px 32px rgba(243,156,18,.3)}
+.feature-card h3{font-size:1.3rem;margin-bottom:10px;color:var(--red-dark)}
+.feature-card p{color:var(--gray);font-size:.95rem;line-height:1.7}
+
+.loyalty{background:linear-gradient(160deg,var(--red-deep),var(--red-dark));padding:100px 0;position:relative;overflow:hidden}
+.loyalty::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 30% 70%,rgba(243,156,18,.1),transparent 50%)}
+.loyalty-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;position:relative;z-index:1}
+.loyalty-content h2{color:var(--white);font-size:clamp(2rem,4vw,3rem);margin-bottom:18px}
+.loyalty-content p{color:rgba(255,255,255,.75);font-size:1.1rem;line-height:1.8;margin-bottom:28px}
+.stamp-card{background:rgba(255,255,255,.07);border:2px solid rgba(243,156,18,.3);border-radius:20px;padding:40px;backdrop-filter:blur(8px);text-align:center;transition:all .4s}
+.stamp-card:hover{transform:translateY(-6px);border-color:var(--gold);box-shadow:0 20px 50px rgba(0,0,0,.3)}
+.stamp-card h3{color:var(--gold-light);font-size:1.5rem;margin-bottom:8px}
+.stamp-card>p{color:rgba(255,255,255,.6);margin-bottom:28px;font-size:.95rem}
+.stamps{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-bottom:28px}
+.stamp{width:52px;height:52px;border-radius:50%;border:2px dashed rgba(243,156,18,.35);display:flex;align-items:center;justify-content:center;font-size:1.4rem;transition:all .3s;margin:0 auto}
+.stamp.filled{background:linear-gradient(145deg,var(--gold),#d4890a);border:2px solid var(--gold);transform:scale(1.05);box-shadow:0 4px 16px rgba(243,156,18,.4)}
+.stamp:last-child{border-style:solid;border-color:var(--gold);background:linear-gradient(145deg,rgba(243,156,18,.15),rgba(243,156,18,.05))}
+.stamp-free{font-weight:800;color:var(--gold-light);font-size:.8rem}
+.stamp-card .btn{width:100%;justify-content:center}
+
+.cta-banner{background:var(--red);padding:80px 0;text-align:center;position:relative;overflow:hidden}
+.cta-banner::before{content:'';position:absolute;inset:0;background:linear-gradient(90deg,transparent,rgba(255,255,255,.05),transparent);background-size:200% 100%;animation:shimmer 3s linear infinite}
+@keyframes shimmer{0%{background-position:-200% 0}100%{background-position:200% 0}}
+.cta-banner h2{color:var(--white);font-size:clamp(1.8rem,3.5vw,2.8rem);margin-bottom:16px;position:relative;z-index:1}
+.cta-banner p{color:rgba(255,255,255,.8);font-size:1.1rem;margin-bottom:30px;position:relative;z-index:1}
+.cta-banner .btn{position:relative;z-index:1}
+
+.footer{background:var(--red-deep);color:rgba(255,255,255,.6);padding:40px 0;text-align:center;font-size:.85rem}
+.footer strong{color:var(--white)}
+
+@media(max-width:992px){.hero-grid{grid-template-columns:1fr;text-align:center}.hero-visual{display:none}.hero-sub{margin:0 auto 32px}.hero-actions{justify-content:center}.features-grid{grid-template-columns:1fr 1fr}.loyalty-grid{grid-template-columns:1fr}}
+@media(max-width:768px){.features-grid{grid-template-columns:1fr}.stamps{grid-template-columns:repeat(5,1fr);gap:8px}.stamp{width:44px;height:44px;font-size:1.1rem}.hero{min-height:auto;padding:120px 0 80px}}
+@media(max-width:480px){.hero h1{font-size:2rem}.btn{padding:14px 28px;font-size:.92rem}.hero-actions{flex-direction:column;align-items:center}.hero-actions .btn{width:100%;max-width:280px;justify-content:center}.stamp-card{padding:28px 20px}}
+</style>
+</head>
+<body>
+
+<section class="hero">
+  <div class="hero-float hf-1"></div>
+  <div class="hero-float hf-2"></div>
+  <div class="hero-float hf-3"></div>
+  <div class="container hero-grid">
+    <div class="hero-text">
+      <div class="hero-badge">&#128293; Fresh &amp; Hot Daily</div>
+      <h1>Hungry for <span class="highlight">Perfection</span>?</h1>
+      <p class="hero-sub">Order your favorite broast deal now and taste the difference that 24-hour marination makes. Delivered hot, crispy, and bursting with flavor.</p>
+      <div class="hero-actions">
+        <a href="#" class="btn btn-primary">&#128293; Order Now</a>
+        <a href="#loyalty" class="btn btn-outline">Loyalty Program</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-circle"></div>
+    </div>
+  </div>
+</section>
+
+<section class="features">
+  <div class="container">
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon">&#128293;</div>
+        <h3>24-Hour Marination</h3>
+        <p>Every piece is marinated for a full 24 hours with our secret blend of herbs and spices for maximum flavor.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">&#127836;</div>
+        <h3>Always Crispy</h3>
+        <p>Fried to golden perfection every single time. Our technique guarantees that signature crunch in every bite.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">&#128666;</div>
+        <h3>Hot Delivery</h3>
+        <p>From our kitchen to your doorstep — delivered piping hot, crispy, and bursting with flavor every time.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="loyalty" id="loyalty">
+  <div class="container loyalty-grid">
+    <div class="loyalty-content">
+      <h2>Loyalty Program</h2>
+      <p>Buy 10 Broasts, Get 1 Absolutely Free. Ask about our stamp card on your next visit!</p>
+      <a href="#" class="btn btn-primary">Order Now &rarr;</a>
+    </div>
+    <div class="stamp-card">
+      <h3>Your Stamp Card</h3>
+      <p>Collect stamps with every purchase</p>
+      <div class="stamps">
+        <div class="stamp filled">&#128293;</div>
+        <div class="stamp filled">&#128293;</div>
+        <div class="stamp filled">&#128293;</div>
+        <div class="stamp filled">&#128293;</div>
+        <div class="stamp filled">&#128293;</div>
+        <div class="stamp filled">&#128293;</div>
+        <div class="stamp filled">&#128293;</div>
+        <div class="stamp filled">&#128293;</div>
+        <div class="stamp filled">&#128293;</div>
+        <div class="stamp"><span class="stamp-free">FREE</span></div>
+      </div>
+      <a href="#" class="btn btn-primary">Start Collecting</a>
+    </div>
+  </div>
+</section>
+
+<section class="cta-banner">
+  <div class="container">
+    <h2>Craving Something Delicious?</h2>
+    <p>Don't wait — order your favorite broast deal now and taste the difference.</p>
+    <a href="#" class="btn btn-primary" style="font-size:1.1rem;padding:18px 44px">&#128293; Order Now</a>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <p>&copy; <span id="year"></span> <strong>Fresh &amp; Hot Daily</strong>. All Rights Reserved.</p>
+  </div>
+</footer>
+
+<script>
+document.getElementById('year').textContent=new Date().getFullYear();
+</script>
+</body>
+</html>
