@@ -9,18 +9,21 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800&family=Source+Sans+3:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
-<style>
-.hero-home{background:linear-gradient(160deg,rgba(61,0,16,.88),rgba(90,0,22,.85) 40%,rgba(128,0,32,.82)),url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=1920&q=80') center/cover no-repeat}
-.service-card-img{width:100%;height:320px;object-fit:cover;object-position:top;border-radius:var(--radius-sm);margin-bottom:18px;border:1px solid #e8ddd0}
-.home-about-img{width:100%;max-height:400px;border-radius:var(--radius);border:1px solid #e8ddd0;object-fit:contain;background:var(--cream)}
-.chairman-home-img{width:320px;max-width:100%;max-height:420px;object-fit:contain;border-radius:var(--radius);box-shadow:var(--shadow-lg);flex-shrink:0;background:var(--cream)}
-.video-wrapper{position:relative;border-radius:var(--radius-lg);overflow:hidden;box-shadow:0 20px 60px rgba(128,0,32,.2);border:3px solid rgba(201,168,76,.3);transition:all .5s cubic-bezier(.25,.46,.45,.94)}
-.video-wrapper:hover{transform:translateY(-6px);box-shadow:0 28px 70px rgba(128,0,32,.25);border-color:var(--gold)}
-.video-container{position:relative;padding-bottom:56.25%;height:0;overflow:hidden}
-.video-container iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:0}
-</style>
 </head>
 <body>
+
+<div class="top-bar">
+  <div class="container top-bar-inner">
+    <div class="top-bar-left">
+      <span>&#128205; <strong>Pakistan</strong></span>
+      <span>&#128337; <strong>Mon - Sat</strong> 9:00 AM - 6:00 PM</span>
+      <span>&#128231; <strong>gflf.official@gmail.com</strong></span>
+    </div>
+    <div class="top-bar-right">
+      <a href="donate.html" class="btn-donate">&#128179; DONATE</a>
+    </div>
+  </div>
+</div>
 
 <header class="navbar" id="navbar">
   <div class="container nav-inner">
@@ -32,23 +35,82 @@
   </div>
 </header>
 
-<section class="hero-home">
-  <div class="hero-float hero-float-1"></div>
-  <div class="hero-float hero-float-2"></div>
-  <div class="hero-float hero-float-3"></div>
-  <div class="hero-content">
-    <p class="hero-eyebrow">Committed to Believe in Excellence</p>
-    <h1>Grace Fellowship<br><em>Law Firm</em></h1>
-    <p class="hero-sub">A Legal Aid, Counselling &amp; Rights Awareness Project of Grace Bible Fellowship Church Pakistan</p>
-    <div class="hero-actions">
-      <a href="contact.html" class="btn btn-gold btn-lg">Request Legal Assistance</a>
-      <a href="about.html" class="btn btn-outline btn-lg">Read Our Profile</a>
-    </div>
-    <div class="hero-tags">
-      <span>Legal Aid</span><span>Counselling</span><span>Rights Awareness</span><span>Community Advocacy</span>
+<section class="hero-slider" id="heroSlider">
+  <div class="hero-slide active">
+    <div class="hero-slide-bg" style="background-image:url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=1920&q=80')"></div>
+    <div class="hero-slide-overlay"></div>
+    <div class="hero-slide-content">
+      <p class="hero-eyebrow">Committed to Believe in Excellence</p>
+      <h1>Grace Fellowship<br><em>Law Firm</em></h1>
+      <p>A Legal Aid, Counselling &amp; Rights Awareness Project of Grace Bible Fellowship Church Pakistan</p>
+      <div class="hero-actions">
+        <a href="contact.html" class="btn btn-gold btn-lg">Request Legal Assistance</a>
+        <a href="about.html" class="btn btn-outline btn-lg">Read Our Profile</a>
+      </div>
     </div>
   </div>
-  <div class="scroll-indicator"><div class="scroll-mouse"></div><span>Scroll</span></div>
+  <div class="hero-slide">
+    <div class="hero-slide-bg" style="background-image:url('https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=1920&q=80')"></div>
+    <div class="hero-slide-overlay"></div>
+    <div class="hero-slide-content">
+      <p class="hero-eyebrow">Justice for All</p>
+      <h1>Fighting for<br><em>Human Rights</em></h1>
+      <p>Providing free legal aid, counselling and rights awareness to individuals and families who face injustice across Pakistan</p>
+      <div class="hero-actions">
+        <a href="services.html" class="btn btn-gold btn-lg">Our Services</a>
+        <a href="jaranwala.html" class="btn btn-outline btn-lg">Jaranwala Response</a>
+      </div>
+    </div>
+  </div>
+  <div class="hero-slide">
+    <div class="hero-slide-bg" style="background-image:url('https://images.unsplash.com/photo-1521791136064-7986c2920216?w=1920&q=80')"></div>
+    <div class="hero-slide-overlay"></div>
+    <div class="hero-slide-content">
+      <p class="hero-eyebrow">Stand With Us</p>
+      <h1>Support<br><em>Legal Aid</em></h1>
+      <p>Your donation helps us provide free legal representation to those who cannot afford it</p>
+      <div class="hero-actions">
+        <a href="donate.html" class="btn btn-gold btn-lg">Donate Now</a>
+        <a href="gallery.html" class="btn btn-outline btn-lg">View Media</a>
+      </div>
+    </div>
+  </div>
+  <div class="hero-dots" id="heroDots">
+    <button class="hero-dot active" data-slide="0"></button>
+    <button class="hero-dot" data-slide="1"></button>
+    <button class="hero-dot" data-slide="2"></button>
+  </div>
+  <div class="hero-arrows">
+    <button class="hero-arrow" id="prevSlide">&#8592;</button>
+    <button class="hero-arrow" id="nextSlide">&#8594;</button>
+  </div>
+</section>
+
+<section class="section" style="padding:80px 0">
+  <div class="container">
+    <div class="section-head reveal">
+      <p class="section-eyebrow">Core Values</p>
+      <h2 class="section-title">What Guides Us</h2>
+      <p class="section-sub">Our mission, vision and practice form the foundation of everything we do.</p>
+    </div>
+    <div class="core-values stagger-children">
+      <div class="core-value-card reveal">
+        <div class="core-value-icon">&#127919;</div>
+        <h3>Mission</h3>
+        <p>Inspiring and mobilizing advocates globally to do justice with compassion for the most vulnerable communities in Pakistan.</p>
+      </div>
+      <div class="core-value-card reveal">
+        <div class="core-value-icon">&#128065;</div>
+        <h3>Vision</h3>
+        <p>All peoples thriving in hope, peace and justice — within societies committed to freedom of religion, belief and the rule of law with integrity.</p>
+      </div>
+      <div class="core-value-card reveal">
+        <div class="core-value-icon">&#9878;&#65039;</div>
+        <h3>Practice</h3>
+        <p>Christ-centeredness maintained, core values protected, communications facilitated, and legal aid conferences encouraged and enabled.</p>
+      </div>
+    </div>
+  </div>
 </section>
 
 <section class="section" style="padding:60px 0">
@@ -57,7 +119,7 @@
       <p class="section-eyebrow">Our Leadership</p>
       <h2 class="section-title">Chairman</h2>
     </div>
-    <div class="chairman-home reveal" style="display:flex;gap:50px;align-items:center">
+    <div class="chairman-home reveal">
       <img src="images/chairman.jpg" alt="Peter Charles Sahotra" class="chairman-home-img">
       <div>
         <div class="team-badge">Chairman</div>
@@ -85,7 +147,7 @@
     <div class="about-text reveal">
       <p class="section-eyebrow">Institutional Profile</p>
       <h2 class="section-title">Executive Overview</h2>
-      <p class="lead">Grace Fellowship Law Firm is a community-focused legal aid initiative of Grace Bible Fellowship Church Pakistan, established to provide legal assistance, counselling and rights awareness to individuals and families who face injustice and cannot afford professional legal services.</p>
+      <p class="lead">Grace Fellowship Law Firm is a community-focused legal aid initiative of Grace Bible Fellowship Church Pakistan, established to provide legal assistance, counselling and rights awareness to individuals and families who face injustice.</p>
       <p>The initiative began its community service activities in <strong>2022</strong> and was formally registered in <strong>June 2023</strong>.</p>
       <blockquote>"The organization is particularly committed to reaching people who are economically vulnerable and may otherwise be unable to access appropriate legal assistance."</blockquote>
     </div>
@@ -94,7 +156,7 @@
       <div class="info-card reveal">
         <div class="info-icon">&#128203;</div>
         <h3>Institutional Identity</h3>
-        <p><strong>Name:</strong> Grace Fellowship Law Firm<br><strong>Established:</strong> 2022<br><strong>Registered:</strong> June 2023<br><strong>Parent:</strong> Grace Bible Fellowship Church Pakistan<br><strong>Focus:</strong> Legal Aid, Counselling, Rights Awareness &amp; Community Advocacy<br><strong>Geography:</strong> Pakistan</p>
+        <p><strong>Name:</strong> Grace Fellowship Law Firm<br><strong>Established:</strong> 2022<br><strong>Registered:</strong> June 2023<br><strong>Parent:</strong> Grace Bible Fellowship Church Pakistan<br><strong>Focus:</strong> Legal Aid, Counselling, Rights Awareness<br><strong>Geography:</strong> Pakistan</p>
       </div>
     </div>
   </div>
@@ -225,7 +287,7 @@
   <div class="container donate-inner">
     <div class="donate-content reveal">
       <p class="section-eyebrow" style="color:var(--gold-light)">Support Victims of Injustice</p>
-      <h2 style="color:var(--white);font-size:clamp(1.8rem,3.5vw,2.5rem);margin-bottom:16px">Your Donation Can Change a Life</h2>
+      <h2>Your Donation Can Change a Life</h2>
       <p style="color:#c8a8b0;font-size:1.05rem;margin-bottom:12px">Many families in Pakistan face injustice but cannot afford legal representation. Your donation helps us provide free legal aid, counselling and rights awareness.</p>
       <p style="color:#c8a8b0;font-size:1.05rem">Every contribution ensures that poverty does not become a barrier to justice.</p>
       <div style="margin-top:28px"><a href="donate.html" class="btn btn-gold btn-lg">Donate Now &rarr;</a></div>
@@ -246,7 +308,7 @@
   <div class="container" style="text-align:center">
     <div class="reveal">
       <p class="section-eyebrow" style="color:var(--gold-light)">Ready to Help</p>
-      <h2 style="color:var(--white);font-size:clamp(1.8rem,3.5vw,2.5rem);margin-bottom:16px">Need Legal Assistance?</h2>
+      <h2 style="font-size:clamp(1.8rem,3.5vw,2.5rem);margin-bottom:16px">Need Legal Assistance?</h2>
       <p style="color:#c8a8b0;max-width:550px;margin:0 auto 30px">If you or someone you know needs legal guidance, counselling or rights awareness support, please reach out.</p>
       <a href="contact.html" class="btn btn-gold btn-lg">Request Assistance &rarr;</a>
     </div>

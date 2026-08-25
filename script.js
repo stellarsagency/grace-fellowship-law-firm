@@ -25,6 +25,45 @@ try {
     });
   }
 
+  // Hero Slider
+  var slider = document.getElementById('heroSlider');
+  if (slider) {
+    var slides = slider.querySelectorAll('.hero-slide');
+    var dots = slider.querySelectorAll('.hero-dot');
+    var prevBtn = document.getElementById('prevSlide');
+    var nextBtn = document.getElementById('nextSlide');
+    var current = 0;
+    var total = slides.length;
+    var autoInterval;
+
+    function goToSlide(n) {
+      slides[current].classList.remove('active');
+      dots[current].classList.remove('active');
+      current = (n + total) % total;
+      slides[current].classList.add('active');
+      dots[current].classList.add('active');
+    }
+
+    function nextSlide() { goToSlide(current + 1); }
+    function prevSlide() { goToSlide(current - 1); }
+
+    function startAuto() { autoInterval = setInterval(nextSlide, 5000); }
+    function stopAuto() { clearInterval(autoInterval); }
+
+    dots.forEach(function(dot) {
+      dot.addEventListener('click', function() {
+        stopAuto();
+        goToSlide(parseInt(this.getAttribute('data-slide')));
+        startAuto();
+      });
+    });
+
+    if (nextBtn) nextBtn.addEventListener('click', function() { stopAuto(); nextSlide(); startAuto(); });
+    if (prevBtn) prevBtn.addEventListener('click', function() { stopAuto(); prevSlide(); startAuto(); });
+
+    startAuto();
+  }
+
   var rv = document.querySelectorAll('.reveal');
   if (rv.length && 'IntersectionObserver' in window) {
     var io = new IntersectionObserver(function(entries){
