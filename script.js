@@ -3,13 +3,11 @@ try {
 
   var nb = document.getElementById('navbar');
   var tb = document.querySelector('.top-bar');
-  var gl = document.querySelector('.gold-line');
   if (nb) {
     window.addEventListener('scroll', function(){
       var scrolled = window.scrollY > 60;
       nb.classList.toggle('scrolled', scrolled);
       if (tb) tb.style.display = scrolled ? 'none' : '';
-      if (gl) gl.style.display = scrolled ? 'none' : '';
     }, {passive:true});
   }
 
