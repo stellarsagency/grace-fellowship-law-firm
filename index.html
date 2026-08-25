@@ -39,6 +39,7 @@
   <div class="hero-slide active">
     <div class="hero-slide-bg" style="background-image:url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=1920&q=80')"></div>
     <div class="hero-slide-overlay"></div>
+    <div class="hero-pattern"></div>
     <div class="hero-slide-content">
       <p class="hero-eyebrow">Committed to Believe in Excellence</p>
       <h1>Grace Fellowship<br><em>Law Firm</em></h1>
@@ -52,6 +53,7 @@
   <div class="hero-slide">
     <div class="hero-slide-bg" style="background-image:url('https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=1920&q=80')"></div>
     <div class="hero-slide-overlay"></div>
+    <div class="hero-pattern"></div>
     <div class="hero-slide-content">
       <p class="hero-eyebrow">Justice for All</p>
       <h1>Fighting for<br><em>Human Rights</em></h1>
@@ -65,6 +67,7 @@
   <div class="hero-slide">
     <div class="hero-slide-bg" style="background-image:url('https://images.unsplash.com/photo-1521791136064-7986c2920216?w=1920&q=80')"></div>
     <div class="hero-slide-overlay"></div>
+    <div class="hero-pattern"></div>
     <div class="hero-slide-content">
       <p class="hero-eyebrow">Stand With Us</p>
       <h1>Support<br><em>Legal Aid</em></h1>
@@ -86,24 +89,31 @@
   </div>
 </section>
 
-<section class="section" style="padding:80px 0;background:var(--cream)">
-  <div class="container">
-    <div class="section-head reveal">
+<div class="marquee-strip">
+  <div class="marquee-track">
+    <span>Legal Aid</span><span>Human Rights</span><span>Counselling</span><span>Rights Awareness</span><span>Community Outreach</span><span>Jaranwala Response</span><span>Justice for All</span><span>Free Legal Services</span>
+    <span>Legal Aid</span><span>Human Rights</span><span>Counselling</span><span>Rights Awareness</span><span>Community Outreach</span><span>Jaranwala Response</span><span>Justice for All</span><span>Free Legal Services</span>
+  </div>
+</div>
+
+<section class="section pattern-bg" style="background:var(--cream)">
+  <div class="container" style="position:relative;z-index:1">
+    <div class="section-header-creative reveal">
       <p class="section-eyebrow">Core Values</p>
       <h2 class="section-title">Our Foundation</h2>
     </div>
     <div class="core-values-grid stagger-children">
-      <div class="core-value-card reveal">
+      <div class="core-value-card deco-corner reveal">
         <div class="core-value-icon">&#127919;</div>
         <h3>Mission</h3>
         <p>Inspiring and Mobilizing Advocates Globally to Do Justice With Compassion.</p>
       </div>
-      <div class="core-value-card reveal">
+      <div class="core-value-card deco-corner reveal">
         <div class="core-value-icon">&#128065;</div>
         <h3>Vision</h3>
         <p>All peoples thriving in hope, peace, and justice, within societies committed to freedom of religion or belief and the rule of law with integrity.</p>
       </div>
-      <div class="core-value-card reveal">
+      <div class="core-value-card deco-corner reveal">
         <div class="core-value-icon">&#9878;&#65039;</div>
         <h3>Practice</h3>
         <ul class="practice-list">
@@ -117,18 +127,27 @@
   </div>
 </section>
 
-<section class="section">
+<div class="wave-divider"><svg viewBox="0 0 1200 60" preserveAspectRatio="none"><path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" fill="%23f8f7f4"/><path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5" fill="%23f8f7f4"/><path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" fill="%23f8f7f4"/></svg></div>
+
+<section class="section diagonal-strip">
   <div class="container about-grid">
     <div class="about-text reveal">
-      <p class="section-eyebrow">About Us</p>
+      <div class="section-header-creative" style="text-align:left;margin-bottom:0">
+        <p class="section-eyebrow" style="justify-content:flex-start">About Us</p>
+      </div>
       <h2 class="section-title">Executive Overview</h2>
       <p class="lead">Grace Fellowship Law Firm is a community-focused legal aid initiative of Grace Bible Fellowship Church Pakistan, established to provide legal assistance, counselling and rights awareness to individuals and families who face injustice.</p>
       <p>The initiative began its community service activities in <strong>2022</strong> and was formally registered in <strong>June 2023</strong>.</p>
-      <p>The organization is particularly committed to reaching people who are economically vulnerable and may otherwise be unable to access appropriate legal assistance.</p>
-      <a href="about.html" class="btn btn-maroon" style="margin-top:20px">Read More &rarr;</a>
+      <div class="unique-quote" style="margin-top:24px">
+        We believe that law is a calling to serve, and every client deserves representation rooted in truth, compassion, and steadfast commitment.
+      </div>
+      <a href="about.html" class="btn btn-maroon" style="margin-top:24px">Read More &rarr;</a>
     </div>
-    <div class="about-img reveal">
-      <img src="images/photos/Community .png" alt="Grace Fellowship Law Firm community work">
+    <div class="reveal">
+      <div class="bordered-img">
+        <img src="images/photos/Community .png" alt="Grace Fellowship Law Firm community work">
+      </div>
+      <div class="float-badge" style="bottom:30px;left:-10px">Est. 2022</div>
     </div>
   </div>
 </section>
@@ -151,50 +170,68 @@
   </div>
 </section>
 
-<section class="section">
+<section class="section section-alt">
   <div class="container">
-    <div class="section-head reveal">
+    <div class="section-header-creative reveal">
       <p class="section-eyebrow">Our Foundation</p>
       <h2 class="section-title">Vision &amp; Mission</h2>
     </div>
     <div class="vm-grid stagger-children">
-      <div class="vm-card reveal">
-        <h3>Vision</h3>
-        <p>All peoples thriving in hope, peace and justice — within societies committed to freedom of religion or belief and the rule of law with integrity.</p>
+      <div class="vm-card marbled-card reveal" style="padding:44px 40px">
+        <h3 style="font-size:1.5rem;margin-bottom:18px">Vision</h3>
+        <p style="font-size:1.08rem;line-height:1.9">All peoples thriving in hope, peace and justice — within societies committed to freedom of religion or belief and the rule of law with integrity.</p>
       </div>
-      <div class="vm-card reveal">
-        <h3>Mission</h3>
-        <p>Inspiring and Mobilizing Advocates Globally to Do Justice With Compassion for the most vulnerable communities in Pakistan.</p>
+      <div class="vm-card marbled-card reveal" style="padding:44px 40px">
+        <h3 style="font-size:1.5rem;margin-bottom:18px">Mission</h3>
+        <p style="font-size:1.08rem;line-height:1.9">Inspiring and Mobilizing Advocates Globally to Do Justice With Compassion for the most vulnerable communities in Pakistan.</p>
       </div>
     </div>
   </div>
 </section>
 
-<section class="stats-strip">
-  <div class="container stats-grid">
-    <div class="stat"><span class="stat-num" data-count="3" data-suffix="+">0</span><p>Years of Service</p></div>
-    <div class="stat"><span class="stat-num" data-count="2023">0</span><p>Formally Registered</p></div>
-    <div class="stat"><span class="stat-num" data-count="100" data-suffix="%">0</span><p>Free &amp; Subsidized</p></div>
-    <div class="stat"><span class="stat-word">Nationwide</span><p>Across Pakistan</p></div>
+<section class="section-dark" style="padding:0">
+  <div class="container">
+    <div class="creative-stats reveal">
+      <div class="creative-stat">
+        <div class="creative-stat-num" data-count="3" data-suffix="+">0</div>
+        <div class="creative-stat-label">Years of Service</div>
+      </div>
+      <div class="creative-stat">
+        <div class="creative-stat-num" data-count="2023">0</div>
+        <div class="creative-stat-label">Formally Registered</div>
+      </div>
+      <div class="creative-stat">
+        <div class="creative-stat-num" data-count="100" data-suffix="%">0</div>
+        <div class="creative-stat-label">Free &amp; Subsidized</div>
+      </div>
+      <div class="creative-stat">
+        <div class="creative-stat-num" style="font-size:2.2rem">Nationwide</div>
+        <div class="creative-stat-label">Across Pakistan</div>
+      </div>
+    </div>
   </div>
 </section>
 
-<section class="section">
-  <div class="container">
-    <div class="section-head reveal">
+<section class="section pattern-bg">
+  <div class="container" style="position:relative;z-index:1">
+    <div class="section-header-creative reveal">
       <p class="section-eyebrow">Our Leadership</p>
       <h2 class="section-title">Chairman</h2>
     </div>
     <div class="chairman-section reveal">
-      <img src="images/chairman.jpg" alt="Peter Charles Sahotra" class="chairman-img">
+      <div class="bordered-img" style="max-width:400px">
+        <img src="images/chairman.jpg" alt="Peter Charles Sahotra" style="aspect-ratio:3/4;object-fit:cover">
+      </div>
       <div class="chairman-text">
         <div class="team-badge">Chairman</div>
         <h2>Peter Charles Sahotra</h2>
         <span class="role">Chairman — Grace Fellowship Law Firm</span>
         <p>Peter Charles Sahotra leads Grace Fellowship Law Firm with unwavering commitment to justice and tireless efforts in serving those who cannot afford legal representation.</p>
         <p>Under his guidance, the firm has grown into a nationwide network providing free legal aid, counselling, and rights awareness to thousands of families across Pakistan.</p>
-        <blockquote>"We are committed to ensuring that every person, regardless of their financial situation, has access to justice and legal assistance."</blockquote>
-        <a href="leadership.html" class="btn btn-maroon" style="margin-top:20px">Learn More &rarr;</a>
+        <div class="unique-quote" style="margin-top:20px">
+          We are committed to ensuring that every person, regardless of their financial situation, has access to justice and legal assistance.
+        </div>
+        <a href="leadership.html" class="btn btn-maroon" style="margin-top:24px">Learn More &rarr;</a>
       </div>
     </div>
   </div>
