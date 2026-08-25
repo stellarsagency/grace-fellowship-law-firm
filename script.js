@@ -2,9 +2,12 @@
 try {
 
   var nb = document.getElementById('navbar');
+  var tb = document.querySelector('.top-bar');
   if (nb) {
     window.addEventListener('scroll', function(){
-      nb.classList.toggle('scrolled', window.scrollY > 60);
+      var scrolled = window.scrollY > 60;
+      nb.classList.toggle('scrolled', scrolled);
+      if (tb) tb.style.display = scrolled ? 'none' : '';
     }, {passive:true});
   }
 
