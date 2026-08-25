@@ -17,6 +17,7 @@ img{max-width:100%;display:block}a{text-decoration:none;color:inherit}ul{list-st
 
 /* Navbar */
 .navbar{position:fixed;top:52px;left:0;right:0;z-index:1001;padding:14px 0;transition:all .4s;background:rgba(61,0,16,.95);backdrop-filter:blur(16px);box-shadow:0 4px 30px rgba(0,0,0,.3)}
+.navbar::after{content:'';position:absolute;bottom:0;left:0;right:0;height:3px;background:linear-gradient(90deg,transparent,var(--gold),var(--gold-light),var(--gold),transparent)}
 .navbar.scrolled{top:0;padding:10px 0}
 .navbar.scrolled .top-bar-hide{display:none}
 .nav-inner{display:flex;align-items:center;justify-content:space-between}
