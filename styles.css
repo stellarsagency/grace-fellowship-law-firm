@@ -293,7 +293,7 @@ img{max-width:100%;display:block}a{text-decoration:none;color:inherit}ul{list-st
 
 /* Page Hero */
 .page-hero{position:relative;min-height:50vh;display:flex;align-items:center;background:linear-gradient(160deg,var(--maroon-deep),var(--maroon-dark) 40%,var(--maroon));overflow:hidden;padding:140px 0 80px}
-.page-hero::before{content:'';position:absolute;inset:0;background:rgba(0,0,0,.35)}
+.page-hero::before{content:'';position:absolute;inset:0;background:rgba(0,0,0,.45)}
 .page-hero .container{position:relative;z-index:2}
 .page-hero h1{color:#ffffff;font-size:clamp(2rem,5vw,3.2rem);margin-bottom:14px}
 .page-hero h1 em{color:var(--gold-light);font-style:normal}
