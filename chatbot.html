@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,viewport-fit=cover">
+<title>Chatbot | Grace Fellowship Law Firm</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800&family=Source+Sans+3:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--maroon:#800020;--maroon-dark:#5a0016;--maroon-deep:#3d0010;--gold:#c9a84c;--gold-light:#e0c878;--white:#ffffff;--cream:#f8f7f4;--text:#222222;--radius:8px}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Source Sans 3',sans-serif;background:var(--cream);color:var(--text);height:100vh;overflow:hidden}
+
+.chatbot{display:flex;flex-direction:column;height:100vh;max-width:500px;margin:0 auto;background:var(--white);box-shadow:0 0 40px rgba(0,0,0,.1)}
+
+.chat-header{background:linear-gradient(135deg,var(--maroon-deep),var(--maroon-dark));color:var(--white);padding:16px 20px;display:flex;align-items:center;gap:14px;flex-shrink:0}
+.chat-header img{width:40px;height:40px;border-radius:50%;border:2px solid var(--gold)}
+.chat-header-info h3{font-family:'Playfair Display',serif;font-size:1rem;color:var(--white)}
+.chat-header-info span{font-size:.75rem;color:var(--gold-light);display:flex;align-items:center;gap:5px}
+.chat-header-info span::before{content:'';width:7px;height:7px;background:#4caf50;border-radius:50%;display:inline-block}
+.chat-header-close{margin-left:auto;background:none;border:none;color:var(--white);font-size:1.4rem;cursor:pointer;opacity:.7;transition:opacity .3s}
+.chat-header-close:hover{opacity:1}
+
+.chat-messages{flex:1;overflow-y:auto;padding:20px;display:flex;flex-direction:column;gap:12px;scroll-behavior:smooth}
+
+.msg{max-width:85%;padding:12px 16px;border-radius:var(--radius);font-size:.92rem;line-height:1.6;animation:msgIn .3s ease}
+@keyframes msgIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+.msg-bot{background:var(--cream);color:var(--text);border:1px solid #e0e0e0;align-self:flex-start;border-bottom-left-radius:2px}
+.msg-user{background:var(--maroon);color:var(--white);align-self:flex-end;border-bottom-right-radius:2px}
+.msg-bot strong{color:var(--maroon);display:block;margin-bottom:4px;font-size:.85rem}
+.msg a{color:var(--maroon);font-weight:700;text-decoration:underline}
+
+.quick-replies{display:flex;flex-wrap:wrap;gap:8px;padding:0 20px 12px;flex-shrink:0}
+.quick-reply{padding:8px 16px;border:1.5px solid var(--gold);border-radius:999px;background:transparent;color:var(--maroon);font-size:.82rem;font-weight:600;cursor:pointer;transition:all .3s;font-family:inherit}
+.quick-reply:hover{background:var(--gold);color:var(--maroon-deep);transform:translateY(-1px)}
+
+.chat-input{display:flex;gap:8px;padding:12px 16px;border-top:1px solid #e0e0e0;background:var(--white);flex-shrink:0}
+.chat-input input{flex:1;padding:12px 16px;border:1.5px solid #e0e0e0;border-radius:999px;font-size:.92rem;font-family:inherit;outline:none;transition:border-color .3s}
+.chat-input input:focus{border-color:var(--gold)}
+.chat-input button{width:44px;height:44px;border-radius:50%;background:var(--gold);color:var(--maroon-deep);border:none;font-size:1.2rem;cursor:pointer;transition:all .3s;flex-shrink:0;display:flex;align-items:center;justify-content:center}
+.chat-input button:hover{background:var(--maroon);color:var(--white);transform:scale(1.05)}
+
+.typing{display:flex;gap:4px;padding:12px 16px;align-self:flex-start}
+.typing span{width:8px;height:8px;background:var(--gold);border-radius:50%;animation:typing 1.4s infinite}
+.typing span:nth-child(2){animation-delay:.2s}
+.typing span:nth-child(3){animation-delay:.4s}
+@keyframes typing{0%,60%,100%{transform:translateY(0);opacity:.4}30%{transform:translateY(-6px);opacity:1}}
+</style>
+</head>
+<body>
+
+<div class="chatbot">
+  <div class="chat-header">
+    <img src="images/Logo.png" alt="GFLF">
+    <div class="chat-header-info">
+      <h3>GFLF Legal Aid</h3>
+      <span>Online — Ask a question</span>
+    </div>
+  </div>
+
+  <div class="chat-messages" id="chatMessages">
+    <div class="msg msg-bot">
+      <strong>Grace Fellowship Law Firm</strong>
+      Assalam o Alaikum! Welcome to Grace Fellowship Law Firm. I can help you with legal aid information, our services, and how to get assistance. How can I help you today?
+    </div>
+  </div>
+
+  <div class="quick-replies" id="quickReplies">
+    <button class="quick-reply" data-q="What services do you offer?">Services</button>
+    <button class="quick-reply" data-q="How to get legal help?">Get Legal Help</button>
+    <button class="quick-reply" data-q="What is your fee?">Fees</button>
+    <button class="quick-reply" data-q="Tell me about Jaranwala case">Jaranwala Case</button>
+    <button class="quick-reply" data-q="How to donate?">Donate</button>
+    <button class="quick-reply" data-q="Contact information">Contact</button>
+  </div>
+
+  <div class="chat-input">
+    <input type="text" id="chatInput" placeholder="Type your question..." autocomplete="off">
+    <button id="chatSend">&#10148;</button>
+  </div>
+</div>
+
+<script>
+var responses = {
+  "services": "We provide 5 core services:\n\n<strong>1. Legal Aid Program</strong> — Free legal representation for those who cannot afford it.\n<strong>2. Human Rights &amp; Justice</strong> — Defending dignity and fundamental freedoms.\n<strong>3. Counselling Services</strong> — Family and individual support.\n<strong>4. Rights Awareness</strong> — Community education on legal rights.\n<strong>5. Community Outreach</strong> — Nationwide church network coordination.\n\nWould you like to know more about any specific service?",
+
+  "legal help": "To get free legal assistance:\n\n<strong>1.</strong> Visit our <a href='contact.html'>Contact Page</a>\n<strong>2.</strong> Email us at <strong>gflf.official@gmail.com</strong>\n<strong>3.</strong> Call during office hours: <strong>Mon-Sat, 9AM-6PM</strong>\n\nOur team will review your case and provide free legal counsel if you qualify. No one is turned away due to inability to pay.",
+
+  "fee": "Our services are <strong>100% FREE</strong> for qualifying individuals and families.\n\nGrace Fellowship Law Firm is a legal aid project of Grace Bible Fellowship Church Pakistan. We do not charge for legal representation, counselling, or rights awareness programs.\n\nIf you need help, please <a href='contact.html'>contact us</a> — we are here to serve.",
+
+  "jaranwala": "We are providing full legal aid for the <strong>Jaranwala incident (16 August 2023)</strong>.\n\nOur team, led by <strong>Advocate Shahbaz Fazal Saroya</strong> (Senior Advocate High Court), is handling multiple FIR cases (1270, 1271, 1278, 1279 and more) before the Anti Terrorism Court Faisalabad.\n\nFor full updates, visit our <a href='jaranwala.html'>Jaranwala Response Page</a>.",
+
+  "donate": "You can support our mission through:\n\n<strong>PayPal:</strong> <a href='https://www.paypal.com/donate/?hosted_button_id=2VGLXZP3EFWUN' target='_blank'>Donate via PayPal</a>\n<strong>Amounts:</strong> Rs. 5,000 / 10,000 / 25,000 / 50,000\n\nEvery donation helps a family access justice. Visit our <a href='donate.html'>Donate Page</a> for details.",
+
+  "contact": "Here's how to reach us:\n\n<strong>Email:</strong> gflf.official@gmail.com\n<strong>Location:</strong> Pakistan\n<strong>Office Hours:</strong> Monday - Saturday, 9:00 AM - 6:00 PM\n\nVisit our <a href='contact.html'>Contact Page</a> for more details.",
+
+  "about": "Grace Fellowship Law Firm is a <strong>Legal Aid, Counselling &amp; Rights Awareness Project</strong> of Grace Bible Fellowship Church Pakistan.\n\nWe started in <strong>2022</strong> and were formally registered in <strong>June 2023</strong>. Our Patron-in-Chief is Pastor Tariq Rehmat.\n\nLearn more on our <a href='about.html'>About Page</a>.",
+
+  "leadership": "Our leadership team:\n\n<strong>Patron-in-Chief:</strong> Pastor Tariq Rehmat\n<strong>Chairman:</strong> Peter Charles Sahotra\n<strong>Director:</strong> Advocate Shahbaz Fazal Saroya (Senior Advocate High Court)\n\nVisit our <a href='leadership.html'>Leadership Page</a>.",
+
+  "church": "We are a project of <strong>Grace Bible Fellowship Church Pakistan</strong>, working nationwide through a network of church partners for community legal aid and rights awareness.",
+
+  "rights": "Every citizen of Pakistan has fundamental rights under the Constitution, including:\n\n<strong>•</strong> Right to life and liberty\n<strong>•</strong> Right to equality\n<strong>•</strong> Right to legal representation\n<strong>•</strong> Freedom of religion\n<strong>•</strong> Protection against discrimination\n\nIf your rights are being violated, <a href='contact.html'>contact us</a> for free legal help.",
+
+  "women": "We provide special legal support for women facing:\n\n<strong>•</strong> Domestic violence\n<strong>•</strong> Property disputes\n<strong>•</strong> Family law matters\n<strong>•</strong> Workplace harassment\n<strong>•</strong> Inheritance rights\n\nAll services are free. <a href='contact.html'>Reach out to us</a>.",
+
+  "property": "We assist with property-related legal matters including:\n\n<strong>•</strong> Property disputes\n<strong>•</strong> Inheritance claims\n<strong>•</strong> Land grabbing cases\n<strong>•</strong> Documentation assistance\n\nContact us for free legal consultation.",
+
+  "thank": "You're welcome! We're always here to help. If you have more questions, feel free to ask. God bless you!",
+
+  "hello": "Wa Alaikum Assalam! Welcome to Grace Fellowship Law Firm. How can I assist you today?",
+
+  "hi": "Hello! Welcome to GFLF Legal Aid. How can I help you?"
+};
+
+function getResponse(input) {
+  var lower = input.toLowerCase().trim();
+  var keywords = Object.keys(responses);
+  for (var i = 0; i < keywords.length; i++) {
+    if (lower.indexOf(keywords[i]) !== -1) {
+      return responses[keywords[i]];
+    }
+  }
+  if (lower.match(/service|program|what do/)) return responses["services"];
+  if (lower.match(/help|assist|need|support/)) return responses["legal help"];
+  if (lower.match(/cost|charge|price|fee|pay/)) return responses["fee"];
+  if (lower.match(/jaranwala|incident|attack/)) return responses["jaranwala"];
+  if (lower.match(/donat|support|give|contribut/)) return responses["donate"];
+  if (lower.match(/contact|email|phone|call|address/)) return responses["contact"];
+  if (lower.match(/about|who|what is gflf|introduction/)) return responses["about"];
+  if (lower.match(/leader|chairman|director|pastor/)) return responses["leadership"];
+  if (lower.match(/church|grace bible/)) return responses["church"];
+  if (lower.match(/right|constitution|freedom/)) return responses["rights"];
+  if (lower.match(/women|woman|wife|domestic|harass/)) return responses["women"];
+  if (lower.match(/property|land|house|plot|inheritance/)) return responses["property"];
+  if (lower.match(/thank|shukriya|jazak/)) return responses["thank"];
+  if (lower.match(/assalam|salam|hello|hi|hey/)) return responses["hello"];
+  return "I'm not sure I understand that question. Could you try rephrasing? You can also ask about:\n\n• Our <strong>services</strong>\n• How to get <strong>legal help</strong>\n• Our <strong>fees</strong>\n• The <strong>Jaranwala</strong> case\n• How to <strong>donate</strong>\n• <strong>Contact</strong> information";
+}
+
+var chatMessages = document.getElementById("chatMessages");
+var chatInput = document.getElementById("chatInput");
+var chatSend = document.getElementById("chatSend");
+var quickReplies = document.getElementById("quickReplies");
+
+function addMsg(text, isUser) {
+  var div = document.createElement("div");
+  div.className = "msg " + (isUser ? "msg-user" : "msg-bot");
+  div.innerHTML = text.replace(/\n/g, "<br>");
+  chatMessages.appendChild(div);
+  chatMessages.scrollTop = chatMessages.scrollHeight;
+}
+
+function showTyping() {
+  var div = document.createElement("div");
+  div.className = "typing";
+  div.id = "typingIndicator";
+  div.innerHTML = "<span></span><span></span><span></span>";
+  chatMessages.appendChild(div);
+  chatMessages.scrollTop = chatMessages.scrollHeight;
+}
+
+function removeTyping() {
+  var t = document.getElementById("typingIndicator");
+  if (t) t.remove();
+}
+
+function handleSend() {
+  var val = chatInput.value.trim();
+  if (!val) return;
+  addMsg(val, true);
+  chatInput.value = "";
+  quickReplies.style.display = "none";
+  showTyping();
+  setTimeout(function() {
+    removeTyping();
+    addMsg(getResponse(val), false);
+  }, 800 + Math.random() * 600);
+}
+
+chatSend.addEventListener("click", handleSend);
+chatInput.addEventListener("keydown", function(e) {
+  if (e.key === "Enter") handleSend();
+});
+
+document.querySelectorAll(".quick-reply").forEach(function(btn) {
+  btn.addEventListener("click", function() {
+    var q = btn.getAttribute("data-q");
+    addMsg(q, true);
+    quickReplies.style.display = "none";
+    showTyping();
+    setTimeout(function() {
+      removeTyping();
+      addMsg(getResponse(q), false);
+    }, 800 + Math.random() * 600);
+  });
+});
+</script>
+</body>
+</html>
