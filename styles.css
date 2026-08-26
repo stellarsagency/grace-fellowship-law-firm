@@ -208,7 +208,7 @@ img{max-width:100%;display:block}a{text-decoration:none;color:inherit}ul{list-st
 .footer-motto{color:var(--gold-light);font-size:.92rem;margin-bottom:10px}
 .footer-church{font-size:.88rem;color:rgba(255,255,255,.5)}
 .brand-light .brand-text strong{color:var(--white)}
-.brand-light .brand-mark{height:50px}
+.brand-light .brand-mark{height:50px;border:2px solid var(--gold);border-radius:var(--radius)}
 .footer-bottom{padding:20px 0;text-align:center;font-size:.82rem;color:rgba(255,255,255,.35)}
 
 /* Gallery */
