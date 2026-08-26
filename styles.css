@@ -318,6 +318,16 @@ img{max-width:100%;display:block}a{text-decoration:none;color:inherit}ul{list-st
 .stagger-children .reveal:nth-child(5){transition-delay:.4s}
 .stagger-children .reveal:nth-child(6){transition-delay:.48s}
 
+/* Responsive Grid Classes */
+.grid-2col,.grid-3col,.grid-4col,.grid-3col-center,.grid-2col-sm{transition:all .3s}
+@media(max-width:768px){
+  .grid-2col,.grid-3col,.grid-4col,.grid-3col-center{grid-template-columns:1fr !important;gap:24px !important}
+  .grid-2col-sm{grid-template-columns:1fr !important;gap:8px !important}
+}
+@media(max-width:480px){
+  .grid-2col,.grid-3col,.grid-4col,.grid-3col-center,.grid-2col-sm{gap:16px !important}
+}
+
 /* Responsive */
 @media(max-width:992px){
   .about-grid,.vm-grid,.split-grid,.cta-inner,.donate-inner,.chairman-section,.donate-home-grid{grid-template-columns:1fr}
