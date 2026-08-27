@@ -105,10 +105,10 @@ RULES:
   async function askAI(userMsg){
     chatHistory.push({role:'user',content:userMsg});
     try{
-      var res=await fetch('https://corsproxy.io/?https://openrouter.ai/api/v1/chat/completions',{
+      var res=await fetch('https://openrouter.ai/api/v1/chat/completions',{
         method:'POST',
-        headers:{'Content-Type':'application/json','Authorization':'Bearer '+API_KEY},
-        body:JSON.stringify({model:MODEL,messages:chatHistory,max_tokens:250,temperature:0.7,include_reasoning:false})
+        headers:{'Content-Type':'application/json','Authorization':'Bearer '+API_KEY,'HTTP-Referer':'https://stellarsagency.github.io','X-Title':'GFLF Legal Aid'},
+        body:JSON.stringify({model:MODEL,messages:chatHistory,max_tokens:250,temperature:0.7})
       });
       var data=await res.json();
       if(data.choices&&data.choices[0]&&data.choices[0].message){
