@@ -104,7 +104,7 @@ RULES:
   async function askAI(userMsg){
     chatHistory.push({role:'user',content:userMsg});
     try{
-      var res=await fetch('https://openrouter.ai/api/v1/chat/completions',{
+      var res=await fetch('https://corsproxy.io/?https://openrouter.ai/api/v1/chat/completions',{
         method:'POST',
         headers:{'Content-Type':'application/json','Authorization':'Bearer '+API_KEY},
         body:JSON.stringify({model:MODEL,messages:chatHistory,max_tokens:500,temperature:0.7})
