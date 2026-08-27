@@ -73,9 +73,10 @@ DONATION:
 - Amounts: Rs. 5,000 / 10,000 / 25,000 / 50,000
 
 RULES:
-- Always be helpful, polite, and professional
+- You are a chatbot for a website. Give SHORT direct answers (1-3 sentences max)
+- NEVER show thinking process, reasoning, or chain-of-thought
+- NEVER output "User Safety:" or "Response Safety:" tags
 - Answer in the same language the user writes in (English or Urdu)
-- Keep responses concise (2-4 sentences unless asked for detail)
 - If you don't know something, direct them to email gflf.official@gmail.com
 - Never make up information not provided above
 - Always mention services are FREE when discussing legal help`;
@@ -107,11 +108,13 @@ RULES:
       var res=await fetch('https://corsproxy.io/?https://openrouter.ai/api/v1/chat/completions',{
         method:'POST',
         headers:{'Content-Type':'application/json','Authorization':'Bearer '+API_KEY},
-        body:JSON.stringify({model:MODEL,messages:chatHistory,max_tokens:500,temperature:0.7})
+        body:JSON.stringify({model:MODEL,messages:chatHistory,max_tokens:250,temperature:0.7,include_reasoning:false})
       });
       var data=await res.json();
       if(data.choices&&data.choices[0]&&data.choices[0].message){
         var reply=data.choices[0].message.content;
+        reply=reply.replace(/<think>[\s\S]*?<\/think>/gi,'').replace(/\n*<think>[\s\S]*$/gi,'').replace(/User Safety:[^\n]*/gi,'').replace(/Response Safety:[^\n]*/gi,'').trim();
+        if(!reply)reply='I can help you with legal aid, our services, donations, and more. What would you like to know?';
         chatHistory.push({role:'assistant',content:reply});
         return reply;
       }
