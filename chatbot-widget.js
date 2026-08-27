@@ -104,6 +104,8 @@ RULES:
 
   async function askAI(userMsg){
     chatHistory.push({role:'user',content:userMsg});
+    if(chatHistory.length>11)chatHistory=chatHistory.slice(0,1).concat(chatHistory.slice(-8));
+    for(var attempt=0;attempt<3;attempt++){
     try{
       var res=await fetch('https://openrouter.ai/api/v1/chat/completions',{
         method:'POST',
@@ -120,10 +122,15 @@ RULES:
         chatHistory.push({role:'assistant',content:reply});
         return reply;
       }
-      if(data.error){return 'Service temporarily busy. Please try again in a moment.'}
+      if(data.error){
+        if(attempt<2){await new Promise(function(r){setTimeout(r,2000)});continue}
+        return 'Service temporarily busy. Please try again in a moment.'
+      }
       return 'Sorry, I could not process your request. Please email us at gflf.official@gmail.com';
     }catch(e){
+      if(attempt<2){await new Promise(function(r){setTimeout(r,2000)});continue}
       return 'Sorry, I\'m having trouble connecting. Please email us at gflf.official@gmail.com';
+    }
     }
   }
 
