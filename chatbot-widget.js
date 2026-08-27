@@ -38,7 +38,7 @@
 
   var _0x=['c2stb3ItdjEtYjcyZTVlYzM5NThjM2IzOGRiNTc2MmMyZDljNTY4Nzc3YTZjZWFjOTgwZDNhYWJkMWJmOGY0YzVlMDFkYzMwNQ=='];
   var API_KEY=atob(_0x[0]);
-  var MODEL='openrouter/free';
+  var MODEL='nvidia/nemotron-3-ultra-550b-a55b:free';
 
   var systemPrompt=`You are a helpful AI assistant for Grace Fellowship Law Firm (GFLF), a Legal Aid, Counselling & Rights Awareness Project of Grace Bible Fellowship Church Pakistan.
 
@@ -113,7 +113,7 @@ RULES:
       var data=await res.json();
       if(data.choices&&data.choices[0]&&data.choices[0].message){
         var reply=data.choices[0].message.content;
-        reply=reply.replace(/<think>[\s\S]*?<\/think>/gi,'').replace(/\n*<think>[\s\S]*$/gi,'').replace(/User Safety:[^\n]*/gi,'').replace(/Response Safety:[^\n]*/gi,'').trim();
+        reply=reply.replace(/<think>[\s\S]*?<\/think>/gi,'').replace(/\n*<think>[\s\S]*$/gi,'').replace(/User Safety:[^\n]*/gi,'').replace(/Response Safety:[^\n]*/gi,'').replace(/Here's a thinking process[\s\S]*$/gi,'').replace(/Okay,.*?I need to[\s\S]*$/gi,'').trim();
         if(!reply)reply='I can help you with legal aid, our services, donations, and more. What would you like to know?';
         chatHistory.push({role:'assistant',content:reply});
         return reply;
