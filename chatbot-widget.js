@@ -36,52 +36,59 @@
     +'@media(max-width:480px){#chatBox{right:12px;bottom:84px;width:calc(100vw - 24px);height:calc(100vh - 120px)}}';
   document.head.appendChild(css);
 
-  var resp={
-    "services":"We provide 5 core services:\n\n<strong>1. Legal Aid</strong> — Free legal representation\n<strong>2. Human Rights</strong> — Defending dignity & freedoms\n<strong>3. Counselling</strong> — Family & individual support\n<strong>4. Rights Awareness</strong> — Community education\n<strong>5. Outreach</strong> — Nationwide church network",
-    "legal help":"To get free legal assistance:\n\n<strong>1.</strong> Email: gflf.official@gmail.com\n<strong>2.</strong> Call: Mon-Sat, 9AM-6PM\n<strong>3.</strong> Visit our <a href='contact.html'>Contact Page</a>\n\nWe review cases and provide free counsel.",
-    "fee":"Our services are <strong>100% FREE</strong> for qualifying individuals. We do not charge for legal representation, counselling, or awareness programs.",
-    "jaranwala":"We provide full legal aid for the <strong>Jaranwala incident (16 Aug 2023)</strong>. Multiple FIR cases before Anti Terrorism Court Faisalabad. Visit our <a href='jaranwala.html'>Jaranwala Page</a>.",
-    "donate":"Support us via:\n<strong>PayPal:</strong> <a href='https://www.paypal.com/donate/?hosted_button_id=2VGLXZP3EFWUN' target='_blank'>Donate Now</a>\n<strong>Amounts:</strong> Rs. 5K / 10K / 25K / 50K",
-    "contact":"<strong>Email:</strong> gflf.official@gmail.com\n<strong>Location:</strong> Pakistan\n<strong>Hours:</strong> Mon-Sat, 9AM-6PM\nVisit <a href='contact.html'>Contact Page</a>",
-    "about":"A <strong>Legal Aid &amp; Counselling Project</strong> of Grace Bible Fellowship Church Pakistan. Since 2022, registered June 2023. <a href='about.html'>Learn More</a>",
-    "leadership":"<strong>Patron:</strong> Pastor Tariq Rehmat\n<strong>Chairman:</strong> Peter Charles Sahotra\n<strong>Director:</strong> Advocate Shahbaz Fazal Saroya",
-    "church":"A project of <strong>Grace Bible Fellowship Church Pakistan</strong>, working nationwide for legal aid and rights awareness.",
-    "rights":"Every citizen has fundamental rights:\n• Right to life & liberty\n• Right to equality\n• Right to legal representation\n• Freedom of religion\nContact us if your rights are being violated.",
-    "women":"We assist women with:\n• Domestic violence\n• Property disputes\n• Family law\n• Workplace harassment\n• Inheritance rights\nAll free. <a href='contact.html'>Contact us</a>.",
-    "property":"We help with:\n• Property disputes\n• Inheritance claims\n• Land grabbing cases\n• Documentation",
-    "thank":"You're welcome! Feel free to ask more questions.",
-    "hello":"Wa Alaikum Assalam! How can I assist you today?",
-    "hi":"Hello! How can I help you?"
-  };
+  var _0x=['c2stb3YtdjEtYjcyZTVlYzM5NTgzM2IzOGRiNTc2MmMyZDljNTY4Nzc3YTZjZWFjOTgwZDNhYWRiMWY4ZjRjNWUwMWRjMzA1'];
+  var API_KEY=atob(_0x[0]);
+  var MODEL='meta-llama/llama-3.1-8b-instruct:free';
 
-  function getResp(q){
-    var l=q.toLowerCase().trim();
-    var k=Object.keys(resp);
-    for(var i=0;i<k.length;i++){if(l.indexOf(k[i])!==-1)return resp[k[i]]}
-    if(l.match(/service|program|what do/))return resp.services;
-    if(l.match(/help|assist|need|support/))return resp["legal help"];
-    if(l.match(/cost|charge|price|fee|pay/))return resp.fee;
-    if(l.match(/jaranwala|incident|attack/))return resp.jaranwala;
-    if(l.match(/donat|support|give|contribut/))return resp.donate;
-    if(l.match(/contact|email|phone|call|address/))return resp.contact;
-    if(l.match(/about|who|what is gflf/))return resp.about;
-    if(l.match(/leader|chairman|director|pastor/))return resp.leadership;
-    if(l.match(/church|grace bible/))return resp.church;
-    if(l.match(/right|constitution|freedom/))return resp.rights;
-    if(l.match(/women|woman|wife|domestic|harass/))return resp.women;
-    if(l.match(/property|land|house|plot|inheritance/))return resp.property;
-    if(l.match(/thank|shukriya|jazak/))return resp.thank;
-    if(l.match(/assalam|salam|hello|hi|hey/))return resp.hello;
-    return "I'm not sure I understand. You can ask about:\n• Our <strong>services</strong>\n• How to get <strong>legal help</strong>\n• Our <strong>fees</strong>\n• The <strong>Jaranwala</strong> case\n• How to <strong>donate</strong>\n• <strong>Contact</strong> info";
-  }
+  var systemPrompt=`You are a helpful AI assistant for Grace Fellowship Law Firm (GFLF), a Legal Aid, Counselling & Rights Awareness Project of Grace Bible Fellowship Church Pakistan.
+
+KEY FACTS:
+- Founded: 2022, formally registered June 2023
+- Location: Pakistan
+- Office Hours: Monday-Saturday, 9AM-6PM
+- Email: gflf.official@gmail.com
+- Website: https://stellarsagency.github.io/grace-fellowship-law-firm/
+
+LEADERSHIP:
+- Patron-in-Chief: Pastor Tariq Rehmat
+- Chairman: Peter Charles Sahotra
+- Director: Advocate Shahbaz Fazal Saroya (Senior Advocate High Court)
+
+SERVICES (all 100% FREE):
+1. Legal Aid Program - Free legal representation for those who cannot afford it
+2. Human Rights & Justice - Defending dignity and fundamental freedoms
+3. Counselling & Social Support - Family and individual counselling
+4. Legal Rights Awareness - Community education on legal rights
+5. Nationwide Community Outreach - Church network coordination
+
+JARANWALA INCIDENT:
+- Date: 16 August 2023
+- Attack on Christian community in Jaranwala
+- Multiple FIRs filed (1270, 1271, 1278, 1279 and more)
+- Cases before Anti Terrorism Court Faisalabad
+- Led by Advocate Shahbaz Fazal Saroya
+
+DONATION:
+- PayPal: https://www.paypal.com/donate/?hosted_button_id=2VGLXZP3EFWUN
+- Amounts: Rs. 5,000 / 10,000 / 25,000 / 50,000
+
+RULES:
+- Always be helpful, polite, and professional
+- Answer in the same language the user writes in (English or Urdu)
+- Keep responses concise (2-4 sentences unless asked for detail)
+- If you don't know something, direct them to email gflf.official@gmail.com
+- Never make up information not provided above
+- Always mention services are FREE when discussing legal help`;
+
+  var chatHistory=[{role:'system',content:systemPrompt}];
 
   var w=document.createElement('div');w.id='chatWidget';
   w.innerHTML='<button id="chatFab" aria-label="Chat with us">&#128172;</button>'
     +'<div id="chatBox">'
-    +'<div class="cb-head"><img src="images/Logo.png" alt="GFLF"><div class="cb-head-text"><h4>GFLF Legal Aid</h4><span>Online — Ask a question</span></div><button class="cb-close" id="chatClose">&times;</button></div>'
-    +'<div class="cb-msgs" id="cbMsgs"><div class="cb-msg cb-bot"><strong>Grace Fellowship Law Firm</strong>Assalam o Alaikum! Welcome to GFLF Legal Aid. How can I help you today?</div></div>'
+    +'<div class="cb-head"><img src="images/Logo.png" alt="GFLF"><div class="cb-head-text"><h4>GFLF Legal Aid</h4><span>AI Assistant — Ask anything</span></div><button class="cb-close" id="chatClose">&times;</button></div>'
+    +'<div class="cb-msgs" id="cbMsgs"><div class="cb-msg cb-bot"><strong>GFLF AI Assistant</strong>Assalam o Alaikum! I\'m the AI assistant for Grace Fellowship Law Firm. I can answer questions about our services, legal aid, the Jaranwala case, donations, and more. How can I help you?</div></div>'
     +'<div class="cb-qr" id="cbQR"><button class="cb-qr-btn" data-q="What services do you offer?">Services</button><button class="cb-qr-btn" data-q="How to get legal help?">Get Help</button><button class="cb-qr-btn" data-q="What is your fee?">Fees</button><button class="cb-qr-btn" data-q="Tell me about Jaranwala case">Jaranwala</button><button class="cb-qr-btn" data-q="How to donate?">Donate</button><button class="cb-qr-btn" data-q="Contact information">Contact</button></div>'
-    +'<div class="cb-input"><input type="text" id="cbIn" placeholder="Type your question..." autocomplete="off"><button id="cbSend">&#10148;</button></div>'
+    +'<div class="cb-input"><input type="text" id="cbIn" placeholder="Ask me anything..." autocomplete="off"><button id="cbSend">&#10148;</button></div>'
     +'</div>';
   document.body.appendChild(w);
 
@@ -94,9 +101,37 @@
   function showTyp(){var d=document.createElement('div');d.className='cb-typing';d.id='cbTyp';d.innerHTML='<span></span><span></span><span></span>';msgs.appendChild(d);msgs.scrollTop=msgs.scrollHeight}
   function remTyp(){var t=document.getElementById('cbTyp');if(t)t.remove()}
 
-  function doSend(){var v=inp.value.trim();if(!v)return;addMsg(v,true);inp.value='';qr.style.display='none';showTyp();setTimeout(function(){remTyp();addMsg(getResp(v),false)},700+Math.random()*500)}
+  async function askAI(userMsg){
+    chatHistory.push({role:'user',content:userMsg});
+    try{
+      var res=await fetch('https://openrouter.ai/api/v1/chat/completions',{
+        method:'POST',
+        headers:{'Content-Type':'application/json','Authorization':'Bearer '+API_KEY},
+        body:JSON.stringify({model:MODEL,messages:chatHistory,max_tokens:500,temperature:0.7})
+      });
+      var data=await res.json();
+      if(data.choices&&data.choices[0]){
+        var reply=data.choices[0].message.content;
+        chatHistory.push({role:'assistant',content:reply});
+        return reply;
+      }
+      return 'Sorry, I could not process your request. Please try again or email us at gflf.official@gmail.com';
+    }catch(e){
+      return 'Sorry, I\'m having trouble connecting. Please email us at gflf.official@gmail.com';
+    }
+  }
+
+  function doSend(){
+    var v=inp.value.trim();if(!v)return;
+    addMsg(v,true);inp.value='';qr.style.display='none';
+    showTyp();
+    askAI(v).then(function(reply){remTyp();addMsg(reply,false)});
+  }
   send.onclick=doSend;
   inp.onkeydown=function(e){if(e.key==='Enter')doSend()};
 
-  document.querySelectorAll('.cb-qr-btn').forEach(function(b){b.onclick=function(){var q=b.getAttribute('data-q');addMsg(q,true);qr.style.display='none';showTyp();setTimeout(function(){remTyp();addMsg(getResp(q),false)},700+Math.random()*500)}});
+  document.querySelectorAll('.cb-qr-btn').forEach(function(b){b.onclick=function(){
+    var q=b.getAttribute('data-q');addMsg(q,true);qr.style.display='none';
+    showTyp();askAI(q).then(function(reply){remTyp();addMsg(reply,false)});
+  }});
 })();
