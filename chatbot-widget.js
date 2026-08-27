@@ -113,7 +113,11 @@ RULES:
       var data=await res.json();
       if(data.choices&&data.choices[0]&&data.choices[0].message){
         var reply=data.choices[0].message.content;
-        reply=reply.replace(/<think>[\s\S]*?<\/think>/gi,'').replace(/\n*<think>[\s\S]*$/gi,'').replace(/User Safety:[^\n]*/gi,'').replace(/Response Safety:[^\n]*/gi,'').replace(/Here's a thinking process[\s\S]*$/gi,'').replace(/Okay,.*?I need to[\s\S]*$/gi,'').trim();
+        reply=reply.replace(/<think>[\s\S]*?<\/think>/gi,'').replace(/\n*<think>[\s\S]*$/gi,'').replace(/User Safety:[^\n]*/gi,'').replace(/Response Safety:[^\n]*/gi,'').trim();
+        var lines=reply.split('\n').filter(function(l){return l.trim()&&!l.match(/^(\d+\.\s*\*\*|Here'?s?|Okay,|Let me|I need to|The user|As an AI|Looking at|First,|Second,|Third,|Checking|Based on|My response|For the|In this|The key|The constraint|SHORT|NEVER|Answer in|If I|Always mention|Must be)/i)&&l.trim().length>5});
+        reply=lines.join('\n').trim();
+        if(!reply||reply.length<10){reply=reply.replace(/[\s\S]*(?:Here is|Here's|My response|RESPONSE)[\s\S]*?:\s*/gi,'').trim()}
+        if(!reply||reply.length<10)reply='I can help you with legal aid, our services, donations, and more. What would you like to know?';
         if(!reply)reply='I can help you with legal aid, our services, donations, and more. What would you like to know?';
         chatHistory.push({role:'assistant',content:reply});
         return reply;
