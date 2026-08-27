@@ -36,9 +36,9 @@
     +'@media(max-width:480px){#chatBox{right:12px;bottom:84px;width:calc(100vw - 24px);height:calc(100vh - 120px)}}';
   document.head.appendChild(css);
 
-  var _0x=['c2stb3YtdjEtYjcyZTVlYzM5NTgzM2IzOGRiNTc2MmMyZDljNTY4Nzc3YTZjZWFjOTgwZDNhYWRiMWY4ZjRjNWUwMWRjMzA1'];
+  var _0x=['c2stb3ItdjEtYjcyZTVlYzM5NThjM2IzOGRiNTc2MmMyZDljNTY4Nzc3YTZjZWFjOTgwZDNhYWJkMWJmOGY0YzVlMDFkYzMwNQ=='];
   var API_KEY=atob(_0x[0]);
-  var MODEL='meta-llama/llama-3.1-8b-instruct:free';
+  var MODEL='openrouter/free';
 
   var systemPrompt=`You are a helpful AI assistant for Grace Fellowship Law Firm (GFLF), a Legal Aid, Counselling & Rights Awareness Project of Grace Bible Fellowship Church Pakistan.
 
@@ -110,12 +110,13 @@ RULES:
         body:JSON.stringify({model:MODEL,messages:chatHistory,max_tokens:500,temperature:0.7})
       });
       var data=await res.json();
-      if(data.choices&&data.choices[0]){
+      if(data.choices&&data.choices[0]&&data.choices[0].message){
         var reply=data.choices[0].message.content;
         chatHistory.push({role:'assistant',content:reply});
         return reply;
       }
-      return 'Sorry, I could not process your request. Please try again or email us at gflf.official@gmail.com';
+      if(data.error){return 'Service temporarily busy. Please try again in a moment.'}
+      return 'Sorry, I could not process your request. Please email us at gflf.official@gmail.com';
     }catch(e){
       return 'Sorry, I\'m having trouble connecting. Please email us at gflf.official@gmail.com';
     }
