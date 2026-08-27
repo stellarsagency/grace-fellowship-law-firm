@@ -33,7 +33,7 @@
     +'.cb-typing span:nth-child(2){animation-delay:.2s}'
     +'.cb-typing span:nth-child(3){animation-delay:.4s}'
     +'@keyframes cbTyp{0%,60%,100%{transform:translateY(0);opacity:.4}30%{transform:translateY(-5px);opacity:1}}'
-    +'@media(max-width:480px){#chatBox{right:12px;bottom:84px;width:calc(100vw - 24px);height:calc(100vh - 120px)}}';
+    +'@media(max-width:480px){#chatBox{right:8px;bottom:80px;width:calc(100vw - 16px);height:calc(100vh - 100px);border-radius:12px}#chatFab{width:56px;height:56px;font-size:1.5rem;bottom:16px;right:16px}.cb-head{padding:10px 12px}.cb-head img{width:30px;height:30px}.cb-head-text h4{font-size:.82rem}.cb-msgs{padding:10px}.cb-msg{font-size:.82rem;max-width:88%}.cb-input{padding:8px 10px}.cb-input input{padding:8px 12px;font-size:.82rem}.cb-input button{width:38px;height:38px;font-size:1rem}.cb-qr{padding:0 10px 8px}.cb-qr-btn{padding:5px 10px;font-size:.72rem}}';
   document.head.appendChild(css);
 
   var _0x=['c2stb3ItdjEtYjcyZTVlYzM5NThjM2IzOGRiNTc2MmMyZDljNTY4Nzc3YTZjZWFjOTgwZDNhYWJkMWJmOGY0YzVlMDFkYzMwNQ=='];
