@@ -134,10 +134,10 @@ img{max-width:100%;display:block}a{text-decoration:none;color:inherit}ul{list-st
 .donate-home-card>p{color:#555555;font-size:.95rem;margin-bottom:18px}
 
 /* CTA Band */
-.cta-band{background:var(--brown);color:#ffffff;padding:60px 0}
+.cta-band{background:#E8D7B6;color:#1a1208;padding:60px 0}
 .cta-inner{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
-.cta-inner h2{color:#ffffff;font-size:clamp(1.8rem,3vw,2.2rem);margin-bottom:14px}
-.cta-inner p{color:rgba(255,255,255,.8);font-size:1.02rem}
+.cta-inner h2{color:#1a1208;font-size:clamp(1.8rem,3vw,2.2rem);margin-bottom:14px}
+.cta-inner p{color:#5a4a35;font-size:1.02rem}
 
 /* Stats */
 .stats-strip{background:linear-gradient(135deg,var(--gold),#b8942e);padding:50px 0}
