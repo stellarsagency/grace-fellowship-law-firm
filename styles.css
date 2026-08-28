@@ -47,7 +47,7 @@ img{max-width:100%;display:block}a{text-decoration:none;color:inherit}ul{list-st
 .hero-slide{position:absolute;inset:0;opacity:0;transition:opacity 1s ease;display:flex;align-items:center;justify-content:center}
 .hero-slide.active{opacity:1;z-index:1}
 .hero-slide-bg{position:absolute;inset:0;background-size:cover;background-position:center}
-.hero-slide-overlay{position:absolute;inset:0;background:linear-gradient(135deg,rgba(61,0,16,.35),rgba(90,0,22,.3) 40%,rgba(61,43,31,.25))}
+.hero-slide-overlay{position:absolute;inset:0;background:linear-gradient(135deg,rgba(0,0,0,.5),rgba(0,0,0,.4) 40%,rgba(0,0,0,.35))}
 .hero-slide-content{position:relative;z-index:2;text-align:center;max-width:900px;padding:0 20px}
 .hero-slide-content .hero-eyebrow{color:var(--gold-light);text-transform:uppercase;letter-spacing:.4em;font-size:.85rem;font-weight:700;margin-bottom:20px}
 .hero-slide-content h1{color:#ffffff;font-size:clamp(2.8rem,6vw,4.5rem);font-weight:800;margin-bottom:22px}
@@ -293,12 +293,12 @@ img{max-width:100%;display:block}a{text-decoration:none;color:inherit}ul{list-st
 .unique-quote::before{content:'\201C';position:absolute;top:10px;left:12px;font-size:4rem;color:var(--gold);opacity:.3;line-height:1}
 
 /* Page Hero */
-.page-hero{position:relative;min-height:50vh;display:flex;align-items:center;background:linear-gradient(160deg,var(--brown),var(--brown-dark) 60%,var(--brown-deep));overflow:hidden;padding:140px 0 80px}
-.page-hero::before{content:'';position:absolute;inset:0;background:rgba(255,255,255,.05)}
+.page-hero{position:relative;min-height:50vh;display:flex;align-items:center;background:linear-gradient(160deg,var(--brown-deep),var(--brown-dark) 60%,var(--brown));overflow:hidden;padding:140px 0 80px}
+.page-hero::before{content:'';position:absolute;inset:0;background:rgba(0,0,0,.45)}
 .page-hero .container{position:relative;z-index:2}
 .page-hero h1{color:#ffffff;font-size:clamp(2rem,5vw,3.2rem);margin-bottom:14px}
 .page-hero h1 em{color:var(--gold-light);font-style:normal}
-.page-hero .hero-sub{color:rgba(255,255,255,.85);font-size:1.1rem;max-width:600px;margin-bottom:20px}
+.page-hero .hero-sub{color:rgba(255,255,255,.9);font-size:1.1rem;max-width:600px;margin-bottom:20px}
 .hero-breadcrumb{font-size:.85rem;color:rgba(255,255,255,.6)}
 .hero-breadcrumb a{color:var(--gold-light);text-decoration:none}
 .hero-breadcrumb .sep{margin:0 8px}
