@@ -23,6 +23,8 @@
     +'.cb-qr{display:flex;flex-wrap:wrap;gap:6px;padding:0 14px 10px;flex-shrink:0}'
     +'.cb-qr-btn{padding:6px 14px;border:1.5px solid #428475;border-radius:999px;background:transparent;color:#1A312C;font-size:.78rem;font-weight:600;cursor:pointer;transition:all .3s;font-family:inherit}'
     +'.cb-qr-btn:hover{background:#428475;color:#fff}'
+    +'.cb-contact-btn{display:inline-block;padding:8px 16px;margin:8px 8px 0 0;border-radius:999px;background:#428475;color:#fff;text-decoration:none;font-weight:600;font-size:.82rem;font-family:inherit;transition:all .3s}'
+    +'.cb-contact-btn:hover{background:#1A312C;transform:translateY(-1px)}'
     +'.cb-input{display:flex;gap:6px;padding:10px 12px;border-top:1px solid #e0e0e0;background:#fff;flex-shrink:0}'
     +'.cb-input input{flex:1;padding:10px 14px;border:1.5px solid #e0e0e0;border-radius:999px;font-size:.88rem;font-family:inherit;outline:none;transition:border-color .3s}'
     +'.cb-input input:focus{border-color:#428475}'
@@ -89,8 +91,8 @@ RULES:
   var w=document.createElement('div');w.id='chatWidget';
   w.innerHTML='<button id="chatFab" aria-label="Chat with us">&#128172;</button>'
     +'<div id="chatBox">'
-    +'<div class="cb-head"><img src="images/Logo.png" alt="GFLF"><div class="cb-head-text"><h4>GFLF Legal Aid</h4><span>AI Assistant — Ask anything</span></div><button class="cb-close" id="chatClose">&times;</button></div>'
-    +'<div class="cb-msgs" id="cbMsgs"><div class="cb-msg cb-bot"><strong>GFLF AI Assistant</strong>Assalam o Alaikum! I\'m the AI assistant for Grace Fellowship Law Firm. I can answer questions about our services, legal aid, the Jaranwala case, donations, and more. How can I help you?</div></div>'
+    +'<div class="cb-head"><img src="images/Logo.png" alt="GFLF"><div class="cb-head-text"><h4>aSK peter Charles</h4><span>ai legal assistance</span></div><button class="cb-close" id="chatClose">&times;</button></div>'
+    +'<div class="cb-msgs" id="cbMsgs"><div class="cb-msg cb-bot"><strong>aSK peter Charles</strong>Welcome to grace fellow ship law firm we are here to assist you. If you hav any question you can ask me for help. Below are our contact options:<br><br><a class=\'cb-contact-btn\' href=\'https://wa.me/923004287689\' target=\'_blank\'>&#128241; WhatsApp</a> <a class=\'cb-contact-btn\' href=\'mailto:gflf.official@gmail.com\'>&#9993; Email</a></div></div>'
     +'<div class="cb-qr" id="cbQR"><button class="cb-qr-btn" data-q="What services do you offer?">Services</button><button class="cb-qr-btn" data-q="How to get legal help?">Get Help</button><button class="cb-qr-btn" data-q="What is your fee?">Fees</button><button class="cb-qr-btn" data-q="Tell me about Jaranwala case">Jaranwala</button><button class="cb-qr-btn" data-q="How to donate?">Donate</button><button class="cb-qr-btn" data-q="Contact information">Contact</button></div>'
     +'<div class="cb-input"><input type="text" id="cbIn" placeholder="Ask me anything..." autocomplete="off"><button id="cbSend">&#10148;</button></div>'
     +'</div>';
@@ -112,7 +114,7 @@ RULES:
     try{
       var res=await fetch('https://openrouter.ai/api/v1/chat/completions',{
         method:'POST',
-        headers:{'Content-Type':'application/json','Authorization':'Bearer '+API_KEY,'HTTP-Referer':'https://stellarsagency.github.io','X-Title':'GFLF Legal Aid'},
+        headers:{'Content-Type':'application/json','Authorization':'Bearer '+API_KEY,'HTTP-Referer':'https://stellarsagency.github.io','X-Title':'aSK peter Charles'},
         body:JSON.stringify({model:MODEL,messages:chatHistory,max_tokens:250,temperature:0.7})
       });
       var data=await res.json();
