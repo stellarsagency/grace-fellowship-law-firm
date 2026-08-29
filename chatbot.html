@@ -35,7 +35,10 @@ body{font-family:'Source Sans 3',sans-serif;background:var(--cream);color:var(--
 .quick-reply{padding:8px 16px;border:1.5px solid var(--gold);border-radius:999px;background:transparent;color:var(--taupe);font-size:.82rem;font-weight:600;cursor:pointer;transition:all .3s;font-family:inherit}
 .quick-reply:hover{background:var(--gold);color:var(--taupe-deep);transform:translateY(-1px)}
 .contact-btn{display:inline-block;padding:8px 16px;margin:8px 8px 0 0;border-radius:999px;background:var(--gold);color:var(--taupe-deep);text-decoration:none;font-weight:600;font-size:.82rem;transition:all .3s}
-.contact-btn:hover{background:var(--taupe);color:#fff;transform:translateY(-1px)}
+.contact-btn.wa{background:#25D366;color:#fff}
+.contact-btn.wa:hover{background:#1ebe5a;color:#fff}
+.contact-btn.email{background:var(--taupe);color:#fff}
+.contact-btn.email:hover{background:#2f4a43;color:#fff}
 
 .chat-input{display:flex;gap:8px;padding:12px 16px;border-top:1px solid #e0e0e0;background:var(--white);flex-shrink:0}
 .chat-input input{flex:1;padding:12px 16px;border:1.5px solid #e0e0e0;border-radius:999px;font-size:.92rem;font-family:inherit;outline:none;transition:border-color .3s}
@@ -64,7 +67,7 @@ body{font-family:'Source Sans 3',sans-serif;background:var(--cream);color:var(--
   <div class="chat-messages" id="chatMessages">
     <div class="msg msg-bot">
       <strong>aSK peter Charles</strong>
-      Welcome to Grace Fellowship Law Firm. We are here to assist you. If you have any question, you can ask me for help. Below are our contact options:<br><br><a class="contact-btn" href="https://wa.me/923004287689" target="_blank">&#128241; WhatsApp</a> <a class="contact-btn" href="mailto:gflf.official@gmail.com">&#9993; Email</a>
+      Welcome to Grace Fellowship Law Firm. We are here to assist you. If you have any question, you can ask me for help. Below are our contact options:<br><br><a class="contact-btn wa" href="https://wa.me/923004287689" target="_blank">&#128241; WhatsApp</a> <a class="contact-btn email" href="mailto:gflf.official@gmail.com">&#9993; Email</a>
     </div>
   </div>
 
