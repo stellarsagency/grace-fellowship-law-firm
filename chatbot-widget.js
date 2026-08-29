@@ -94,8 +94,8 @@ RULES:
   var w=document.createElement('div');w.id='chatWidget';
   w.innerHTML='<button id="chatFab" aria-label="Chat with us">&#128172;</button>'
     +'<div id="chatBox">'
-    +'<div class="cb-head"><img src="images/Logo.png" alt="GFLF"><div class="cb-head-text"><h4>aSK peter Charles</h4><span>ai legal assistance</span></div><button class="cb-close" id="chatClose">&times;</button></div>'
-    +'<div class="cb-msgs" id="cbMsgs"><div class="cb-msg cb-bot"><strong>aSK peter Charles</strong>Welcome to Grace Fellowship Law Firm. We are here to assist you. If you have any question, you can ask me for help. Below are our contact options:<br><br><a class=\'cb-contact-btn cb-wa\' href=\'https://wa.me/923004287689\' target=\'_blank\'>&#128241; WhatsApp</a> <a class=\'cb-contact-btn cb-email\' href=\'mailto:gflf.official@gmail.com\'>&#9993; Email</a></div></div>'
+    +'<div class="cb-head"><img src="images/Logo.png" alt="GFLF"><div class="cb-head-text"><h4>Ask Peter Charles</h4><span>ai legal assistance</span></div><button class="cb-close" id="chatClose">&times;</button></div>'
+    +'<div class="cb-msgs" id="cbMsgs"><div class="cb-msg cb-bot"><strong>Ask Peter Charles</strong>Welcome to Grace Fellowship Law Firm. We are here to assist you. If you have any question, you can ask me for help. Below are our contact options:<br><br><a class=\'cb-contact-btn cb-wa\' href=\'https://wa.me/923004287689\' target=\'_blank\'>&#128241; WhatsApp</a> <a class=\'cb-contact-btn cb-email\' href=\'mailto:gflf.official@gmail.com\'>&#9993; Email</a></div></div>'
     +'<div class="cb-qr" id="cbQR"><button class="cb-qr-btn" data-q="What services do you offer?">Services</button><button class="cb-qr-btn" data-q="How to get legal help?">Get Help</button><button class="cb-qr-btn" data-q="What is your fee?">Fees</button><button class="cb-qr-btn" data-q="Tell me about Jaranwala case">Jaranwala</button><button class="cb-qr-btn" data-q="How to donate?">Donate</button><button class="cb-qr-btn" data-q="Contact information">Contact</button></div>'
     +'<div class="cb-input"><input type="text" id="cbIn" placeholder="Ask me anything..." autocomplete="off"><button id="cbSend">&#10148;</button></div>'
     +'</div>';
@@ -117,7 +117,7 @@ RULES:
     try{
       var res=await fetch('https://openrouter.ai/api/v1/chat/completions',{
         method:'POST',
-        headers:{'Content-Type':'application/json','Authorization':'Bearer '+API_KEY,'HTTP-Referer':'https://stellarsagency.github.io','X-Title':'aSK peter Charles'},
+        headers:{'Content-Type':'application/json','Authorization':'Bearer '+API_KEY,'HTTP-Referer':'https://stellarsagency.github.io','X-Title':'Ask Peter Charles'},
         body:JSON.stringify({model:MODEL,messages:chatHistory,max_tokens:250,temperature:0.7})
       });
       var data=await res.json();
