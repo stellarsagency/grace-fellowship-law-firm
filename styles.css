@@ -152,6 +152,15 @@ img{max-width:100%;display:block}a{text-decoration:none;color:inherit}ul{list-st
 .stats-band .stat-icon-wrap{background:rgba(137,215,183,.14);border:1px solid rgba(137,215,183,.35);color:var(--sage)}
 .stats-band .stat:hover .stat-icon-wrap{background:var(--sage);color:var(--taupe-deep);border-color:var(--sage)}
 
+/* Resources */
+.resource-card{background:var(--white);border:1px solid var(--sage);border-radius:var(--radius-lg);padding:28px;transition:var(--transition);display:flex;flex-direction:column;gap:12px;position:relative;overflow:hidden}
+.resource-card::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--gold),var(--taupe))}
+.resource-card:hover{transform:translateY(-4px);box-shadow:var(--shadow);border-color:var(--gold)}
+.resource-card h3{font-size:1.15rem;color:#1a1a1a;margin:0}
+.resource-card p{color:#555;font-size:.95rem;flex:1}
+.resource-card .res-link{display:inline-flex;align-items:center;gap:6px;color:var(--taupe);font-weight:600;font-size:.9rem;text-decoration:none;margin-top:6px;transition:color .3s}
+.resource-card .res-link:hover{color:var(--gold)}
+
 /* Cards Grid */
 .cards-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:28px}
 .service-card{background:transparent;border:none;border-radius:var(--radius-lg);overflow:hidden;transition:var(--transition)}
