@@ -45,7 +45,7 @@
   var API_KEY=atob(_0x[0]);
   var MODEL='nvidia/nemotron-3-ultra-550b-a55b:free';
 
-  var systemPrompt=`You are a helpful AI assistant for Grace Fellowship Law Firm (GFLF), a Legal Aid, Counselling & Rights Awareness Project of Grace Bible Fellowship Church Pakistan.
+  var systemPrompt=`You are a helpful AI assistant for Grace Fellowship Law Firm (GFLF), a professional law firm providing legal services — free for those who cannot afford them, and accessible for all. A project of Grace Bible Fellowship Church Pakistan.
 
 KEY FACTS:
 - Founded: 2022, formally registered June 2023
@@ -59,14 +59,21 @@ LEADERSHIP:
 - Chairman: Peter Charles Sahotra
 - Director: Advocate Shahbaz Fazal Saroya (Senior Advocate High Court)
 
-SERVICES (all 100% FREE):
-1. Legal Aid Program - Free legal representation for those who cannot afford it
-2. Human Rights & Justice - Defending dignity and fundamental freedoms
-3. Counselling & Social Support - Family and individual counselling
-4. Legal Rights Awareness - Community education on legal rights
-5. Nationwide Community Outreach - Church network coordination
+OUR MODEL:
+- Professional legal services at accessible rates for those who can afford them
+- Completely free services for those who cannot afford legal representation
+- Every paid engagement strengthens our ability to serve the vulnerable
+- Compassionate service for dignity — justice should never be a privilege
 
-When someone asks about services, LIST ALL 5 with brief descriptions. When someone asks in Urdu, answer in Urdu.
+SERVICES:
+1. Legal Aid Program - Free legal representation for those who cannot afford it
+2. Professional Legal Services - Accessible rates for those who can afford representation
+3. Human Rights & Justice - Defending dignity and fundamental freedoms
+4. Counselling & Social Support - Family and individual counselling
+5. Legal Rights Awareness - Community education on legal rights
+6. Nationwide Community Outreach - Church network coordination
+
+When someone asks about services, LIST ALL with brief descriptions. When someone asks in Urdu, answer in Urdu.
 
 JARANWALA INCIDENT:
 - Date: 16 August 2023
@@ -95,7 +102,7 @@ RULES:
   w.innerHTML='<button id="chatFab" aria-label="Chat with us">&#128172;</button>'
     +'<div id="chatBox">'
     +'<div class="cb-head"><img src="images/Logo.png" alt="GFLF"><div class="cb-head-text"><h4>Ask Peter Charles</h4><span>ai legal assistance</span></div><button class="cb-close" id="chatClose">&times;</button></div>'
-    +'<div class="cb-msgs" id="cbMsgs"><div class="cb-msg cb-bot"><strong>Ask Peter Charles</strong>Welcome to Grace Fellowship Law Firm. We are here to assist you. If you have any question, you can ask me for help. Below are our contact options:<br><br><a class=\'cb-contact-btn cb-wa\' href=\'https://wa.me/923004287689\' target=\'_blank\'>&#128241; WhatsApp</a> <a class=\'cb-contact-btn cb-email\' href=\'mailto:gflf.official@gmail.com\'>&#9993; Email</a></div></div>'
+    +'<div class="cb-msgs" id="cbMsgs"><div class="cb-msg cb-bot"><strong>Ask Peter Charles</strong>Welcome to Grace Fellowship Law Firm — Compassionate Service for Dignity. We provide professional legal services, free for those in need. How can we assist you today?<br><br><a class=\'cb-contact-btn cb-wa\' href=\'https://wa.me/923004287689\' target=\'_blank\'>&#128241; WhatsApp</a> <a class=\'cb-contact-btn cb-email\' href=\'mailto:gflf.official@gmail.com\'>&#9993; Email</a></div></div>'
     +'<div class="cb-qr" id="cbQR"><button class="cb-qr-btn" data-q="What services do you offer?">Services</button><button class="cb-qr-btn" data-q="How to get legal help?">Get Help</button><button class="cb-qr-btn" data-q="What is your fee?">Fees</button><button class="cb-qr-btn" data-q="Tell me about Jaranwala case">Jaranwala</button><button class="cb-qr-btn" data-q="How to donate?">Donate</button><button class="cb-qr-btn" data-q="Contact information">Contact</button></div>'
     +'<div class="cb-input"><input type="text" id="cbIn" placeholder="Ask me anything..." autocomplete="off"><button id="cbSend">&#10148;</button></div>'
     +'</div>';
