@@ -4,11 +4,104 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0,viewport-fit=cover">
 <title>Contact Us | Grace Fellowship Law Firm</title>
-<meta name="description" content="Reach out to Grace Fellowship Law Firm for free legal aid, counselling, and rights awareness support.">
+<meta name="description" content="Reach out to Grace Fellowship Law Firm for legal aid, counselling, and rights awareness support. Free consultations available.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800&family=Source+Sans+3:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css?v=4">
+<style>
+.contact-hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:0;min-height:520px}
+.contact-hero-left{background:var(--taupe-deep);padding:80px 60px;display:flex;flex-direction:column;justify-content:center;position:relative;overflow:hidden}
+.contact-hero-left::before{content:'';position:absolute;top:-60px;right:-60px;width:200px;height:200px;border-radius:50%;background:rgba(66,132,117,.15)}
+.contact-hero-left::after{content:'';position:absolute;bottom:-40px;left:-40px;width:150px;height:150px;border-radius:50%;background:rgba(137,215,183,.08)}
+.contact-hero-right{background:linear-gradient(135deg,var(--taupe),var(--taupe-dark));padding:80px 60px;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;position:relative}
+.contact-hero-right::before{content:'';position:absolute;inset:0;background:url('images/Banner.jpeg') center/cover;opacity:.15}
+.contact-hero-right .inner{position:relative;z-index:1}
+.contact-eyebrow{color:var(--gold-light);text-transform:uppercase;letter-spacing:.3em;font-size:.78rem;font-weight:700;margin-bottom:16px;display:flex;align-items:center;gap:10px}
+.contact-eyebrow::before{content:'';width:40px;height:2px;background:var(--gold)}
+.contact-hero-left h1{color:var(--white);font-size:clamp(2rem,4vw,3rem);line-height:1.2;margin-bottom:20px}
+.contact-hero-left h1 em{color:var(--sage-light);font-style:normal}
+.contact-hero-left p{color:rgba(255,255,255,.7);font-size:1.05rem;line-height:1.8;margin-bottom:32px;max-width:440px}
+.contact-quick-btns{display:flex;gap:14px;flex-wrap:wrap}
+.contact-quick-btn{display:inline-flex;align-items:center;gap:10px;padding:14px 28px;border-radius:var(--radius);font-weight:700;font-size:.95rem;text-decoration:none;transition:all .3s;border:2px solid transparent}
+.contact-quick-btn.wa{background:#25D366;color:#fff;border-color:#25D366}
+.contact-quick-btn.wa:hover{background:#1da851;transform:translateY(-2px);box-shadow:0 8px 24px rgba(37,211,102,.3)}
+.contact-quick-btn.em{background:transparent;color:var(--sage-light);border-color:var(--sage-light)}
+.contact-quick-btn.em:hover{background:var(--sage-light);color:var(--taupe-deep);transform:translateY(-2px)}
+.contact-quick-btn.ph{background:transparent;color:var(--gold-light);border-color:var(--gold-light)}
+.contact-quick-btn.ph:hover{background:var(--gold-light);color:var(--taupe-deep);transform:translateY(-2px)}
+.hero-contact-badge{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);border-radius:var(--radius-lg);padding:32px;margin-top:36px;width:100%;max-width:380px}
+.hero-contact-badge h3{color:var(--white);font-size:1rem;margin-bottom:12px;display:flex;align-items:center;gap:8px}
+.hero-contact-badge p{color:rgba(255,255,255,.6);font-size:.9rem;line-height:1.7;margin-bottom:0}
+
+.info-cards-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.info-card-pro{background:var(--white);border:1px solid #e8e0d0;border-radius:var(--radius-lg);padding:32px 28px;transition:var(--transition);position:relative;overflow:hidden}
+.info-card-pro:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg);border-color:var(--gold)}
+.info-card-pro::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--gold),var(--sage))}
+.info-card-pro .icp-icon{width:52px;height:52px;background:linear-gradient(135deg,var(--taupe),var(--taupe-dark));color:var(--sage-light);border-radius:var(--radius);display:flex;align-items:center;justify-content:center;font-size:1.4rem;margin-bottom:18px}
+.info-card-pro h3{font-size:1.05rem;color:var(--taupe);margin-bottom:8px}
+.info-card-pro p{color:#666;font-size:.92rem;line-height:1.7;margin-bottom:0}
+.info-card-pro .highlight{color:var(--gold);font-weight:700}
+
+.contact-form-pro{background:var(--white);border:1px solid #e8e0d0;border-radius:var(--radius-lg);padding:48px 40px;box-shadow:var(--shadow);position:relative;overflow:hidden}
+.contact-form-pro::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--gold),var(--sage))}
+.contact-form-pro h2{font-size:1.6rem;color:var(--taupe);margin-bottom:8px}
+.contact-form-pro .form-sub{color:#888;font-size:.95rem;margin-bottom:32px}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.form-group-pro{margin-bottom:20px}
+.form-group-pro label{display:block;font-weight:600;font-size:.88rem;color:var(--taupe);margin-bottom:8px;text-transform:uppercase;letter-spacing:.05em}
+.form-group-pro input,.form-group-pro select,.form-group-pro textarea{width:100%;padding:14px 18px;border:2px solid #e8e0d0;border-radius:var(--radius);font-size:.95rem;font-family:inherit;color:#333;background:#fafaf7;transition:all .3s;outline:none}
+.form-group-pro input:focus,.form-group-pro select:focus,.form-group-pro textarea:focus{border-color:var(--gold);box-shadow:0 0 0 3px rgba(66,132,117,.1);background:var(--white)}
+.form-group-pro textarea{resize:vertical;min-height:120px}
+.form-group-pro select{cursor:pointer;appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23999' stroke-width='2'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 16px center}
+.btn-submit{width:100%;padding:16px;background:linear-gradient(135deg,var(--taupe),var(--taupe-dark));color:var(--white);border:none;border-radius:var(--radius);font-size:1.05rem;font-weight:700;cursor:pointer;transition:all .3s;font-family:inherit;display:flex;align-items:center;justify-content:center;gap:10px}
+.btn-submit:hover{transform:translateY(-2px);box-shadow:0 8px 28px rgba(26,49,44,.3)}
+.form-trust{display:flex;align-items:center;justify-content:center;gap:20px;margin-top:16px;flex-wrap:wrap}
+.form-trust span{display:flex;align-items:center;gap:6px;color:#999;font-size:.82rem}
+
+.office-hours-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}
+.hours-card{background:var(--white);border:1px solid #e8e0d0;border-radius:var(--radius-lg);padding:36px;box-shadow:var(--shadow)}
+.hours-card h3{font-size:1.2rem;color:var(--taupe);margin-bottom:20px;display:flex;align-items:center;gap:10px}
+.hours-row{display:flex;justify-content:space-between;padding:12px 0;border-bottom:1px solid #f0ebe0}
+.hours-row:last-child{border-bottom:none}
+.hours-row .day{font-weight:600;color:#333;font-size:.95rem}
+.hours-row .time{color:var(--gold);font-weight:600;font-size:.95rem}
+.hours-row.closed .time{color:#cc4444}
+.direct-contact-card{background:linear-gradient(135deg,var(--taupe),var(--taupe-dark));border-radius:var(--radius-lg);padding:36px;color:var(--white)}
+.direct-contact-card h3{font-size:1.2rem;margin-bottom:20px;color:var(--white)}
+.direct-contact-item{display:flex;align-items:center;gap:14px;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.1)}
+.direct-contact-item:last-child{border-bottom:none}
+.direct-contact-item .dci-icon{width:44px;height:44px;background:rgba(255,255,255,.1);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.2rem;flex-shrink:0}
+.direct-contact-item h4{color:var(--sage-light);font-size:.82rem;text-transform:uppercase;letter-spacing:.08em;margin-bottom:2px}
+.direct-contact-item p{color:var(--white);font-size:.95rem;margin:0}
+
+.faq-accordion{max-width:800px;margin:0 auto}
+.faq-item{background:var(--white);border:1px solid #e8e0d0;border-radius:var(--radius-lg);margin-bottom:16px;overflow:hidden;transition:var(--transition)}
+.faq-item:hover{box-shadow:var(--shadow)}
+.faq-question{padding:20px 24px;cursor:pointer;display:flex;align-items:center;justify-content:space-between;font-weight:600;color:var(--taupe);font-size:1rem;transition:background .3s}
+.faq-question:hover{background:rgba(66,132,117,.03)}
+.faq-question::after{content:'+';font-size:1.4rem;color:var(--gold);transition:transform .3s;flex-shrink:0;margin-left:16px}
+.faq-item.active .faq-question::after{transform:rotate(45deg)}
+.faq-answer{max-height:0;overflow:hidden;transition:max-height .4s ease,padding .3s ease;padding:0 24px}
+.faq-item.active .faq-answer{max-height:300px;padding:0 24px 20px}
+.faq-answer p{color:#666;font-size:.95rem;line-height:1.8;margin:0}
+
+@media(max-width:968px){
+  .contact-hero-grid{grid-template-columns:1fr}
+  .contact-hero-left{padding:60px 32px}
+  .contact-hero-right{padding:60px 32px;min-height:auto}
+  .info-cards-grid{grid-template-columns:1fr}
+  .form-row{grid-template-columns:1fr}
+  .office-hours-grid{grid-template-columns:1fr}
+}
+@media(max-width:600px){
+  .contact-hero-left{padding:40px 20px}
+  .contact-hero-right{padding:40px 20px}
+  .contact-form-pro{padding:32px 20px}
+  .contact-quick-btns{flex-direction:column}
+  .contact-quick-btn{justify-content:center}
+}
+</style>
 </head>
 <body>
 
@@ -34,89 +127,52 @@
   </div>
 </header>
 
-<section class="page-hero" style="background-image:url('images/Banner.jpeg');background-size:cover;background-position:center">
-  <div class="container">
-    <h1>Request <em>Legal</em> Assistance</h1>
-    <p class="hero-sub">Reach out for legal assistance, counselling, or to learn about our compassionate service model.</p>
-    <div class="hero-breadcrumb"><a href="index.html">Home</a><span class="sep">/</span><span>Contact</span></div>
+<section class="contact-hero-grid">
+  <div class="contact-hero-left">
+    <div class="contact-eyebrow">Get In Touch</div>
+    <h1>Let's Talk About <em>Your Case</em></h1>
+    <p>Whether you need legal aid, professional representation, or simply want to understand your rights — we are here to help. Reach out today for a confidential consultation.</p>
+    <div class="contact-quick-btns">
+      <a href="https://wa.me/923004287689" target="_blank" class="contact-quick-btn wa">&#128241; WhatsApp Us</a>
+      <a href="mailto:gflf.official@gmail.com" class="contact-quick-btn em">&#9993; Send Email</a>
+      <a href="tel:+923004287689" class="contact-quick-btn ph">&#128222; Call Now</a>
+    </div>
+    <div class="hero-contact-badge">
+      <h3>&#128274; Confidential &amp; Professional</h3>
+      <p>All consultations are strictly confidential. Your privacy and dignity are our priority.</p>
+    </div>
+  </div>
+  <div class="contact-hero-right">
+    <div class="inner">
+      <div class="contact-eyebrow" style="justify-content:center">Office Hours</div>
+      <h2 style="color:var(--white);font-size:clamp(1.8rem,3vw,2.4rem);margin-bottom:12px">We're Available</h2>
+      <p style="color:var(--sage-light);font-size:1rem;margin-bottom:32px">Visit us or reach out during business hours</p>
+      <div style="background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);border-radius:var(--radius-lg);padding:28px;text-align:left;width:100%;max-width:340px">
+        <div style="display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px solid rgba(255,255,255,.1)"><span style="color:rgba(255,255,255,.7);font-size:.95rem">Monday - Friday</span><span style="color:var(--sage-light);font-weight:700;font-size:.95rem">9:00 AM - 6:00 PM</span></div>
+        <div style="display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px solid rgba(255,255,255,.1)"><span style="color:rgba(255,255,255,.7);font-size:.95rem">Saturday</span><span style="color:var(--sage-light);font-weight:700;font-size:.95rem">9:00 AM - 2:00 PM</span></div>
+        <div style="display:flex;justify-content:space-between;padding:10px 0"><span style="color:rgba(255,255,255,.7);font-size:.95rem">Sunday</span><span style="color:#ff8a8a;font-weight:700;font-size:.95rem">Closed</span></div>
+      </div>
+    </div>
   </div>
 </section>
 
 <section class="section">
   <div class="container">
-    <div class="contact-grid">
-      <div class="contact-info reveal">
-        <h2>Get In Touch</h2>
-        <div class="contact-item">
-          <div class="ci-icon">&#128205;</div>
-          <div>
-            <h4>Location</h4>
-            <p>Faisalabad, Punjab, Pakistan</p>
-          </div>
-        </div>
-        <div class="contact-item">
-          <div class="ci-icon">&#9962;</div>
-          <div>
-            <h4>Parent Organization</h4>
-            <p>Grace Bible Fellowship Church Pakistan</p>
-          </div>
-        </div>
-        <div class="contact-item">
-          <div class="ci-icon">&#128203;</div>
-          <div>
-            <h4>Registered</h4>
-            <p>Since June 2023</p>
-          </div>
-        </div>
-        <div class="contact-item">
-          <div class="ci-icon">&#9878;&#65039;</div>
-          <div>
-            <h4>Legal Services</h4>
-            <p>Free consultations available</p>
-          </div>
-        </div>
-        <div class="contact-item">
-          <div class="ci-icon">&#128231;</div>
-          <div>
-            <h4>Email</h4>
-            <p>legalgracefellowship@gmail.com</p>
-          </div>
-        </div>
+    <div class="info-cards-grid">
+      <div class="info-card-pro reveal">
+        <div class="icp-icon">&#128205;</div>
+        <h3>Our Office</h3>
+        <p>Faisalabad, Punjab, Pakistan<br><span class="highlight">Walk-in consultations available</span></p>
       </div>
-      <div class="contact-form reveal">
-        <h3>Send Us a Message</h3>
-        <form id="contactForm">
-          <div class="form-group">
-            <label for="name">Full Name *</label>
-            <input type="text" id="name" name="name" required placeholder="Enter your name">
-          </div>
-          <div class="form-group">
-            <label for="phone">Phone Number *</label>
-            <input type="tel" id="phone" name="phone" required placeholder="Phone number">
-          </div>
-          <div class="form-group">
-            <label for="email">Email Address</label>
-            <input type="email" id="email" name="email" placeholder="Email address">
-          </div>
-          <div class="form-group">
-            <label for="topic">How Can We Help? *</label>
-            <select id="topic" name="topic" required>
-              <option value="">Select a topic...</option>
-              <option value="legal-aid">Legal Aid Request</option>
-              <option value="family-dispute">Family Dispute</option>
-              <option value="rights-awareness">Rights Awareness</option>
-              <option value="human-rights">Human Rights Issue</option>
-              <option value="counselling">Family Counselling</option>
-              <option value="other">Other</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label for="message">Your Message *</label>
-            <textarea id="message" name="message" rows="5" required placeholder="Tell us about your situation..."></textarea>
-          </div>
-          <button type="submit" class="btn btn-maroon btn-block">Request Assistance</button>
-          <p class="form-note">All information is kept strictly confidential. We will respond within 24 hours.</p>
-        </form>
+      <div class="info-card-pro reveal">
+        <div class="icp-icon">&#128231;</div>
+        <h3>Email Us</h3>
+        <p><span class="highlight">gflf.official@gmail.com</span><br>We respond within 24 hours</p>
+      </div>
+      <div class="info-card-pro reveal">
+        <div class="icp-icon">&#128222;</div>
+        <h3>Call / WhatsApp</h3>
+        <p><span class="highlight">+92 300 428 7689</span><br>Available Mon - Sat, 9AM - 6PM</p>
       </div>
     </div>
   </div>
@@ -124,49 +180,128 @@
 
 <section class="section section-alt">
   <div class="container">
-    <div class="section-head reveal">
-      <h2 class="section-title">Frequently Asked Questions</h2>
-      <p class="section-sub">Important information about our legal services.</p>
-    </div>
-    <div class="cards-grid stagger-children">
-      <article class="service-card reveal">
-        <div class="service-icon">&#128274;</div>
-        <h3>Confidentiality</h3>
-        <p>All communications and case details are kept strictly confidential. Your privacy is our priority.</p>
-      </article>
-      <article class="service-card reveal">
-        <div class="service-icon">&#128203;</div>
-        <h3>Initial Assessment</h3>
-        <p>After submitting your request, our team will review your case and contact you within 24 hours for an initial assessment.</p>
-      </article>
-      <article class="service-card reveal">
-        <div class="service-icon">&#10003;</div>
-        <h3>Eligibility</h3>
-        <p>Our services are available to individuals and families who cannot afford private legal representation.</p>
-      </article>
-      <article class="service-card reveal">
-        <div class="service-icon">&#9878;&#65039;</div>
-        <h3>Legal Scope</h3>
-        <p>We provide legal aid for family disputes, rights violations, human rights cases, and community legal issues.</p>
-      </article>
-      <article class="service-card reveal">
-        <div class="service-icon">&#9200;</div>
-        <h3>Timeline</h3>
-        <p>Most cases are addressed within 1-2 weeks. Emergency situations receive immediate attention.</p>
-      </article>
+    <div style="display:grid;grid-template-columns:1.1fr 1fr;gap:50px;align-items:start" class="grid-2col">
+      <div class="contact-form-pro reveal">
+        <h2>Request Legal Assistance</h2>
+        <p class="form-sub">Fill out the form below and our team will get back to you within 24 hours.</p>
+        <form id="contactForm">
+          <div class="form-row">
+            <div class="form-group-pro">
+              <label for="name">Full Name *</label>
+              <input type="text" id="name" name="name" required placeholder="Your full name">
+            </div>
+            <div class="form-group-pro">
+              <label for="phone">Phone Number *</label>
+              <input type="tel" id="phone" name="phone" required placeholder="+92 xxx xxx xxxx">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group-pro">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" placeholder="your@email.com">
+            </div>
+            <div class="form-group-pro">
+              <label for="topic">How Can We Help? *</label>
+              <select id="topic" name="topic" required>
+                <option value="">Select a topic...</option>
+                <option value="legal-aid">Legal Aid Request (Free)</option>
+                <option value="professional">Professional Legal Services</option>
+                <option value="family-dispute">Family Dispute</option>
+                <option value="human-rights">Human Rights Issue</option>
+                <option value="counselling">Family Counselling</option>
+                <option value="rights-awareness">Rights Awareness</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group-pro">
+            <label for="message">Your Message *</label>
+            <textarea id="message" name="message" rows="5" required placeholder="Tell us about your situation..."></textarea>
+          </div>
+          <button type="submit" class="btn-submit">&#9878;&#65039; Request Assistance</button>
+          <div class="form-trust">
+            <span>&#128274; Confidential</span>
+            <span>&#10003; 24hr Response</span>
+            <span>&#128274; Secure</span>
+          </div>
+        </form>
+      </div>
+      <div>
+        <div class="direct-contact-card reveal">
+          <h3>&#128222; Direct Contact</h3>
+          <div class="direct-contact-item">
+            <div class="dci-icon">&#128100;</div>
+            <div>
+              <h4>Chairman</h4>
+              <p>Peter Charles Sahotra</p>
+            </div>
+          </div>
+          <div class="direct-contact-item">
+            <div class="dci-icon">&#9878;&#65039;</div>
+            <div>
+              <h4>Director of Legal Services</h4>
+              <p>Advocate Shahbaz Fazal Saroya</p>
+            </div>
+          </div>
+          <div class="direct-contact-item">
+            <div class="dci-icon">&#9962;</div>
+            <div>
+              <h4>Patron-in-Chief</h4>
+              <p>Pastor Tariq Rehmat</p>
+            </div>
+          </div>
+          <div class="direct-contact-item">
+            <div class="dci-icon">&#128231;</div>
+            <div>
+              <h4>Email</h4>
+              <p>gflf.official@gmail.com</p>
+            </div>
+          </div>
+          <div class="direct-contact-item">
+            <div class="dci-icon">&#128241;</div>
+            <div>
+              <h4>WhatsApp</h4>
+              <p>+92 300 428 7689</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
 <section class="section">
-  <div class="container" style="text-align:center">
+  <div class="container">
     <div class="section-head reveal">
-      <p class="section-eyebrow">As Seen On</p>
-      <h2 class="section-title">In the News</h2>
-      <p class="section-sub">Our work has been featured in media outlets across Pakistan.</p>
+      <p class="section-eyebrow">FAQ</p>
+      <h2 class="section-title">Frequently Asked Questions</h2>
+      <p class="section-sub">Quick answers to common questions about our legal services.</p>
     </div>
-    <div style="display:flex;justify-content:center;gap:40px;align-items:center;flex-wrap:wrap;margin-top:20px" class="reveal">
-      <img src="images/nk-news.jpeg" alt="NK News HD — Nawa-E-Khawateen" style="max-width:220px;border-radius:var(--radius);box-shadow:var(--shadow)">
+    <div class="faq-accordion">
+      <div class="faq-item reveal">
+        <div class="faq-question">Is legal aid really free?</div>
+        <div class="faq-answer"><p>Yes. Our legal aid services are completely free for individuals and families who cannot afford private representation. We also provide professional legal services at accessible rates for those who can afford them — every paid engagement helps fund free cases.</p></div>
+      </div>
+      <div class="faq-item reveal">
+        <div class="faq-question">How do I know if I qualify for free legal aid?</div>
+        <div class="faq-answer"><p>Our team will assess your case during the initial consultation. We consider your financial situation, the nature of your case, and your eligibility under our legal aid criteria. Contact us for a free assessment.</p></div>
+      </div>
+      <div class="faq-item reveal">
+        <div class="faq-question">What types of cases do you handle?</div>
+        <div class="faq-answer"><p>We handle family disputes, domestic violence cases, property matters, criminal allegations, human rights violations, discrimination cases, and community legal issues. Our team also provides counselling and rights awareness programs.</p></div>
+      </div>
+      <div class="faq-item reveal">
+        <div class="faq-question">How long does it take to get a response?</div>
+        <div class="faq-answer"><p>We respond to all inquiries within 24 hours. Emergency situations receive immediate attention. For urgent matters, WhatsApp or call us directly.</p></div>
+      </div>
+      <div class="faq-item reveal">
+        <div class="faq-question">Is my information kept confidential?</div>
+        <div class="faq-answer"><p>Absolutely. All communications and case details are kept strictly confidential. Your privacy and dignity are our top priorities. We follow professional legal ethics and data protection standards.</p></div>
+      </div>
+      <div class="faq-item reveal">
+        <div class="faq-question">Can I visit your office in person?</div>
+        <div class="faq-answer"><p>Yes. Walk-in consultations are available during office hours (Mon-Sat, 9AM-6PM). We recommend calling ahead to ensure a team member is available to meet with you.</p></div>
+      </div>
     </div>
   </div>
 </section>
@@ -174,10 +309,10 @@
 <section class="section section-dark">
   <div class="container" style="text-align:center">
     <div class="reveal">
-      <p class="section-eyebrow" style="color:var(--gold-light)">Justice for All</p>
+      <p class="section-eyebrow" style="color:var(--gold-light)">Justice for Dignity</p>
       <h2 style="color:var(--white);font-size:clamp(1.8rem,3.5vw,2.5rem);margin-bottom:16px">Know Your Rights. Seek Justice.</h2>
-      <p style="color:var(--sage-light);max-width:550px;margin:0 auto 30px">Every person deserves access to legal help. We're here to fight for you.</p>
-      <a href="contact.html" class="btn btn-gold btn-lg">Get Help Now &rarr;</a>
+      <p style="color:var(--sage-light);max-width:550px;margin:0 auto 30px">Every person deserves access to legal help. We are here to fight for you.</p>
+      <a href="https://wa.me/923004287689" target="_blank" class="btn btn-gold btn-lg">Get Help Now &rarr;</a>
     </div>
   </div>
 </section>
@@ -194,6 +329,15 @@
 <button id="toTop" aria-label="Back to top">&uarr;</button>
 <script src="script.js?v=4"></script>
 <script src="chatbot-widget.js?v=4"></script>
-
+<script>
+document.querySelectorAll('.faq-question').forEach(function(q){
+  q.addEventListener('click',function(){
+    var item=this.parentElement;
+    var wasActive=item.classList.contains('active');
+    document.querySelectorAll('.faq-item').forEach(function(i){i.classList.remove('active')});
+    if(!wasActive)item.classList.add('active');
+  });
+});
+</script>
 </body>
 </html>
