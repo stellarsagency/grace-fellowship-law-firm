@@ -51,7 +51,7 @@ KEY FACTS:
 - Founded: 2022, formally registered June 2023
 - Location: Pakistan
 - Office Hours: Monday-Saturday, 9AM-6PM
-- Email: gflf.official@gmail.com
+- Email: petercharles81@gmail.com
 - Website: https://stellarsagency.github.io/grace-fellowship-law-firm/
 
 LEADERSHIP:
@@ -92,7 +92,7 @@ RULES:
 - NEVER output "User Safety:" or "Response Safety:" tags
 - Answer in the same language the user writes in (English or Urdu)
 - When listing services, always include all 5 with brief descriptions
-- If you don't know something, direct them to email gflf.official@gmail.com
+- If you don't know something, direct them to email petercharles81@gmail.com
 - Never make up information not provided above
 - Always mention services are FREE when discussing legal help`;
 
@@ -102,7 +102,7 @@ RULES:
   w.innerHTML='<button id="chatFab" aria-label="Chat with us">&#128172;</button>'
     +'<div id="chatBox">'
     +'<div class="cb-head"><img src="images/Logo.png" alt="GFLF"><div class="cb-head-text"><h4>Ask Peter Charles</h4><span>ai legal assistance</span></div><button class="cb-close" id="chatClose">&times;</button></div>'
-    +'<div class="cb-msgs" id="cbMsgs"><div class="cb-msg cb-bot"><strong>Ask Peter Charles</strong>Welcome to Grace Fellowship Law Firm — Compassionate Service for Dignity. We provide professional legal services, free for those in need. How can we assist you today?<br><br><a class=\'cb-contact-btn cb-wa\' href=\'https://wa.me/923004287689\' target=\'_blank\'>&#128241; WhatsApp</a> <a class=\'cb-contact-btn cb-email\' href=\'mailto:gflf.official@gmail.com\'>&#9993; Email</a></div></div>'
+    +'<div class="cb-msgs" id="cbMsgs"><div class="cb-msg cb-bot"><strong>Ask Peter Charles</strong>Welcome to Grace Fellowship Law Firm — Compassionate Service for Dignity. We provide professional legal services, free for those in need. How can we assist you today?<br><br><a class=\'cb-contact-btn cb-wa\' href=\'https://wa.me/923004287689\' target=\'_blank\'>&#128241; WhatsApp</a> <a class=\'cb-contact-btn cb-email\' href=\'mailto:petercharles81@gmail.com\'>&#9993; Email</a></div></div>'
     +'<div class="cb-qr" id="cbQR"><button class="cb-qr-btn" data-q="What services do you offer?">Services</button><button class="cb-qr-btn" data-q="How to get legal help?">Get Help</button><button class="cb-qr-btn" data-q="What is your fee?">Fees</button><button class="cb-qr-btn" data-q="Tell me about Jaranwala case">Jaranwala</button><button class="cb-qr-btn" data-q="How to donate?">Donate</button><button class="cb-qr-btn" data-q="Contact information">Contact</button></div>'
     +'<div class="cb-input"><input type="text" id="cbIn" placeholder="Ask me anything..." autocomplete="off"><button id="cbSend">&#10148;</button></div>'
     +'</div>';
@@ -141,10 +141,10 @@ RULES:
         if(attempt<2){await new Promise(function(r){setTimeout(r,2000)});continue}
         return 'Service temporarily busy. Please try again in a moment.'
       }
-      return 'Sorry, I could not process your request. Please email us at gflf.official@gmail.com';
+      return 'Sorry, I could not process your request. Please email us at petercharles81@gmail.com';
     }catch(e){
       if(attempt<2){await new Promise(function(r){setTimeout(r,2000)});continue}
-      return 'Sorry, I\'m having trouble connecting. Please email us at gflf.official@gmail.com';
+      return 'Sorry, I\'m having trouble connecting. Please email us at petercharles81@gmail.com';
     }
     }
   }
